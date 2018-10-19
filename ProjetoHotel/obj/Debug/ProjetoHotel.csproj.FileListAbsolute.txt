@@ -1,0 +1,12 @@
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\bin\Debug\ProjetoHotel.exe.config
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\bin\Debug\ProjetoHotel.exe
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\bin\Debug\ProjetoHotel.pdb
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.csprojAssemblyReference.cache
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Form1.resources
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Properties.Resources.resources
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.csproj.GenerateResource.cache
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.csproj.CoreCompileInputs.cache
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.exe
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.pdb
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Tela_De_Cadastro.resources
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Tela_De_Busca.resources
