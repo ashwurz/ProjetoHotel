@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ProjetoHotel
@@ -13,6 +14,8 @@ namespace ProjetoHotel
     public partial class Tela_De_Cadastro : Form
     { 
         public LES les;
+        Stream st;
+        StreamWriter str;
         public Tela_De_Cadastro(LES les)
         {
             InitializeComponent();
@@ -39,9 +42,14 @@ namespace ProjetoHotel
                 DialogResult result;
                 result = MessageBox.Show(mensagem, caption, boxButtons);
             }
+            st = File.Open(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt", FileMode.Append);
+            str = new StreamWriter(st);
+            str.WriteLine(usuario);
+            str.WriteLine(senha);
             txtUsuario.Clear();
             txtSenha.Clear();
             les.insere(funcionario);
+            str.Close();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
