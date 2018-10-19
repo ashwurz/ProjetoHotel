@@ -14,7 +14,8 @@ namespace ProjetoHotel
         private Funcionario[] funcionarios = new Funcionario[100];
 
         public LES()
-        {  
+        {
+            quantidade = 0;
         }
         
         public int busca(string nome)
@@ -45,7 +46,7 @@ namespace ProjetoHotel
             if(posicao == -1)
             {
                 string mensagem = "O Funcionário não pode ser deletado, pois não consta nos registros";
-                string titulo = "Erro detectado na remoção do Usuário";
+                string titulo = "Erro detectado na remoção do Funcionário";
                 MessageBoxButtons boxButtons = MessageBoxButtons.OK;
                 DialogResult result;
                 result = MessageBox.Show(mensagem, titulo, boxButtons);

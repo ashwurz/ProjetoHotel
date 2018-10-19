@@ -36,6 +36,7 @@ namespace ProjetoHotel
         private void btnBusca_Click(object sender, EventArgs e)
         {
             string usuario = txtUsuario.Text;
+            txtUsuario.Clear();
             les.busca(usuario);
         }
     }

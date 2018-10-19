@@ -39,6 +39,8 @@ namespace ProjetoHotel
                 DialogResult result;
                 result = MessageBox.Show(mensagem, caption, boxButtons);
             }
+            txtUsuario.Clear();
+            txtSenha.Clear();
             les.insere(funcionario);
         }
 
