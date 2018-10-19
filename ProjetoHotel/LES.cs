@@ -12,6 +12,8 @@ namespace ProjetoHotel
     {
         private int quantidade;
         private Funcionario[] funcionarios = new Funcionario[100];
+        Stream st;
+        StreamWriter str;
 
         public LES()
         {
@@ -52,11 +54,19 @@ namespace ProjetoHotel
                 result = MessageBox.Show(mensagem, titulo, boxButtons);
             }else
             {
-                for(int i = posicao; i < quantidade; i++)
+                st = File.Open(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt", FileMode.Create);
+                str = new StreamWriter(st);
+                for (int i = posicao; i < quantidade; i++)
                 {
                     funcionarios[i] = funcionarios[i + 1];
                 }
                 quantidade--;
+                for(int i = 0; i < quantidade; i++)
+                {
+                    str.WriteLine(funcionarios[i].getUsuario());
+                    str.WriteLine(funcionarios[i].getSenha());
+                }
+                str.Close();
                 string mensagem = "O Funcionário foi excluído com sucesso dos registros";
                 string titulo = "Remoção de Funcionário";
                 MessageBoxButtons boxButtons = MessageBoxButtons.OK;
