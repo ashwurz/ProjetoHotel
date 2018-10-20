@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{92C868D4-B0C0-491B-9740-2A4B2752FF25}</ProjectGuid>
+    <ProjectGuid>{22BC74E1-2DE9-4DCD-9DE5-234BE13F2212}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ProjetoHotel</RootNamespace>
     <AssemblyName>ProjetoHotel</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -58,21 +59,15 @@
     <Compile Include="Tela_De_Busca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_De_Busca.Designer.cs">
-      <DependentUpon>Tela_De_Busca.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Tela_De_Busca.Designer.cs" />
     <Compile Include="Tela_De_Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_De_Cadastro.Designer.cs">
-      <DependentUpon>Tela_De_Cadastro.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Tela_De_Cadastro.Designer.cs" />
     <Compile Include="Tela_De_Perfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_De_Perfil.Designer.cs">
-      <DependentUpon>Tela_De_Perfil.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Tela_De_Perfil.Designer.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,12 +80,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Tela_De_Busca.resx">
-      <DependentUpon>Tela_De_Busca.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tela_De_Cadastro.resx">
-      <DependentUpon>Tela_De_Cadastro.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_De_Busca.resx" />
+    <EmbeddedResource Include="Tela_De_Cadastro.resx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,9 +94,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Images\logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
