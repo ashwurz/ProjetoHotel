@@ -45,5 +45,17 @@ namespace ProjetoHotel
             txtUsuario.Clear();
             les.busca(usuario);
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // Tela_De_Busca
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "Tela_De_Busca";
+            this.ResumeLayout(false);
+
+        }
     }
 }
