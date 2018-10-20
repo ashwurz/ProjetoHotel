@@ -14,44 +14,18 @@ namespace ProjetoHotel
     public partial class Form1 : Form
     {
         public LES les;
-        public FileInfo fi = new FileInfo(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt");
-        Stream st;
-        StreamReader str;
         public Form1(LES les)
         {
             this.les = les;
-            if (fi.Exists)
-            {
-                st = File.Open(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt", FileMode.Open);
-                str = new StreamReader(st);
-                Funcionario funcionario;
-                string linha = str.ReadLine();
-                string usuario = linha;
-                linha = str.ReadLine();
-                string senha = linha;
-                while (linha != null)
-                {
-                    funcionario = new Funcionario(usuario, senha);
-                    les.insere(funcionario);
-                    linha = str.ReadLine();
-                    usuario = linha;
-                    linha = str.ReadLine();
-                    senha = linha;
-                }
-                str.Close();
-            }
-            else
-            {
-                FileStream fstr = fi.Create();
-            }
             InitializeComponent();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             Tela_De_Cadastro cadastro = new Tela_De_Cadastro(les);
-            this.Hide();
             cadastro.Show();
+            this.Hide();
+            
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)

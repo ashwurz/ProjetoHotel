@@ -19,6 +19,12 @@ namespace ProjetoHotel
             InitializeComponent();
         }
 
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Exit();
+        }
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             Tela_De_Cadastro cadastro = new Tela_De_Cadastro(les);

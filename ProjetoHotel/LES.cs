@@ -54,7 +54,7 @@ namespace ProjetoHotel
                 result = MessageBox.Show(mensagem, titulo, boxButtons);
             }else
             {
-                st = File.Open(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt", FileMode.Create);
+                st = File.Open(@"C:\Users\Helmuth\Documents\ListadeFuncionarios.txt", FileMode.Create);
                 str = new StreamWriter(st);
                 for (int i = posicao; i < quantidade; i++)
                 {
@@ -98,13 +98,13 @@ namespace ProjetoHotel
 
             funcionarios[i] = f;
             quantidade++;
-
+            /*
             string mensagem1 = "O Funcionário foi inserido com sucesso nos registros";
             string titulo1 = "Inserção de Funcionário";
             MessageBoxButtons boxButtons1 = MessageBoxButtons.OK;
             DialogResult result1;
             result1 = MessageBox.Show(mensagem1, titulo1, boxButtons1);
-
+            */
             return true;
 
         }
