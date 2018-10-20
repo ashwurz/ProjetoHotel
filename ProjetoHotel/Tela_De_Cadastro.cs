@@ -42,7 +42,7 @@ namespace ProjetoHotel
                 DialogResult result;
                 result = MessageBox.Show(mensagem, caption, boxButtons);
             }
-            st = File.Open(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt", FileMode.Append);
+            st = File.Open(@"C:\Users\Helmuth\Documents\ListadeFuncionarios.txt", FileMode.Append);
             str = new StreamWriter(st);
             str.WriteLine(usuario);
             str.WriteLine(senha);
