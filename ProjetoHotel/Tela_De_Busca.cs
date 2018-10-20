@@ -18,6 +18,12 @@ namespace ProjetoHotel
             this.les = les;
             InitializeComponent();
         }
+        //Função que faz com que se a pessoa clique no botão "X", o programa inteiro se encerra
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Exit();
+        }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
