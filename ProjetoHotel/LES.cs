@@ -42,9 +42,9 @@ namespace ProjetoHotel
             return -1;
         }
 
-        public void deletar(Funcionario f)
+        public void deletar(string f)
         {
-            int posicao = busca(f.getUsuario());
+            int posicao = busca(f);
             if(posicao == -1)
             {
                 string mensagem = "O Funcionário não pode ser deletado, pois não consta nos registros";
@@ -99,11 +99,11 @@ namespace ProjetoHotel
             funcionarios[i] = f;
             quantidade++;
 
-            string mensagem1 = "O Funcionário foi inserido com sucesso nos registros";
+            /*string mensagem1 = "O Funcionário foi inserido com sucesso nos registros";
             string titulo1 = "Inserção de Funcionário";
             MessageBoxButtons boxButtons1 = MessageBoxButtons.OK;
             DialogResult result1;
-            result1 = MessageBox.Show(mensagem1, titulo1, boxButtons1);
+            result1 = MessageBox.Show(mensagem1, titulo1, boxButtons1);*/
 
             return true;
 

@@ -22,3 +22,5 @@ C:\Users\User\Documents\GitHub\ProjetoHotel\ProjetoHotel\bin\Debug\ProjetoHotel.
 C:\Users\User\Documents\GitHub\ProjetoHotel\ProjetoHotel\bin\Debug\ProjetoHotel.pdb
 C:\Users\User\Documents\GitHub\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Tela_De_Busca.resources
 C:\Users\User\Documents\GitHub\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Tela_De_Cadastro.resources
+C:\Users\User\Documents\GitHub\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Checkinout.resources
+C:\Users\User\Documents\GitHub\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Delete.resources
