@@ -9,10 +9,12 @@ namespace ProjetoHotel
 {
     static class Program
     {
+        //Instância do arquivos
         public static FileInfo fi = new FileInfo(@"C:\Users\Helmuth\Documents\ListadeFuncionarios.txt");
         [STAThread]
         static void Main()
         {
+            //Instância da LES que vai ser usada para o gerenciamento de funcionários
             LES les = new LES();
             Stream st;
             StreamReader str;
