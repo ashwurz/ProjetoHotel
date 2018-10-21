@@ -24,5 +24,12 @@ namespace ProjetoHotel
             string nome = txtbUsuario.Text;
             les.deletar(nome);
         }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            Form1 inicio = new Form1(les);
+            this.Hide();
+            inicio.Show();
+        }
     }
 }

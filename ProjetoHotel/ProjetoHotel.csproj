@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -65,7 +66,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Funcionario.cs" />
+    <Compile Include="LDE.cs" />
     <Compile Include="LES.cs" />
+    <Compile Include="No.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,10 +80,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tela_De_Cadastro.Designer.cs" />
-    <Compile Include="Tela_De_Perfil.cs">
+    <Compile Include="Tela_de_Check-In.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_De_Perfil.Designer.cs" />
+    <Compile Include="Tela_de_Check-In.Designer.cs">
+      <DependentUpon>Tela_de_Check-In.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_de_Check-out.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_de_Check-out.Designer.cs">
+      <DependentUpon>Tela_de_Check-out.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Checkinout.resx">
       <DependentUpon>Checkinout.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +112,12 @@
     </Compile>
     <EmbeddedResource Include="Tela_De_Busca.resx" />
     <EmbeddedResource Include="Tela_De_Cadastro.resx" />
+    <EmbeddedResource Include="Tela_de_Check-In.resx">
+      <DependentUpon>Tela_de_Check-In.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_de_Check-out.resx">
+      <DependentUpon>Tela_de_Check-out.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

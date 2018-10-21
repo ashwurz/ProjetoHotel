@@ -42,13 +42,13 @@ namespace ProjetoHotel
                 DialogResult result;
                 result = MessageBox.Show(mensagem, caption, boxButtons);
             }
+            les.insere(funcionario);
             st = File.Open(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt", FileMode.Append);
             str = new StreamWriter(st);
             str.WriteLine(usuario);
             str.WriteLine(senha);
             txtUsuario.Clear();
             txtSenha.Clear();
-            les.insere(funcionario);
             str.Close();
         }
 
