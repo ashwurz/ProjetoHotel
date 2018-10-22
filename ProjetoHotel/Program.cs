@@ -13,9 +13,10 @@ namespace ProjetoHotel
         {
             LES les = new LES();
             LDE lde = new LDE();
+            FEC fec = new FEC();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(les, lde));
+            Application.Run(new Form1(les, lde, fec));
         }
     }
 }

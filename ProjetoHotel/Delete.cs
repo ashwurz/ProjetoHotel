@@ -14,9 +14,11 @@ namespace ProjetoHotel
     {
         public LES les;
         public LDE lde;
-        public Delete(LES les, LDE lde)
+        public FEC fec;
+        public Delete(LES les, LDE lde, FEC fec)
         {
             InitializeComponent();
+            this.fec = fec;
             this.lde = lde;
             this.les = les;
         }
@@ -29,7 +31,7 @@ namespace ProjetoHotel
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            Form1 inicio = new Form1(les, lde);
+            Form1 inicio = new Form1(les, lde, fec);
             this.Hide();
             inicio.Show();
         }

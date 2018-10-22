@@ -15,18 +15,20 @@ namespace ProjetoHotel
     { 
         public LES les;
         public LDE lde;
+        public FEC fec;
         Stream st;
         StreamWriter str;
-        public Tela_De_Cadastro(LES les, LDE lde)
+        public Tela_De_Cadastro(LES les, LDE lde, FEC fec)
         {
             InitializeComponent();
+            this.fec = fec;
             this.lde = lde;
             this.les = les;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            Form1 inicio = new Form1(les, lde);
+            Form1 inicio = new Form1(les, lde, fec);
             this.Hide();
             inicio.Show();
         }
@@ -60,7 +62,7 @@ namespace ProjetoHotel
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Tela_De_Busca busca = new Tela_De_Busca(les, lde);
+            Tela_De_Busca busca = new Tela_De_Busca(les, lde, fec);
             this.Hide();
             busca.Show();
         }

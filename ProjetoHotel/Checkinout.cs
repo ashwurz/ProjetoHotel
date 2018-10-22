@@ -13,22 +13,26 @@ namespace ProjetoHotel
     public partial class Checkinout : Form
     {
         public LES les;
-        public Checkinout(LES les)
+        public LDE lde;
+        public FEC fec;
+        public Checkinout(LES les, LDE lde, FEC fec)
         {
             InitializeComponent();
+            this.lde = lde;
+            this.fec = fec;
             this.les = les;
         }
 
         private void btnCheckin_Click(object sender, EventArgs e)
         {
-            Tela_de_Check_In checkinout = new Tela_de_Check_In(les);
+            Tela_de_Check_In checkinout = new Tela_de_Check_In(les, lde, fec);
             this.Hide();
             checkinout.Show();
         }
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            Tela_de_Check_out checkinout = new Tela_de_Check_out(les);
+            Tela_de_Check_out checkinout = new Tela_de_Check_out(les, lde, fec);
             this.Hide();
             checkinout.Show();
         }

@@ -12,16 +12,20 @@ namespace ProjetoHotel
 {
     public partial class Tela_de_Check_out : Form
     {
-        public LES les = new LES();
-        public Tela_de_Check_out(LES les)
+        public LES les;
+        public LDE lde;
+        public FEC fec;
+        public Tela_de_Check_out(LES les, LDE lde, FEC fec)
         {
             InitializeComponent();
             this.les = les;
+            this.lde = lde;
+            this.fec = fec;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            Checkinout checkinout = new Checkinout(les);
+            Checkinout checkinout = new Checkinout(les, lde, fec);
             this.Hide();
             checkinout.Show();
         }

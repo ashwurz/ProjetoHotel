@@ -1,14 +1,19 @@
-﻿using System;
+﻿using ProjetoHotel;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public unsafe class FEC<T>
+public unsafe class FEC
 {
 
-    private int max = 11; //10 quartos de 1,7,14,21,30 dias de estadia totalizando 50 quartos de hotel,
+    //private int max = 11; //10 quartos de 1,7,14,21,30 dias de estadia totalizando 50 quartos de hotel,
                           // o max é 11 pois 1 espaço não pode ser usado.
     private int i; // inicio da fila.
     private int f; // fim da fila.
     private int n = 11;  //variavel para o maximo de quartos.
-    private T[] v = new T[11]; //fila de tamanho do maximo de quartos.
+    private Pessoa[] v = new Pessoa[11]; //fila de tamanho do maximo de quartos.
     private int[] time = new int[11]; //Tempo da estadia de cada cliente.
 
     public FEC()
@@ -18,7 +23,7 @@ public unsafe class FEC<T>
     }
 
     // insere o valor na fila com seu devido tempo de estadia.
-    public bool insere(T valor, int t)
+    /*public bool insere(Pessoa valor, int t)
     {
         if ((f + 1) % n == i)
         {
@@ -64,7 +69,7 @@ public unsafe class FEC<T>
     {
         for (int k = this.i; k != f; k = (k + 1) % n)
         {
-            Console.WriteLine("{0} com {1} Dias", v[k], time[k]);
+            Console.WriteLine("{0} {1} com {2} Dias restando no Quarto {3}", v[k].getNome(), v[k].getUltimoSobrenome(), time[k], v[k].getQuarto());
         }
     }
 }

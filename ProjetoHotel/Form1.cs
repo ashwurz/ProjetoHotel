@@ -15,13 +15,15 @@ namespace ProjetoHotel
     {
         public LES les;
         public LDE lde;
+        public FEC fec;
         public FileInfo fi = new FileInfo(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt");
         Stream st;
         StreamReader str;
-        public Form1(LES les, LDE lde)
+        public Form1(LES les, LDE lde, FEC fec)
         {
             this.les = les;
             this.lde = lde;
+            this.fec = fec;
             if (fi.Exists)
             {
                 st = File.Open(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt", FileMode.Open);
@@ -52,7 +54,7 @@ namespace ProjetoHotel
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Tela_De_Cadastro cadastro = new Tela_De_Cadastro(les,lde);
+            Tela_De_Cadastro cadastro = new Tela_De_Cadastro(les,lde,fec);
             this.Hide();
             cadastro.Show();
         }
