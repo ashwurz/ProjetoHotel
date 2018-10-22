@@ -23,6 +23,13 @@ namespace ProjetoHotel
             this.les = les;
         }
 
+        //Função que faz com que se a pessoa clique no botão "X", o programa inteiro se encerra
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Exit();
+        }
+
         private void btnRemove_Click(object sender, EventArgs e)
         {
             string nome = txtbUsuario.Text;

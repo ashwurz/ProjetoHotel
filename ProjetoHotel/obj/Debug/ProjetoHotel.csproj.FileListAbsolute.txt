@@ -26,3 +26,7 @@ C:\Users\User\Documents\GitHub\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.
 C:\Users\User\Documents\GitHub\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Delete.resources
 C:\Users\User\Documents\GitHub\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Tela_de_Check_In.resources
 C:\Users\User\Documents\GitHub\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Tela_de_Check_out.resources
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Checkinout.resources
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Delete.resources
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Tela_de_Check_In.resources
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Tela_de_Check_out.resources

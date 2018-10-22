@@ -16,7 +16,7 @@ namespace ProjetoHotel
         public LES les;
         public LDE lde;
         public FEC fec;
-        public FileInfo fi = new FileInfo(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt");
+        public FileInfo fi = new FileInfo(@"C:\Users\Helmuth\Documents\ListadeFuncionarios.txt");
         Stream st;
         StreamReader str;
         public Form1(LES les, LDE lde, FEC fec)
@@ -26,7 +26,7 @@ namespace ProjetoHotel
             this.fec = fec;
             if (fi.Exists)
             {
-                st = File.Open(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt", FileMode.Open);
+                st = File.Open(@"C:\Users\Helmuth\Documents\ListadeFuncionarios.txt", FileMode.Open);
                 str = new StreamReader(st);
                 Funcionario funcionario;
                 string linha = str.ReadLine();
@@ -51,6 +51,12 @@ namespace ProjetoHotel
             }
             InitializeComponent();
         }
+        //Função que faz com que se a pessoa clique no botão "X", o programa inteiro se encerra
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Exit();
+        }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
@@ -69,11 +75,18 @@ namespace ProjetoHotel
                 DialogResult result;
                 result = MessageBox.Show(mensagem, caption, boxButtons);
             }
+            Checkinout checkinout = new Checkinout(les, lde, fec);
+            if(lde.busca(txtUsuario.Text, txtSenha.Text) != null)
+            {
+                this.Hide();
+                checkinout.Show();
+            }
         }
         /*
         public static void ThreadProc()
         {
             Application.Run(new Tela_De_Cadastro(les));
+            this.CLose();
         }
         */
     }

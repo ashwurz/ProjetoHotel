@@ -75,6 +75,28 @@ namespace ProjetoHotel
             return null;
         }
 
+        public No busca(string usuario, string senha)
+        {
+            No atual = primeiro;
+            while (atual != null)
+            {
+                if (atual.funcionario.getUsuario() == usuario && atual.funcionario.getSenha() == senha)
+                {
+                    return atual;
+                }
+                else
+                {
+                    atual = atual.proximo;
+                }
+            }
+            string mensagem1 = "O usuário NÃO foi encontrado!";
+            string titulo1 = "Erro no resultado da Busca";
+            MessageBoxButtons boxButtons1 = MessageBoxButtons.OK;
+            DialogResult result1;
+            result1 = MessageBox.Show(mensagem1, titulo1, boxButtons1);
+            return null;
+        }
+
         public void remove(string usuario)
         {
             No atual = primeiro;
@@ -107,7 +129,7 @@ namespace ProjetoHotel
                 }
                 atual = null;
                 n--;
-                st = File.Open(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt", FileMode.Create);
+                st = File.Open(@"C:\Users\Helmuth\Documents\ListadeFuncionarios.txt", FileMode.Create);
                 str = new StreamWriter(st);
                 No arruma = primeiro;
                 for (int i = 0; i < n ; i++)

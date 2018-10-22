@@ -22,6 +22,12 @@ namespace ProjetoHotel
             this.fec = fec;
             this.les = les;
         }
+        //Função que faz com que se a pessoa clique no botão "X", o programa inteiro se encerra
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Exit();
+        }
 
         private void btnCheckin_Click(object sender, EventArgs e)
         {
