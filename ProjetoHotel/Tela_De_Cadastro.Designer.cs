@@ -119,6 +119,7 @@
             this.btnDeleta.TabIndex = 8;
             this.btnDeleta.Text = "Deletar";
             this.btnDeleta.UseVisualStyleBackColor = true;
+            this.btnDeleta.Click += new System.EventHandler(this.btnDeleta_Click);
             // 
             // Tela_De_Cadastro
             // 

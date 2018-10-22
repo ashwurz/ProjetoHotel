@@ -44,11 +44,12 @@ namespace ProjetoHotel
                 result = MessageBox.Show(mensagem, caption, boxButtons);
             }
         }
+
         /*
-        public static void ThreadProc()
-        {
-            Application.Run(new Tela_De_Cadastro(les));
-        }
-        */
+public static void ThreadProc()
+{
+   Application.Run(new Tela_De_Cadastro(les));
+}
+*/
     }
 }

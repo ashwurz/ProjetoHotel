@@ -101,6 +101,7 @@
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Deletar";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Tela_De_Busca
             // 

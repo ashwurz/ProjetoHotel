@@ -45,5 +45,11 @@ namespace ProjetoHotel
             txtUsuario.Clear();
             les.busca(usuario);
         }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Delete delete = new Delete(les);
+            this.Hide();
+            delete.Show();
+        }
     }
 }

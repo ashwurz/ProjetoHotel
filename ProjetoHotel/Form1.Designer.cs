@@ -98,6 +98,7 @@ namespace ProjetoHotel
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::ProjetoHotel.Properties.Resources.logo_2;
             this.pictureBox1.Location = new System.Drawing.Point(195, 68);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(421, 135);

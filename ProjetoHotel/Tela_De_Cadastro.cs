@@ -64,5 +64,12 @@ namespace ProjetoHotel
             this.Hide();
             busca.Show();
         }
+
+        private void btnDeleta_Click(object sender, EventArgs e)
+        {
+            Delete delata = new Delete(les);
+            this.Hide();
+            delata.Show();
+        }
     }
 }

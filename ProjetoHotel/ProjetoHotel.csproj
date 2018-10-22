@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Checkinout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkinout.Designer.cs">
+      <DependentUpon>Checkinout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete.Designer.cs">
+      <DependentUpon>Delete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,20 +67,46 @@
     </Compile>
     <Compile Include="Funcionario.cs" />
     <Compile Include="LES.cs" />
+    <Compile Include="No.cs" />
+    <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tela_De_Busca.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tela_De_Busca.Designer.cs" />
+    <Compile Include="Tela_De_Busca1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tela_De_Busca.resx</DependentUpon>
+    </Compile>
     <Compile Include="Tela_De_Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tela_De_Cadastro.Designer.cs" />
-    <Compile Include="Tela_De_Perfil.cs">
+    <Compile Include="Tela_De_Cadastro1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tela_De_Cadastro.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_de_Check-In.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_De_Perfil.Designer.cs" />
+    <Compile Include="Tela_de_Check-In.Designer.cs">
+      <DependentUpon>Tela_de_Check-In.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_de_Check-out.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_de_Check-out.Designer.cs">
+      <DependentUpon>Tela_de_Check-out.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Checkinout.resx">
+      <DependentUpon>Checkinout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete.resx">
+      <DependentUpon>Delete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,9 +118,22 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Tela_De_Busca.resx" />
-    <EmbeddedResource Include="Tela_De_Cadastro.resx" />
+    <EmbeddedResource Include="Tela_De_Busca.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Tela_De_Busca1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_De_Cadastro.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Tela_De_Cadastro1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_de_Check-In.resx">
+      <DependentUpon>Tela_de_Check-In.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_de_Check-out.resx">
+      <DependentUpon>Tela_de_Check-out.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,6 +146,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\logo_2.png" />
+    <Content Include="logo.jpg" />
+    <Content Include="logo_2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
