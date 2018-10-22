@@ -16,39 +16,12 @@ namespace ProjetoHotel
         public LES les;
         public LDE lde;
         public FEC fec;
-        public FileInfo fi = new FileInfo(@"C:\Users\Helmuth\Documents\ListadeFuncionarios.txt");
-        Stream st;
-        StreamReader str;
+
         public Form1(LES les, LDE lde, FEC fec)
         {
             this.les = les;
             this.lde = lde;
             this.fec = fec;
-            if (fi.Exists)
-            {
-                st = File.Open(@"C:\Users\Helmuth\Documents\ListadeFuncionarios.txt", FileMode.Open);
-                str = new StreamReader(st);
-                Funcionario funcionario;
-                string linha = str.ReadLine();
-                string usuario = linha;
-                linha = str.ReadLine();
-                string senha = linha;
-                while (linha != null)
-                {
-                    funcionario = new Funcionario(usuario, senha);
-                    lde.insere(funcionario);
-                    linha = str.ReadLine();
-                    usuario = linha;
-                    linha = str.ReadLine();
-                    senha = linha;
-                }
-                str.Close();
-            }
-            else
-            {
-                FileStream fstr = fi.Create();
-                fstr.Close();
-            }
             InitializeComponent();
         }
         //Função que faz com que se a pessoa clique no botão "X", o programa inteiro se encerra
