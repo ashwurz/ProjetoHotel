@@ -4,36 +4,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ProjetoHotel
 {
-    public unsafe class LDE<T>
+    public unsafe class LDE
     {
         private int n;
-        private No<T>* primeiro;
+        private No primeiro;
+        Stream st;
+        StreamWriter str;
         public LDE(){
             this.n = 0;
             this.primeiro = null;
         }
-        public bool insere(int valor)
+        public bool insere(Funcionario funcionario)
         {
-            No<T>* novo = new No<T>(valor);
+            No novo = new No(funcionario);
             if (novo == null)
                 return false;
 
-            No<T>* anterior = null;
-            No<T>* atual = primeiro;
+            No anterior = null;
+            No atual = primeiro;
 
-            while (atual && valor > atual->valor)
+            while (atual != null)
             {
                 anterior = atual;
-                atual = atual->proximo;
+                atual = atual.proximo;
             }
 
-            novo->proximo = atual;
+            novo.proximo = atual;
             if (anterior != null)
             {
-                anterior->proximo = novo;
+                anterior.proximo = novo;
             }
             else
             {
@@ -45,12 +48,12 @@ namespace ProjetoHotel
 
         }
 
-        public No<T>* busca(int valor)
+        public No busca(string usuario)
         {
-            No<T>* atual = primeiro;
-            while (atual)
+            No atual = primeiro;
+            while (atual != null)
             {
-                if (atual->valor == valor)
+                if (atual.funcionario.getUsuario() == usuario)
                 {
                     string mensagem = "O usuário foi encontrado!";
                     string titulo = "Resultado da Busca";
@@ -61,7 +64,7 @@ namespace ProjetoHotel
                 }
                 else
                 {
-                    atual = atual->proximo;
+                    atual = atual.proximo;
                 }
             }
             string mensagem1 = "O usuário NÃO foi encontrado!";
@@ -72,37 +75,57 @@ namespace ProjetoHotel
             return null;
         }
 
-        public void remove(int valor)
+        public void remove(string usuario)
         {
-            No<T>* atual = primeiro;
-            No<T>* anterior = nullptr;
-            while (atual)
+            No atual = primeiro;
+            No anterior = null;
+            while (atual != null)
             {
-                if (atual->valor == valor)
+                if (atual.funcionario.getUsuario() == usuario)
                 {
                     break;
                 }
                 else
                 {
                     anterior = atual;
-                    atual = atual->proximo;
+                    atual = atual.proximo;
                 }
             }
-            if (anterior != null && atual->proximo != null)
+            if (atual != null)
             {
-                anterior->proximo = atual->proximo;
-            }
-            else if (anterior != null && atual->proximo == null)
-            {
-                anterior->proximo = null;
+                if (anterior != null && atual.proximo != null)
+                {
+                    anterior.proximo = atual.proximo;
+                }
+                else if (anterior != null && atual.proximo == null)
+                {
+                    anterior.proximo = null;
+                }
+                else
+                {
+                    primeiro = atual.proximo;
+                }
+                atual = null;
+                n--;
+                st = File.Open(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt", FileMode.Create);
+                str = new StreamWriter(st);
+                No arruma = primeiro;
+                for (int i = 0; i < n ; i++)
+                {
+                    str.WriteLine(arruma.funcionario.getUsuario());
+                    str.WriteLine(arruma.funcionario.getSenha());
+                    arruma = arruma.proximo;
+                }
+                str.Close();
             }
             else
             {
-                primeiro = atual->proximo;
+                string mensagem = "O Funcionário não pode ser deletado, pois não consta nos registros";
+                string titulo = "Erro detectado na remoção do Funcionário";
+                MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+                DialogResult result;
+                result = MessageBox.Show(mensagem, titulo, boxButtons);
             }
-            delete(atual);
-            n--;
-
         }
 
     }

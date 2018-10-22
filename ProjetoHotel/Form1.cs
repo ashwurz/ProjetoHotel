@@ -14,12 +14,14 @@ namespace ProjetoHotel
     public partial class Form1 : Form
     {
         public LES les;
+        public LDE lde;
         public FileInfo fi = new FileInfo(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt");
         Stream st;
         StreamReader str;
-        public Form1(LES les)
+        public Form1(LES les, LDE lde)
         {
             this.les = les;
+            this.lde = lde;
             if (fi.Exists)
             {
                 st = File.Open(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt", FileMode.Open);
@@ -32,7 +34,7 @@ namespace ProjetoHotel
                 while (linha != null)
                 {
                     funcionario = new Funcionario(usuario, senha);
-                    les.insere(funcionario);
+                    lde.insere(funcionario);
                     linha = str.ReadLine();
                     usuario = linha;
                     linha = str.ReadLine();
@@ -43,13 +45,14 @@ namespace ProjetoHotel
             else
             {
                 FileStream fstr = fi.Create();
+                fstr.Close();
             }
             InitializeComponent();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Tela_De_Cadastro cadastro = new Tela_De_Cadastro(les);
+            Tela_De_Cadastro cadastro = new Tela_De_Cadastro(les,lde);
             this.Hide();
             cadastro.Show();
         }

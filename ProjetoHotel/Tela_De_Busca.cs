@@ -13,22 +13,24 @@ namespace ProjetoHotel
     public partial class Tela_De_Busca : Form
     {
         public LES les;
-        public Tela_De_Busca(LES les)
+        public LDE lde;
+        public Tela_De_Busca(LES les, LDE lde)
         {
             this.les = les;
+            this.lde = lde;
             InitializeComponent();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Tela_De_Cadastro cadastro = new Tela_De_Cadastro(les);
+            Tela_De_Cadastro cadastro = new Tela_De_Cadastro(les, lde);
             this.Hide();
             cadastro.Show();
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            Form1 inicio = new Form1(les);
+            Form1 inicio = new Form1(les, lde);
             this.Hide();
             inicio.Show();
         }
@@ -37,11 +39,11 @@ namespace ProjetoHotel
         {
             string usuario = txtUsuario.Text;
             txtUsuario.Clear();
-            les.busca(usuario);
+            lde.busca(usuario);
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Delete delete = new Delete(les);
+            Delete delete = new Delete(les, lde);
             this.Hide();
             delete.Show();
         }

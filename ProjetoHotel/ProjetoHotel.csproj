@@ -59,6 +59,7 @@
     <Compile Include="Delete.Designer.cs">
       <DependentUpon>Delete.cs</DependentUpon>
     </Compile>
+    <Compile Include="FEC.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ProjetoHotel
 {
-    public unsafe class No<T>
+    public unsafe class No
     {
-        private Pessoa valor;
-        No<T>* proximo;
-        No(Pessoa valor) {
-            this.valor = valor;
-            proximo = null;
+        public Funcionario funcionario;
+        public No proximo;
+        public No(Funcionario funcionario) {
+            this.funcionario = funcionario;
+            this.proximo = null;
         }
 
     }

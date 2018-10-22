@@ -14,17 +14,19 @@ namespace ProjetoHotel
     public partial class Tela_De_Cadastro : Form
     { 
         public LES les;
+        public LDE lde;
         Stream st;
         StreamWriter str;
-        public Tela_De_Cadastro(LES les)
+        public Tela_De_Cadastro(LES les, LDE lde)
         {
             InitializeComponent();
+            this.lde = lde;
             this.les = les;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            Form1 inicio = new Form1(les);
+            Form1 inicio = new Form1(les, lde);
             this.Hide();
             inicio.Show();
         }
@@ -33,7 +35,6 @@ namespace ProjetoHotel
         {
             string usuario = txtUsuario.Text;
             string senha = txtSenha.Text;
-            Funcionario funcionario = new Funcionario(usuario, senha);
             if(usuario == "" || senha == "")
             {
                 string mensagem = "Campo de Usuário ou Senha não preenchido";
@@ -42,19 +43,24 @@ namespace ProjetoHotel
                 DialogResult result;
                 result = MessageBox.Show(mensagem, caption, boxButtons);
             }
-            les.insere(funcionario);
-            st = File.Open(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt", FileMode.Append);
-            str = new StreamWriter(st);
-            str.WriteLine(usuario);
-            str.WriteLine(senha);
-            txtUsuario.Clear();
-            txtSenha.Clear();
-            str.Close();
+            else
+            {
+                Funcionario funcionario = new Funcionario(usuario, senha);
+                lde.insere(funcionario);
+                st = File.Open(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt", FileMode.Append);
+                str = new StreamWriter(st);
+                str.WriteLine(usuario);
+                str.WriteLine(senha);
+                txtUsuario.Clear();
+                txtSenha.Clear();
+                str.Close();
+            }
+            
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Tela_De_Busca busca = new Tela_De_Busca(les);
+            Tela_De_Busca busca = new Tela_De_Busca(les, lde);
             this.Hide();
             busca.Show();
         }

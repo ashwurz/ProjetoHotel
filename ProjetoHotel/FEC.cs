@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class FEC<T>
+public unsafe class FEC<T>
 {
 
     private int max = 11; //10 quartos de 1,7,14,21,30 dias de estadia totalizando 50 quartos de hotel,
@@ -38,10 +38,13 @@ public class FEC<T>
             time[i]--;
             if (time[i] == 0)
             {
-                remove();
+                //remove();
+                return true;
             }
         }
+        return false;
     }
+    /*
     // remove quem entrou primeiro em uma fila.
     public bool remove(T* confirma = null)
     {
@@ -49,13 +52,13 @@ public class FEC<T>
         {
             return false;
         }
-        if (confirma)
+        if (confirma != null)
         {
             *confirma = v[i];
         }
         i = (i + 1) % n;
         return true;
-    }
+    }*/
     // impressão para confirmação dos resultados e relatorio de quem ainda está no hotel.
     public void imprime()
     {

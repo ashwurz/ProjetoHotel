@@ -12,9 +12,10 @@ namespace ProjetoHotel
         static void Main()
         {
             LES les = new LES();
+            LDE lde = new LDE();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(les));
+            Application.Run(new Form1(les, lde));
         }
     }
 }
