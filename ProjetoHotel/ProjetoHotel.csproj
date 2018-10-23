@@ -79,6 +79,12 @@
     <Compile Include="Telas\Tela_De_Busca.Designer.cs">
       <DependentUpon>Tela_De_Busca.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Tela_de_CadastraCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Tela_de_CadastraCliente.Designer.cs">
+      <DependentUpon>Tela_de_CadastraCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Tela_De_Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </Compile>
     <EmbeddedResource Include="Telas\Tela_De_Busca.resx">
       <DependentUpon>Tela_De_Busca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tela_de_CadastraCliente.resx">
+      <DependentUpon>Tela_de_CadastraCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Tela_De_Cadastro.resx">
       <DependentUpon>Tela_De_Cadastro.cs</DependentUpon>

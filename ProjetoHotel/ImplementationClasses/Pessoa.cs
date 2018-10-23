@@ -16,15 +16,16 @@ namespace ProjetoHotel
         private int id;
         private int tempo;
         private string plano;
+        private int familia;
+        private string[] nomes = new string[5]; // cabem no maximo 6 pessoas em um unico quarto.
 
-        public Pessoa(string nome, string ultimoSobrenome, int numero, string endereco, string plano, int tempo)
+        public Pessoa(string nome, string ultimoSobrenome, int numero, string endereco, int familia)
         {
             setNome(nome);
             setUltimoSobrenome(ultimoSobrenome);
             setNumero(numero);
             setEndereco(endereco);
-            setPlano(plano);
-            setTempo(tempo);
+            setFamilia(familia);
         }
         public void setNome(string nome)
         {
@@ -49,6 +50,14 @@ namespace ProjetoHotel
         public void setId(int id)
         {
             this.id = id;
+        }
+        public void setFamilia(int familia)
+        {
+            this.familia = familia;
+        }
+        public void setNomes(string nomes, int i)
+        {
+            this.nomes[i] = nomes;
         }
         public void setPlano(string plano)
         {
@@ -81,6 +90,18 @@ namespace ProjetoHotel
         public int getId()
         {
             return id;
+        }
+        public int getFamilia()
+        {
+            return familia;
+        }
+        public string getNomes(int i)
+        {
+            if(nomes[i] != null)
+            {
+                return nomes[i];
+            }
+            return "";
         }
         public string getPlano()
         {

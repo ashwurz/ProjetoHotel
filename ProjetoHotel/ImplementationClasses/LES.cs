@@ -11,7 +11,7 @@ namespace ProjetoHotel
     public class LES
     {
         private int quantidade;
-        private Funcionario[] funcionarios = new Funcionario[100];
+        private Pessoa[] clientes = new Pessoa[100];
         Stream st;
         StreamWriter str;
 
@@ -24,9 +24,9 @@ namespace ProjetoHotel
         {
             for(int i = 0; i < quantidade; i++)
             {
-                if(funcionarios[i].getUsuario().ToString().Equals(nome))
+                if(clientes[i].getNome().ToString().Equals(nome))
                 {
-                    string mensagem = "O usuário foi encontrado!";
+                    string mensagem = "O Cliente foi encontrado!";
                     string titulo = "Resultado da Busca";
                     MessageBoxButtons boxButtons = MessageBoxButtons.OK;
                     DialogResult result;
@@ -34,7 +34,7 @@ namespace ProjetoHotel
                     return i;
                 }
             }
-            string mensagem1 = "O usuário NÃO foi encontrado!";
+            string mensagem1 = "O Cliente NÃO esta cadastrado!";
             string titulo1 = "Erro no resultado da Busca";
             MessageBoxButtons boxButtons1 = MessageBoxButtons.OK;
             DialogResult result1;
@@ -47,28 +47,39 @@ namespace ProjetoHotel
             int posicao = busca(f);
             if(posicao == -1)
             {
-                string mensagem = "O Funcionário não pode ser deletado, pois não consta nos registros";
-                string titulo = "Erro detectado na remoção do Funcionário";
+                string mensagem = "O cliente não pode ser deletado, pois não consta nos registros";
+                string titulo = "Erro detectado na remoção do cliente";
                 MessageBoxButtons boxButtons = MessageBoxButtons.OK;
                 DialogResult result;
                 result = MessageBox.Show(mensagem, titulo, boxButtons);
             }else
             {
-                st = File.Open(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeFuncionarios.txt", FileMode.Create);
+                st = File.Open(@"C:\Users\User\Documents\GitHub\ProjetoHotel\ListadeClientes.txt", FileMode.Create);
                 str = new StreamWriter(st);
                 for (int i = posicao; i < quantidade; i++)
                 {
-                    funcionarios[i] = funcionarios[i + 1];
+                    clientes[i] = clientes[i + 1];
                 }
                 quantidade--;
                 for(int i = 0; i < quantidade; i++)
                 {
-                    str.WriteLine(funcionarios[i].getUsuario());
-                    str.WriteLine(funcionarios[i].getSenha());
+                    int membros = clientes[i].getFamilia();
+                    str.WriteLine(clientes[i].getNome());
+                    str.WriteLine(clientes[i].getUltimoSobrenome());
+                    str.WriteLine(clientes[i].getNumero());
+                    str.WriteLine(clientes[i].getEndereco());
+                    str.WriteLine(clientes[i].getFamilia());
+                    for (int j = 0; j < membros; j++)
+                    {
+                        str.WriteLine(clientes[i].getNomes(j));
+                    }
+                    str.WriteLine(clientes[i].getTempo());
+                    str.WriteLine(clientes[i].getPlano());
+                    str.WriteLine(clientes[i].getQuarto());
                 }
                 str.Close();
-                string mensagem = "O Funcionário foi excluído com sucesso dos registros";
-                string titulo = "Remoção de Funcionário";
+                string mensagem = "O Cliente foi excluído com sucesso dos registros";
+                string titulo = "Remoção de Cliente";
                 MessageBoxButtons boxButtons = MessageBoxButtons.OK;
                 DialogResult result;
                 result = MessageBox.Show(mensagem, titulo, boxButtons);
@@ -76,12 +87,12 @@ namespace ProjetoHotel
             }
         }
 
-        public bool insere(Funcionario f)
+        public bool insere(Pessoa f)
         {
             if(quantidade == 100)
             {
-                string mensagem = "O Funcionário não pode ser inserido nos registro, pois o limite já foi atingido";
-                string titulo = "Erro detectado na inserção do Funcionário";
+                string mensagem = "O Cliente não pode ser inserido nos registro, pois o limite já foi atingido";
+                string titulo = "Erro detectado na inserção do Cliente";
                 MessageBoxButtons boxButtons = MessageBoxButtons.OK;
                 DialogResult result;
                 result = MessageBox.Show(mensagem, titulo, boxButtons);
@@ -89,18 +100,18 @@ namespace ProjetoHotel
             }
 
             int i;
-            for (i = 0; i < quantidade && !funcionarios[i].getUsuario().Equals(f.getUsuario()); i++);
+            for (i = 0; i < quantidade && !clientes[i].getNome().Equals(f.getNome()); i++);
 
             for(int j = quantidade; j >= i; j--)
             {
-                funcionarios[j + 1] = funcionarios[j];
+                clientes[j + 1] = clientes[j];
             }
 
-            funcionarios[i] = f;
+            clientes[i] = f;
             quantidade++;
 
-            /*string mensagem1 = "O Funcionário foi inserido com sucesso nos registros";
-            string titulo1 = "Inserção de Funcionário";
+            /*string mensagem1 = "O Cliente foi inserido com sucesso nos registros";
+            string titulo1 = "Inserção de Cliente";
             MessageBoxButtons boxButtons1 = MessageBoxButtons.OK;
             DialogResult result1;
             result1 = MessageBox.Show(mensagem1, titulo1, boxButtons1);*/

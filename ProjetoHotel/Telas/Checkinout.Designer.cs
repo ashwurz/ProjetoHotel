@@ -30,7 +30,7 @@
         {
             this.btnCheckin = new System.Windows.Forms.Button();
             this.btnCheckout = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.btnReservar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -56,15 +56,15 @@
             this.btnCheckout.UseVisualStyleBackColor = true;
             this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
-            // button3
+            // btnInfo
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(402, 107);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(214, 115);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Informações de Reservas";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.Location = new System.Drawing.Point(402, 107);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(214, 115);
+            this.btnInfo.TabIndex = 2;
+            this.btnInfo.Text = "Informações de Reservas";
+            this.btnInfo.UseVisualStyleBackColor = true;
             // 
             // btnReservar
             // 
@@ -82,7 +82,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnReservar);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.btnCheckout);
             this.Controls.Add(this.btnCheckin);
             this.Name = "Checkinout";
@@ -95,7 +95,7 @@
 
         private System.Windows.Forms.Button btnCheckin;
         private System.Windows.Forms.Button btnCheckout;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnInfo;
         private System.Windows.Forms.Button btnReservar;
     }
 }
