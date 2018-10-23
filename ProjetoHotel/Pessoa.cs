@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoHotel
 {
-    class Pessoa
+    public class Pessoa
     {
         private string nome;
         private string ultimoSobrenome;
@@ -14,13 +14,17 @@ namespace ProjetoHotel
         private string endereco;
         private int quarto;
         private int id;
+        private int tempo;
+        private string plano;
 
-        public Pessoa(string nome, string ultimoSobrenome, int numero, string endereco)
+        public Pessoa(string nome, string ultimoSobrenome, int numero, string endereco, string plano, int tempo)
         {
             setNome(nome);
             setUltimoSobrenome(ultimoSobrenome);
             setNumero(numero);
             setEndereco(endereco);
+            setPlano(plano);
+            setTempo(tempo);
         }
         public void setNome(string nome)
         {
@@ -46,6 +50,14 @@ namespace ProjetoHotel
         {
             this.id = id;
         }
+        public void setPlano(string plano)
+        {
+            this.plano = plano;
+        }
+        public void setTempo(int tempo)
+        {
+            this.tempo = tempo;
+        }
         public string getNome()
         {
             return nome;
@@ -69,6 +81,14 @@ namespace ProjetoHotel
         public int getId()
         {
             return id;
+        }
+        public string getPlano()
+        {
+            return plano;
+        }
+        public int getTempo()
+        {
+            return tempo;
         }
     }
 }
