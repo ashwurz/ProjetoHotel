@@ -54,6 +54,7 @@ namespace ProjetoHotel
             // 
             this.txtSenha.Location = new System.Drawing.Point(258, 288);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(308, 20);
             this.txtSenha.TabIndex = 1;
             // 

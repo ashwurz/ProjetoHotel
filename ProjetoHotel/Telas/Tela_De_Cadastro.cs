@@ -78,5 +78,6 @@ namespace ProjetoHotel
             this.Hide();
             deletar.Show();
         }
+
     }
 }
