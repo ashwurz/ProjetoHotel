@@ -17,23 +17,17 @@ namespace ProjetoHotel
         public FEC fec;
         public Tela_De_Busca(LES les, LDE lde, FEC fec)
         {
-            this.fec = fec;
+            InitializeComponent();
             this.les = les;
             this.lde = lde;
-            InitializeComponent();
+            this.fec = fec;
         }
+
         //Função que faz com que se a pessoa clique no botão "X", o programa inteiro se encerra
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);
             Application.Exit();
-        }
-
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            Tela_De_Cadastro cadastro = new Tela_De_Cadastro(les, lde, fec);
-            this.Hide();
-            cadastro.Show();
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -43,17 +37,25 @@ namespace ProjetoHotel
             inicio.Show();
         }
 
-        private void btnBusca_Click(object sender, EventArgs e)
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Tela_De_Cadastro cadastro = new Tela_De_Cadastro(les, lde, fec);
+            this.Hide();
+            cadastro.Show();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             string usuario = txtUsuario.Text;
             txtUsuario.Clear();
             lde.busca(usuario);
         }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Delete delete = new Delete(les, lde, fec);
+            Delete deletar = new Delete(les, lde, fec);
             this.Hide();
-            delete.Show();
+            deletar.Show();
         }
     }
 }

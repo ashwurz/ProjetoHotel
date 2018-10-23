@@ -89,15 +89,16 @@ namespace ProjetoHotel
             // 
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(330, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(275, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 31);
+            this.label1.Size = new System.Drawing.Size(274, 46);
             this.label1.TabIndex = 5;
             this.label1.Text = "Tela de Login";
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::ProjetoHotel.Properties.Resources.logo_2;
             this.pictureBox1.Location = new System.Drawing.Point(195, 68);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(421, 135);

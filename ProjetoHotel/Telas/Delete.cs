@@ -31,9 +31,10 @@ namespace ProjetoHotel
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
-        {
-            string nome = txtbUsuario.Text;
-            lde.remove(nome);
+        {   
+            lde.remove(txtbUsuario.Text, txtSenha.Text);
+            txtbUsuario.Clear();
+            txtSenha.Clear();
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -42,5 +43,20 @@ namespace ProjetoHotel
             this.Hide();
             inicio.Show();
         }
+
+        private void btnCadastro_Click(object sender, EventArgs e)
+        {
+            Tela_De_Cadastro cadastro = new Tela_De_Cadastro(les, lde, fec);
+            this.Hide();
+            cadastro.Show();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Tela_De_Busca busca = new Tela_De_Busca(les, lde, fec);
+            this.Hide();
+            busca.Show();
+        }
+
     }
 }
