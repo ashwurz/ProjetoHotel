@@ -76,11 +76,15 @@
     <Compile Include="Tela_De_Busca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_De_Busca.Designer.cs" />
+    <Compile Include="Tela_De_Busca.Designer.cs">
+      <DependentUpon>Tela_De_Busca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tela_De_Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_De_Cadastro.Designer.cs" />
+    <Compile Include="Tela_De_Cadastro.Designer.cs">
+      <DependentUpon>Tela_De_Cadastro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tela_de_Check-In.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,8 +115,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Tela_De_Busca.resx" />
-    <EmbeddedResource Include="Tela_De_Cadastro.resx" />
+    <EmbeddedResource Include="Tela_De_Busca.resx">
+      <DependentUpon>Tela_De_Busca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_De_Cadastro.resx">
+      <DependentUpon>Tela_De_Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tela_de_Check-In.resx">
       <DependentUpon>Tela_de_Check-In.cs</DependentUpon>
     </EmbeddedResource>

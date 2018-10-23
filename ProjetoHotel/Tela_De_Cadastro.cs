@@ -6,13 +6,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ProjetoHotel
 {
     public partial class Tela_De_Cadastro : Form
-    { 
+    {
         public LES les;
         public LDE lde;
         public FEC fec;
@@ -21,9 +21,9 @@ namespace ProjetoHotel
         public Tela_De_Cadastro(LES les, LDE lde, FEC fec)
         {
             InitializeComponent();
-            this.fec = fec;
-            this.lde = lde;
             this.les = les;
+            this.lde = lde;
+            this.fec = fec;
         }
         //Função que faz com que se a pessoa clique no botão "X", o programa inteiro se encerra
         protected override void OnClosed(EventArgs e)
@@ -32,7 +32,7 @@ namespace ProjetoHotel
             Application.Exit();
         }
 
-        private void btnVoltar_Click(object sender, EventArgs e)
+        private void btnInicio_Click(object sender, EventArgs e)
         {
             Form1 inicio = new Form1(les, lde, fec);
             this.Hide();
@@ -43,7 +43,7 @@ namespace ProjetoHotel
         {
             string usuario = txtUsuario.Text;
             string senha = txtSenha.Text;
-            if(usuario == "" || senha == "")
+            if (usuario == "" || senha == "")
             {
                 string mensagem = "Campo de Usuário ou Senha não preenchido";
                 string caption = "Erro detectado na inserção";
@@ -63,14 +63,20 @@ namespace ProjetoHotel
                 txtSenha.Clear();
                 str.Close();
             }
-            
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnBusca_Click(object sender, EventArgs e)
         {
             Tela_De_Busca busca = new Tela_De_Busca(les, lde, fec);
             this.Hide();
             busca.Show();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Delete deletar = new Delete(les, lde, fec);
+            this.Hide();
+            deletar.Show();
         }
     }
 }

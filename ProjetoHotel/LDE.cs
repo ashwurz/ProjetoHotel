@@ -97,13 +97,13 @@ namespace ProjetoHotel
             return null;
         }
 
-        public void remove(string usuario)
+        public void remove(string usuario, string senha)
         {
             No atual = primeiro;
             No anterior = null;
             while (atual != null)
             {
-                if (atual.funcionario.getUsuario() == usuario)
+                if (atual.funcionario.getUsuario() == usuario && atual.funcionario.getSenha() == senha)
                 {
                     break;
                 }
@@ -139,9 +139,16 @@ namespace ProjetoHotel
                     arruma = arruma.proximo;
                 }
                 str.Close();
+                //MessageBox que aparecerá quando o usuário for deletado
+                string mensagem = "O Funcionário foi deletado com sucesso!";
+                string titulo = "Sucesso!";
+                MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+                DialogResult result;
+                result = MessageBox.Show(mensagem, titulo, boxButtons);
             }
             else
             {
+                //MessageBox que aparecerá quando o usuário NÃO for deletado
                 string mensagem = "O Funcionário não pode ser deletado, pois não consta nos registros";
                 string titulo = "Erro detectado na remoção do Funcionário";
                 MessageBoxButtons boxButtons = MessageBoxButtons.OK;
