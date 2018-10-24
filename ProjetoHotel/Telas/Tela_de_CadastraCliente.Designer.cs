@@ -140,11 +140,11 @@
             // txtAC
             // 
             this.txtAC.AutoSize = true;
-            this.txtAC.Location = new System.Drawing.Point(116, 223);
+            this.txtAC.Location = new System.Drawing.Point(61, 223);
             this.txtAC.Name = "txtAC";
-            this.txtAC.Size = new System.Drawing.Size(87, 13);
+            this.txtAC.Size = new System.Drawing.Size(142, 13);
             this.txtAC.TabIndex = 19;
-            this.txtAC.Text = "Acompanhantes:";
+            this.txtAC.Text = "Numero de Acompanhantes:";
             // 
             // edtAC
             // 

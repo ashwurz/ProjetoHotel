@@ -103,6 +103,18 @@
     <Compile Include="Telas\Tela_de_Check-out.Designer.cs">
       <DependentUpon>Tela_de_Check-out.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Tela_de_Plano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Tela_de_Plano.Designer.cs">
+      <DependentUpon>Tela_de_Plano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Tela_de_Tempo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Tela_de_Tempo.Designer.cs">
+      <DependentUpon>Tela_de_Tempo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Telas\Checkinout.resx">
       <DependentUpon>Checkinout.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +148,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Tela_de_Check-out.resx">
       <DependentUpon>Tela_de_Check-out.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tela_de_Plano.resx">
+      <DependentUpon>Tela_de_Plano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tela_de_Tempo.resx">
+      <DependentUpon>Tela_de_Tempo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

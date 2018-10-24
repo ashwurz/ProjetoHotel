@@ -89,22 +89,27 @@ namespace ProjetoHotel.Telas
                 str.WriteLine(acompanhantes);
                 if (i >= 1)
                 {
+                    pessoa.setNomes(acompanhante1,0);
                     str.WriteLine(acompanhante1);
                 }
                 if (i >= 2)
                 {
+                    pessoa.setNomes(acompanhante2, 1);
                     str.WriteLine(acompanhante2);
                 }
                 if (i >= 3)
                 {
+                    pessoa.setNomes(acompanhante3, 2);
                     str.WriteLine(acompanhante3);
                 }
                 if (i >= 4)
                 {
+                    pessoa.setNomes(acompanhante4, 3);
                     str.WriteLine(acompanhante4);
                 }
                 if (i == 5)
                 {
+                    pessoa.setNomes(acompanhante5, 4);
                     str.WriteLine(acompanhante5);
                 }
                 edtNome.Clear();
@@ -118,7 +123,10 @@ namespace ProjetoHotel.Telas
                 edtAC4.Clear();
                 edtAC5.Clear();
                 str.Close();
-                //proxima tela
+                //proxima tela levando pessoa
+                Tela_de_Tempo tempo = new Tela_de_Tempo(les, lde, fec, pessoa);
+                this.Hide();
+                tempo.Show();
             }
         }
     }
