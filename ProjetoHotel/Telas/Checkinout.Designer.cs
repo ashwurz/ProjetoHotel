@@ -32,6 +32,7 @@
             this.btnCheckout = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnReservar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCheckin
@@ -76,11 +77,22 @@
             this.btnReservar.Text = "Cadastrar Cliente";
             this.btnReservar.UseVisualStyleBackColor = true;
             // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(12, 12);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.TabIndex = 4;
+            this.btnSair.Text = "Logout";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // Checkinout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnReservar);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnCheckout);
@@ -97,5 +109,6 @@
         private System.Windows.Forms.Button btnCheckout;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnReservar;
+        private System.Windows.Forms.Button btnSair;
     }
 }

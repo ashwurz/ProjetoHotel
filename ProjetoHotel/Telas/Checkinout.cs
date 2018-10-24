@@ -42,5 +42,12 @@ namespace ProjetoHotel
             this.Hide();
             checkinout.Show();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Form1 inicio = new Form1(les, lde, fec);
+            this.Hide();
+            inicio.Show();
+        }
     }
 }
