@@ -75,6 +75,7 @@
             this.btnReservar.TabIndex = 3;
             this.btnReservar.Text = "Cadastrar Cliente";
             this.btnReservar.UseVisualStyleBackColor = true;
+            this.btnReservar.Click += new System.EventHandler(this.btnReservar_Click);
             // 
             // Checkinout
             // 

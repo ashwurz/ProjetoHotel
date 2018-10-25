@@ -37,22 +37,22 @@ namespace ProjetoHotel.Telas
 
         private void btnPlano_Click(object sender, EventArgs e)
         {
-            st = File.Open(@"C:\Users\Helmuth\Documents\ListadeFuncionarios.txt", FileMode.Append);
+            st = File.Open("ListadeClientes.txt", FileMode.Append);
             str = new StreamWriter(st);
             int escolhido;
             if (rbtnD1.Checked)
             {
                 escolhido = 1;
             }
-            else if (rbtnD1.Checked)
+            else if (rbtnD7.Checked)
             {
                 escolhido = 7;
             }
-            else if (rbtnD1.Checked)
+            else if (rbtnD14.Checked)
             {
                 escolhido = 14;
             }
-            else if (rbtnD1.Checked)
+            else if (rbtnD21.Checked)
             {
                 escolhido = 21;
             }
@@ -60,9 +60,10 @@ namespace ProjetoHotel.Telas
             {
                 escolhido = 30;
             }
-            int tempo = Convert.ToInt32(escolhido);
+            int tempo = escolhido;
             str.WriteLine(tempo);
             pessoa.setTempo(tempo);
+            str.Close();
             Tela_de_Plano plano = new Tela_de_Plano(les, lde, fec, pessoa);
             this.Hide();
             plano.Show();

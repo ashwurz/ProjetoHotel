@@ -129,7 +129,7 @@ namespace ProjetoHotel
                 }
                 atual = null;
                 n--;
-                st = File.Open(@"C:\Users\Helmuth\Documents\ListadeFuncionarios.txt", FileMode.Create);
+                st = File.Open("ListadeFuncionarios.txt", FileMode.Create);
                 str = new StreamWriter(st);
                 No arruma = primeiro;
                 for (int i = 0; i < n ; i++)

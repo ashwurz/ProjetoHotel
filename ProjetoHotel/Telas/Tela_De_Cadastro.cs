@@ -55,7 +55,7 @@ namespace ProjetoHotel
             {
                 Funcionario funcionario = new Funcionario(usuario, senha);
                 lde.insere(funcionario);
-                st = File.Open(@"C:\Users\Helmuth\Documents\ListadeFuncionarios.txt", FileMode.Append);
+                st = File.Open("ListadeFuncionarios.txt", FileMode.Append);
                 str = new StreamWriter(st);
                 str.WriteLine(usuario);
                 str.WriteLine(senha);

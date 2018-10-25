@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoHotel.Telas;
 
 namespace ProjetoHotel
 {
@@ -41,6 +42,13 @@ namespace ProjetoHotel
             Tela_de_Check_out checkinout = new Tela_de_Check_out(les, lde, fec);
             this.Hide();
             checkinout.Show();
+        }
+
+        private void btnReservar_Click(object sender, EventArgs e)
+        {
+            Tela_de_CadastraCliente cliente = new Tela_de_CadastraCliente(les, lde, fec);
+            this.Hide();
+            cliente.Show();
         }
     }
 }

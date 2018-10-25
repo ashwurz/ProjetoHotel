@@ -9,8 +9,8 @@ namespace ProjetoHotel
 {
     static class Program
     {
-        public static FileInfo fi = new FileInfo(@"C:\Users\Helmuth\Documents\ListadeFuncionarios.txt");
-        public static FileInfo fi1 = new FileInfo(@"C:\Users\Helmuth\Documents\ListadeClientes.txt");
+        public static FileInfo fi = new FileInfo("ListadeFuncionarios.txt");
+        public static FileInfo fi1 = new FileInfo("ListadeClientes.txt");
         [STAThread]
         static void Main()
         {
@@ -23,7 +23,7 @@ namespace ProjetoHotel
             StreamReader str1;
             if (fi.Exists)
             {
-                st = File.Open(@"C:\Users\Helmuth\Documents\ListadeFuncionarios.txt", FileMode.Open);
+                st = File.Open("ListadeFuncionarios.txt", FileMode.Open);
                 str = new StreamReader(st);
                 Funcionario funcionario;
                 string linha = str.ReadLine();
@@ -48,7 +48,7 @@ namespace ProjetoHotel
             }
             if (fi1.Exists)
             {
-                st1 = File.Open(@"C:\Users\Helmuth\Documents\ListadeClientes.txt", FileMode.Open);
+                st1 = File.Open("ListadeClientes.txt", FileMode.Open);
                 str1 = new StreamReader(st1);
                 Pessoa pessoa;
                 string linha = str1.ReadLine();

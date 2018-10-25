@@ -78,7 +78,7 @@ namespace ProjetoHotel.Telas
             else
             {
                 Pessoa pessoa = new Pessoa(nome, sobrenome, numero, endereco, acompanhantes);
-                st = File.Open(@"C:\Users\Helmuth\Documents\ListadeClientes.txt", FileMode.Append);
+                st = File.Open("ListadeClientes.txt", FileMode.Append);
                 str = new StreamWriter(st);
                 str.WriteLine(nome);
                 str.WriteLine(sobrenome);

@@ -30,7 +30,7 @@ namespace ProjetoHotel.Telas
 
         private void btnRegistra_Click(object sender, EventArgs e)
         {
-            st = File.Open(@"C:\Users\Helmuth\Documents\ListadeFuncionarios.txt", FileMode.Append);
+            st = File.Open("ListadeClientes.txt", FileMode.Append);
             str = new StreamWriter(st);
             string escolhido;
             if (rbtnComum.Checked)
@@ -47,7 +47,12 @@ namespace ProjetoHotel.Telas
             }
             str.WriteLine(escolhido);
             pessoa.setPlano(escolhido);
+            Random randNum = new Random();
+            int q = randNum.Next(1,50);
+            str.WriteLine(q);
+            pessoa.setQuarto(q);
             les.insere(pessoa);
+            str.Close();
             Checkinout checkinout = new Checkinout(les, lde, fec);
             this.Hide();
             checkinout.Show();
