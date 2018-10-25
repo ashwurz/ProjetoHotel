@@ -43,7 +43,7 @@ namespace ProjetoHotel
             if(txtUsuario.TextLength == 0 || txtSenha.TextLength == 0)
             {
                 string mensagem = "Campo de Usuário ou Senha não preenchido";
-                string caption = "Erro detectado na inserção";
+                string caption = "Erro detectado no Login";
                 MessageBoxButtons boxButtons = MessageBoxButtons.OK;
                 DialogResult result;
                 result = MessageBox.Show(mensagem, caption, boxButtons);
@@ -55,12 +55,13 @@ namespace ProjetoHotel
                 checkinout.Show();
             }
         }
+
         /*
-        public static void ThreadProc()
-        {
-            Application.Run(new Tela_De_Cadastro(les));
-            this.CLose();
-        }
-        */
+public static void ThreadProc()
+{
+   Application.Run(new Tela_De_Cadastro(les));
+   this.CLose();
+}
+*/
     }
 }
