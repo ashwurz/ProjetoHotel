@@ -110,12 +110,10 @@
             // rbtnComum
             // 
             this.rbtnComum.AutoSize = true;
-            this.rbtnComum.Checked = true;
             this.rbtnComum.Location = new System.Drawing.Point(111, 344);
             this.rbtnComum.Name = "rbtnComum";
             this.rbtnComum.Size = new System.Drawing.Size(63, 17);
             this.rbtnComum.TabIndex = 7;
-            this.rbtnComum.TabStop = true;
             this.rbtnComum.Text = "RSxx,xx";
             this.rbtnComum.UseVisualStyleBackColor = true;
             // 

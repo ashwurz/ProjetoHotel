@@ -26,6 +26,9 @@ namespace ProjetoHotel.Telas
             this.fec = fec;
             this.pessoa = p;
             InitializeComponent();
+            rbtnComum.Visible = les.confirmaDisponivel(p, "Comum");
+            rbtnDeluxe.Visible = les.confirmaDisponivel(p, "Deluxe");
+            rbtnPremium.Visible = les.confirmaDisponivel(p, "Premium");
         }
 
         private void btnRegistra_Click(object sender, EventArgs e)

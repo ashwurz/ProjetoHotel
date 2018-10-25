@@ -119,5 +119,176 @@ namespace ProjetoHotel
             return true;
 
         }
+        public bool confirmaDisponivel(Pessoa p, string plano)
+        {
+            int contC1 = 0;
+            int contD1 = 0;
+            int contP1 = 0;
+            int contC7 = 0;
+            int contD7 = 0;
+            int contP7 = 0;
+            int contC14 = 0;
+            int contD14 = 0;
+            int contP14 = 0;
+            int contC21 = 0;
+            int contD21 = 0;
+            int contP21 = 0;
+            int contC30 = 0;
+            int contD30 = 0;
+            int contP30 = 0;
+            for (int i = 0; i < quantidade; i++)
+            {
+                if (plano == "Comum")
+                {
+                    if (clientes[i].getTempo() == 1)
+                    {
+                        if (clientes[i].getPlano() == "Comum")
+                        {
+                            contC1 += 1;
+                        }
+                    }
+                    else if (clientes[i].getTempo() == 7)
+                    {
+                        if (clientes[i].getPlano() == "Comum")
+                        {
+                            contC7 += 1;
+                        }
+                    }
+                    else if (clientes[i].getTempo() == 14)
+                    {
+                        if (clientes[i].getPlano() == "Comum")
+                        {
+                            contC14 += 1;
+                        }
+                    }
+                    else if (clientes[i].getTempo() == 21)
+                    {
+                        if (clientes[i].getPlano() == "Comum")
+                        {
+                            contC21 += 1;
+                        }
+                    }
+                    else
+                    {
+                        if (clientes[i].getPlano() == "Comum")
+                        {
+                            contC30 += 1;
+                        }
+                    }
+                }
+                else if (plano == "Deluxe")
+                {
+                    if (clientes[i].getTempo() == 1)
+                    {
+                        if (clientes[i].getPlano() == "Deluxe")
+                        {
+                            contD1 += 1;
+                        }
+                    }
+                    else if (clientes[i].getTempo() == 7)
+                    {
+                        if (clientes[i].getPlano() == "Deluxe")
+                        {
+                            contD7 += 1;
+                        }
+                    }
+                    else if (clientes[i].getTempo() == 14)
+                    {
+                        if (clientes[i].getPlano() == "Deluxe")
+                        {
+                            contD14 += 1;
+                        }
+                    }
+                    else if (clientes[i].getTempo() == 21)
+                    {
+                        if (clientes[i].getPlano() == "Deluxe")
+                        {
+                            contD21 += 1;
+                        }
+                    }
+                    else
+                    {
+                        if (clientes[i].getPlano() == "Deluxe")
+                        {
+                            contD30 += 1;
+                        }
+                    }
+                }
+                else
+                {
+                    if (clientes[i].getTempo() == 1)
+                    {
+                        if (clientes[i].getPlano() == "Premium")
+                        {
+                            contP1 += 1;
+                        }
+                    }
+                    else if (clientes[i].getTempo() == 7)
+                    {
+                        if (clientes[i].getPlano() == "Premium")
+                        {
+                            contP7 += 1;
+                        }
+                    }
+                    else if (clientes[i].getTempo() == 14)
+                    {
+                        if (clientes[i].getPlano() == "Premium")
+                        {
+                            contP14 += 1;
+                        }
+                    }
+                    else if (clientes[i].getTempo() == 21)
+                    {
+                        if (clientes[i].getPlano() == "Premium")
+                        {
+                            contP21 += 1;
+                        }
+                    }
+                    else
+                    {
+                        if (clientes[i].getPlano() == "Premium")
+                        {
+                            contP30 += 1;
+                        }
+                    }
+                }
+            }
+            if (p.getTempo() == 1)
+            {
+                if(plano == "Comum" && contC1 == 4 || plano == "Deluxe" && contD1 == 3 || plano == "Premium" && contP1 == 3)
+                {
+                    return false;
+                }
+            }
+            else if (p.getTempo() == 7)
+            {
+                if (plano == "Comum" && contC7 == 4 || plano == "Deluxe" && contD7 == 3 || plano == "Premium" && contP7 == 3)
+                {
+                    return false;
+                }
+            }
+            else if (p.getTempo() == 14)
+            {
+                if (plano == "Comum" && contC14 == 4 || plano == "Deluxe" && contD14 == 3 || plano == "Premium" && contP14 == 3)
+                {
+                    return false;
+                }
+            }
+            else if (p.getTempo() == 21)
+            {
+                if (plano == "Comum" && contC21 == 4 || plano == "Deluxe" && contD21 == 3 || plano == "Premium" && contP21 == 3)
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                if (plano == "Comum" && contC30 == 4 || plano == "Deluxe" && contD30 == 3 || plano == "Premium" && contP30 == 3)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }

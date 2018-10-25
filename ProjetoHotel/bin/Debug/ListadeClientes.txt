@@ -17,7 +17,8 @@ fei sbc
 helmuth pai
 21
 Deluxe
-101ola
+101
+ola
 mundo
 44444444
 dedo no cu e gritaria
@@ -27,3 +28,12 @@ gritaria
 14
 Comum
 33
+abc
+def
+123
+ghijk
+1
+lmn
+7
+Premium
+15
