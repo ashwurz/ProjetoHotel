@@ -39,7 +39,6 @@
             this.edtNumero = new System.Windows.Forms.TextBox();
             this.edtEndereco = new System.Windows.Forms.TextBox();
             this.txtAC = new System.Windows.Forms.Label();
-            this.edtAC = new System.Windows.Forms.TextBox();
             this.txtAC1 = new System.Windows.Forms.Label();
             this.txtAC2 = new System.Windows.Forms.Label();
             this.txtAC3 = new System.Windows.Forms.Label();
@@ -51,6 +50,12 @@
             this.edtAC4 = new System.Windows.Forms.TextBox();
             this.edtAC5 = new System.Windows.Forms.TextBox();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.rbtn1 = new System.Windows.Forms.RadioButton();
+            this.rbtn2 = new System.Windows.Forms.RadioButton();
+            this.rbtn3 = new System.Windows.Forms.RadioButton();
+            this.rbtn4 = new System.Windows.Forms.RadioButton();
+            this.rbtn5 = new System.Windows.Forms.RadioButton();
+            this.rbtn0 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // btnCadastrar
@@ -145,14 +150,6 @@
             this.txtAC.Size = new System.Drawing.Size(142, 13);
             this.txtAC.TabIndex = 19;
             this.txtAC.Text = "Numero de Acompanhantes:";
-            // 
-            // edtAC
-            // 
-            this.edtAC.Location = new System.Drawing.Point(209, 216);
-            this.edtAC.Name = "edtAC";
-            this.edtAC.Size = new System.Drawing.Size(376, 20);
-            this.edtAC.TabIndex = 20;
-            this.edtAC.TextChanged += new System.EventHandler(this.edtAC_TextChanged);
             // 
             // txtAC1
             // 
@@ -253,11 +250,85 @@
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             // 
+            // rbtn1
+            // 
+            this.rbtn1.AutoSize = true;
+            this.rbtn1.Location = new System.Drawing.Point(284, 219);
+            this.rbtn1.Name = "rbtn1";
+            this.rbtn1.Size = new System.Drawing.Size(31, 17);
+            this.rbtn1.TabIndex = 32;
+            this.rbtn1.Text = "1";
+            this.rbtn1.UseVisualStyleBackColor = true;
+            this.rbtn1.Click += new System.EventHandler(this.rbtn0_Click);
+            // 
+            // rbtn2
+            // 
+            this.rbtn2.AutoSize = true;
+            this.rbtn2.Location = new System.Drawing.Point(344, 219);
+            this.rbtn2.Name = "rbtn2";
+            this.rbtn2.Size = new System.Drawing.Size(31, 17);
+            this.rbtn2.TabIndex = 33;
+            this.rbtn2.Text = "2";
+            this.rbtn2.UseVisualStyleBackColor = true;
+            this.rbtn2.Click += new System.EventHandler(this.rbtn0_Click);
+            // 
+            // rbtn3
+            // 
+            this.rbtn3.AutoSize = true;
+            this.rbtn3.Location = new System.Drawing.Point(412, 219);
+            this.rbtn3.Name = "rbtn3";
+            this.rbtn3.Size = new System.Drawing.Size(31, 17);
+            this.rbtn3.TabIndex = 34;
+            this.rbtn3.Text = "3";
+            this.rbtn3.UseVisualStyleBackColor = true;
+            this.rbtn3.Click += new System.EventHandler(this.rbtn0_Click);
+            // 
+            // rbtn4
+            // 
+            this.rbtn4.AutoSize = true;
+            this.rbtn4.Location = new System.Drawing.Point(476, 219);
+            this.rbtn4.Name = "rbtn4";
+            this.rbtn4.Size = new System.Drawing.Size(31, 17);
+            this.rbtn4.TabIndex = 35;
+            this.rbtn4.Text = "4";
+            this.rbtn4.UseVisualStyleBackColor = true;
+            this.rbtn4.Click += new System.EventHandler(this.rbtn0_Click);
+            // 
+            // rbtn5
+            // 
+            this.rbtn5.AutoSize = true;
+            this.rbtn5.Location = new System.Drawing.Point(534, 219);
+            this.rbtn5.Name = "rbtn5";
+            this.rbtn5.Size = new System.Drawing.Size(31, 17);
+            this.rbtn5.TabIndex = 36;
+            this.rbtn5.Text = "5";
+            this.rbtn5.UseVisualStyleBackColor = true;
+            this.rbtn5.Click += new System.EventHandler(this.rbtn0_Click);
+            // 
+            // rbtn0
+            // 
+            this.rbtn0.AutoSize = true;
+            this.rbtn0.Checked = true;
+            this.rbtn0.Location = new System.Drawing.Point(224, 219);
+            this.rbtn0.Name = "rbtn0";
+            this.rbtn0.Size = new System.Drawing.Size(31, 17);
+            this.rbtn0.TabIndex = 37;
+            this.rbtn0.TabStop = true;
+            this.rbtn0.Text = "0";
+            this.rbtn0.UseVisualStyleBackColor = true;
+            this.rbtn0.Click += new System.EventHandler(this.rbtn0_Click);
+            // 
             // Tela_de_CadastraCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.rbtn0);
+            this.Controls.Add(this.rbtn5);
+            this.Controls.Add(this.rbtn4);
+            this.Controls.Add(this.rbtn3);
+            this.Controls.Add(this.rbtn2);
+            this.Controls.Add(this.rbtn1);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.edtAC5);
             this.Controls.Add(this.edtAC4);
@@ -269,7 +340,6 @@
             this.Controls.Add(this.txtAC3);
             this.Controls.Add(this.txtAC2);
             this.Controls.Add(this.txtAC1);
-            this.Controls.Add(this.edtAC);
             this.Controls.Add(this.txtAC);
             this.Controls.Add(this.edtEndereco);
             this.Controls.Add(this.edtNumero);
@@ -301,7 +371,6 @@
         private System.Windows.Forms.TextBox edtNumero;
         private System.Windows.Forms.TextBox edtEndereco;
         private System.Windows.Forms.Label txtAC;
-        private System.Windows.Forms.TextBox edtAC;
         private System.Windows.Forms.Label txtAC1;
         private System.Windows.Forms.Label txtAC2;
         private System.Windows.Forms.Label txtAC3;
@@ -313,5 +382,11 @@
         private System.Windows.Forms.TextBox edtAC4;
         private System.Windows.Forms.TextBox edtAC5;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.RadioButton rbtn1;
+        private System.Windows.Forms.RadioButton rbtn2;
+        private System.Windows.Forms.RadioButton rbtn3;
+        private System.Windows.Forms.RadioButton rbtn4;
+        private System.Windows.Forms.RadioButton rbtn5;
+        private System.Windows.Forms.RadioButton rbtn0;
     }
 }

@@ -26,33 +26,31 @@ namespace ProjetoHotel.Telas
             this.fec = fec;
         }
 
-        private void edtAC_TextChanged(object sender, EventArgs e)
+        private int numeroDeAcompanhantes()
         {
-            int i = Convert.ToInt32(edtAC.Text);
-            if (i >= 1)
+            if (rbtn1.Checked)
             {
-                txtAC1.Visible = true;
-                edtAC1.Visible = true;
+                return 1;
             }
-            if (i >= 2)
+            else if (rbtn2.Checked)
             {
-                txtAC2.Visible = true;
-                edtAC2.Visible = true;
+                return 2;
             }
-            if (i >= 3)
+            else if (rbtn3.Checked)
             {
-                txtAC3.Visible = true;
-                edtAC3.Visible = true;
+                return 3;
             }
-            if (i >= 4)
+            else if (rbtn4.Checked)
             {
-                txtAC4.Visible = true;
-                edtAC4.Visible = true;
+                return 4;
             }
-            if (i == 5)
+            else if (rbtn5.Checked)
             {
-                txtAC5.Visible = true;
-                edtAC5.Visible = true;
+                return 5;
+            }
+            else
+            {
+                return 0;
             }
         }
 
@@ -62,7 +60,7 @@ namespace ProjetoHotel.Telas
             string sobrenome = edtSobrenome.Text;
             int numero = Convert.ToInt32(edtNumero.Text);
             string endereco = edtEndereco.Text;
-            int acompanhantes = Convert.ToInt32(edtAC.Text);
+            int acompanhantes = numeroDeAcompanhantes();
             int i = acompanhantes;
             string acompanhante1 = edtAC1.Text;
             string acompanhante2 = edtAC2.Text;
@@ -112,21 +110,102 @@ namespace ProjetoHotel.Telas
                     pessoa.setNomes(acompanhante5, 4);
                     str.WriteLine(acompanhante5);
                 }
-                edtNome.Clear();
+                /*edtNome.Clear();
                 edtSobrenome.Clear();
                 edtNumero.Clear();
                 edtEndereco.Clear();
-                edtAC.Clear();
                 edtAC1.Clear();
                 edtAC2.Clear();
                 edtAC3.Clear();
                 edtAC4.Clear();
-                edtAC5.Clear();
+                edtAC5.Clear();*/
                 str.Close();
                 //proxima tela levando pessoa
                 Tela_de_Tempo tempo = new Tela_de_Tempo(les, lde, fec, pessoa);
                 this.Hide();
                 tempo.Show();
+            }
+        }
+
+        private void rbtn0_Click(object sender, EventArgs e)
+        {
+            if (rbtn1.Checked)
+            {
+                txtAC1.Visible = true;
+                edtAC1.Visible = true;
+                txtAC2.Visible = false;
+                edtAC2.Visible = false;
+                txtAC3.Visible = false;
+                edtAC3.Visible = false;
+                txtAC4.Visible = false;
+                edtAC4.Visible = false;
+                txtAC5.Visible = false;
+                edtAC5.Visible = false;
+            }
+            else if (rbtn2.Checked)
+            {
+                txtAC1.Visible = true;
+                edtAC1.Visible = true;
+                txtAC2.Visible = true;
+                edtAC2.Visible = true;
+                txtAC3.Visible = false;
+                edtAC3.Visible = false;
+                txtAC4.Visible = false;
+                edtAC4.Visible = false;
+                txtAC5.Visible = false;
+                edtAC5.Visible = false;
+            }
+            else if (rbtn3.Checked)
+            {
+                txtAC1.Visible = true;
+                edtAC1.Visible = true;
+                txtAC2.Visible = true;
+                edtAC2.Visible = true;
+                txtAC3.Visible = true;
+                edtAC3.Visible = true;
+                txtAC4.Visible = false;
+                edtAC4.Visible = false;
+                txtAC5.Visible = false;
+                edtAC5.Visible = false;
+            }
+            else if (rbtn4.Checked)
+            {
+                txtAC1.Visible = true;
+                edtAC1.Visible = true;
+                txtAC2.Visible = true;
+                edtAC2.Visible = true;
+                txtAC3.Visible = true;
+                edtAC3.Visible = true;
+                txtAC4.Visible = true;
+                edtAC4.Visible = true;
+                txtAC5.Visible = false;
+                edtAC5.Visible = false;
+            }
+            else if (rbtn5.Checked)
+            {
+                txtAC1.Visible = true;
+                edtAC1.Visible = true;
+                txtAC2.Visible = true;
+                edtAC2.Visible = true;
+                txtAC3.Visible = true;
+                edtAC3.Visible = true;
+                txtAC4.Visible = true;
+                edtAC4.Visible = true;
+                txtAC5.Visible = true;
+                edtAC5.Visible = true;
+            }
+            else
+            {
+                txtAC1.Visible = false;
+                edtAC1.Visible = false;
+                txtAC2.Visible = false;
+                edtAC2.Visible = false;
+                txtAC3.Visible = false;
+                edtAC3.Visible = false;
+                txtAC4.Visible = false;
+                edtAC4.Visible = false;
+                txtAC5.Visible = false;
+                edtAC5.Visible = false;
             }
         }
     }
