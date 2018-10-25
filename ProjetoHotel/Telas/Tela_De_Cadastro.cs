@@ -51,6 +51,16 @@ namespace ProjetoHotel
                 DialogResult result;
                 result = MessageBox.Show(mensagem, caption, boxButtons);
             }
+            else if(lde.buscaValidacao(usuario))
+            {
+                txtUsuario.Clear();
+                txtSenha.Clear();
+                string mensagem = "Esse Usuário já esta cadastrado na Base de Dados, por favor digite outro Usuário";
+                string caption = "Erro detectado na inserção";
+                MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+                DialogResult result;
+                result = MessageBox.Show(mensagem, caption, boxButtons);
+            }
             else
             {
                 Funcionario funcionario = new Funcionario(usuario, senha);

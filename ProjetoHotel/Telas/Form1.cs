@@ -49,10 +49,20 @@ namespace ProjetoHotel
                 result = MessageBox.Show(mensagem, caption, boxButtons);
             }
             Checkinout checkinout = new Checkinout(les, lde, fec);
-            if(lde.busca(txtUsuario.Text, txtSenha.Text) != null)
+            if(lde.buscaValidacao(txtUsuario.Text, txtSenha.Text))
             {
                 this.Hide();
                 checkinout.Show();
+            }
+            else
+            {
+                txtUsuario.Clear();
+                txtSenha.Clear();
+                string mensagem = "Usuário ou Senha incorretos";
+                string caption = "Erro detectado no Login";
+                MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+                DialogResult result;
+                result = MessageBox.Show(mensagem, caption, boxButtons);
             }
         }
 
