@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Telas\Busca_Informacoes_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Busca_Informacoes_Cliente.Designer.cs">
+      <DependentUpon>Busca_Informacoes_Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Checkinout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <Compile Include="Telas\Tela_De_Informacoes_Reserva.Designer.cs">
       <DependentUpon>Tela_De_Informacoes_Reserva.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Telas\Busca_Informacoes_Cliente.resx">
+      <DependentUpon>Busca_Informacoes_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Checkinout.resx">
       <DependentUpon>Checkinout.cs</DependentUpon>
     </EmbeddedResource>

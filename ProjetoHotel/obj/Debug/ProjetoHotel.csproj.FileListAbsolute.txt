@@ -31,3 +31,4 @@ C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.D
 C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Tela_de_Check_In.resources
 C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Tela_de_Check_out.resources
 C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Telas.Tela_De_Informacoes_Reserva.resources
+C:\Users\Helmuth\source\repos\ProjetoHotel\ProjetoHotel\obj\Debug\ProjetoHotel.Telas.Busca_Informacoes_Cliente.resources

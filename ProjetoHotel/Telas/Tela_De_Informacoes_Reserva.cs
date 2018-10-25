@@ -35,5 +35,12 @@ namespace ProjetoHotel.Telas
             this.Hide();
             checkinout.Show();
         }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            Busca_Informacoes_Cliente buscaCliente = new Busca_Informacoes_Cliente(les, lde, fec);
+            this.Hide();
+            buscaCliente.Show();
+        }
     }
 }
