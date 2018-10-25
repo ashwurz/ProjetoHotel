@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoHotel.Telas;
 
 namespace ProjetoHotel
 {
@@ -48,6 +49,13 @@ namespace ProjetoHotel
             Form1 inicio = new Form1(les, lde, fec);
             this.Hide();
             inicio.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Tela_De_Informacoes_Reserva reserva= new Tela_De_Informacoes_Reserva(les, lde, fec);
+            this.Hide();
+            reserva.Show();
         }
     }
 }

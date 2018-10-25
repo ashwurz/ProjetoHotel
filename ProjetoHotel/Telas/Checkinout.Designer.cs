@@ -40,7 +40,7 @@
             this.btnCheckin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckin.Location = new System.Drawing.Point(82, 107);
             this.btnCheckin.Name = "btnCheckin";
-            this.btnCheckin.Size = new System.Drawing.Size(176, 69);
+            this.btnCheckin.Size = new System.Drawing.Size(199, 81);
             this.btnCheckin.TabIndex = 0;
             this.btnCheckin.Text = "Check-IN";
             this.btnCheckin.UseVisualStyleBackColor = true;
@@ -51,7 +51,7 @@
             this.btnCheckout.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckout.Location = new System.Drawing.Point(82, 252);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(176, 72);
+            this.btnCheckout.Size = new System.Drawing.Size(199, 72);
             this.btnCheckout.TabIndex = 1;
             this.btnCheckout.Text = "Check-OUT";
             this.btnCheckout.UseVisualStyleBackColor = true;
@@ -60,19 +60,20 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(402, 107);
+            this.button3.Location = new System.Drawing.Point(462, 107);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(214, 115);
+            this.button3.Size = new System.Drawing.Size(230, 81);
             this.button3.TabIndex = 2;
             this.button3.Text = "Informações de Reservas";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnReservar
             // 
             this.btnReservar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReservar.Location = new System.Drawing.Point(402, 252);
+            this.btnReservar.Location = new System.Drawing.Point(462, 252);
             this.btnReservar.Name = "btnReservar";
-            this.btnReservar.Size = new System.Drawing.Size(214, 72);
+            this.btnReservar.Size = new System.Drawing.Size(230, 72);
             this.btnReservar.TabIndex = 3;
             this.btnReservar.Text = "Cadastrar Cliente";
             this.btnReservar.UseVisualStyleBackColor = true;
@@ -98,7 +99,7 @@
             this.Controls.Add(this.btnCheckout);
             this.Controls.Add(this.btnCheckin);
             this.Name = "Checkinout";
-            this.Text = "Checkinout";
+            this.Text = "Tela de Inicio";
             this.ResumeLayout(false);
 
         }
