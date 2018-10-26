@@ -8,6 +8,7 @@ namespace ProjetoHotel
 {
     class Pessoa
     {
+        //nome
         private string nome;
         private string ultimoSobrenome;
         private int numero;
