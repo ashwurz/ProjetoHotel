@@ -22,6 +22,12 @@ namespace ProjetoHotel.Telas
             this.lde = lde;
             this.fec = fec;
         }
+        //Função que faz com que se a pessoa clique no botão "X", o programa inteiro se encerra
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Exit();
+        }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
