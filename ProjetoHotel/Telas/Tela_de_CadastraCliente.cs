@@ -63,6 +63,7 @@ namespace ProjetoHotel.Telas
         //cadastro, o que o usuário já havia cadastrado e inserido no arquivo estará incompleto, o que pode ocasionar futuras Exceptions.
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            //nome
             string nome = edtNome.Text;
             string sobrenome = edtSobrenome.Text;
             int numero = Convert.ToInt32(edtNumero.Text);
