@@ -65,6 +65,7 @@ namespace ProjetoHotel.Telas
         {
             //nome
             string nome = edtNome.Text;
+            //sobrenome
             string sobrenome = edtSobrenome.Text;
             int numero = Convert.ToInt32(edtNumero.Text);
             string endereco = edtEndereco.Text;
