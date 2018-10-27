@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using ProjetoHotel.Telas;
 
 namespace ProjetoHotel
 {
@@ -48,11 +49,11 @@ namespace ProjetoHotel
                 DialogResult result;
                 result = MessageBox.Show(mensagem, caption, boxButtons);
             }
-            Checkinout checkinout = new Checkinout(les, lde, fec);
+            Tela_de_Check_In check_In = new Tela_de_Check_In(les, lde, fec);
             if(lde.buscaValidacao(txtUsuario.Text, txtSenha.Text))
             {
                 this.Hide();
-                checkinout.Show();
+                check_In.Show();
             }
             else
             {

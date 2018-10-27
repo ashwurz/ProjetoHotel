@@ -12,6 +12,7 @@ namespace ProjetoHotel
         private string nome;
         //sobrenome
         private string ultimoSobrenome;
+        //Numero de telefone
         private int numero;
         private string endereco;
         private int quarto;

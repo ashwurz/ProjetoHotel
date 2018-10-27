@@ -53,12 +53,6 @@
     <Compile Include="Telas\Busca_Informacoes_Cliente.Designer.cs">
       <DependentUpon>Busca_Informacoes_Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Checkinout.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\Checkinout.Designer.cs">
-      <DependentUpon>Checkinout.cs</DependentUpon>
-    </Compile>
     <Compile Include="Telas\Delete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,17 +97,8 @@
     <Compile Include="Telas\Tela_de_Check-out.Designer.cs">
       <DependentUpon>Tela_de_Check-out.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Tela_De_Informacoes_Reserva.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\Tela_De_Informacoes_Reserva.Designer.cs">
-      <DependentUpon>Tela_De_Informacoes_Reserva.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Telas\Busca_Informacoes_Cliente.resx">
       <DependentUpon>Busca_Informacoes_Cliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Checkinout.resx">
-      <DependentUpon>Checkinout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Delete.resx">
       <DependentUpon>Delete.cs</DependentUpon>
@@ -142,9 +127,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Tela_de_Check-out.resx">
       <DependentUpon>Tela_de_Check-out.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Tela_De_Informacoes_Reserva.resx">
-      <DependentUpon>Tela_De_Informacoes_Reserva.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
