@@ -55,7 +55,7 @@ namespace ProjetoHotel
             {
                 txtUsuario.Clear();
                 txtSenha.Clear();
-                string mensagem = "Esse Usuário já esta cadastrado na Base de Dados, por favor digite outro Usuário";
+                string mensagem = "Esse Funcionário já esta cadastrado na Base de Dados, por favor digite outro Usuário";
                 string caption = "Erro detectado na inserção";
                 MessageBoxButtons boxButtons = MessageBoxButtons.OK;
                 DialogResult result;
@@ -65,13 +65,18 @@ namespace ProjetoHotel
             {
                 Funcionario funcionario = new Funcionario(usuario, senha);
                 lde.insere(funcionario);
-                st = File.Open(@"C:\Users\Helmuth\Documents\ListadeFuncionarios.txt", FileMode.Append);
+                st = File.Open("ListadeFuncionarios.txt", FileMode.Append);
                 str = new StreamWriter(st);
                 str.WriteLine(usuario);
                 str.WriteLine(senha);
                 txtUsuario.Clear();
                 txtSenha.Clear();
                 str.Close();
+                string mensagem = "O funcionário foi cadastrado com sucesso!!!";
+                string caption = "Sucesso!!!";
+                MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+                DialogResult result;
+                result = MessageBox.Show(mensagem, caption, boxButtons);
             }
         }
 

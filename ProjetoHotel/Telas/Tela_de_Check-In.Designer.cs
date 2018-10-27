@@ -125,6 +125,7 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(113, 20);
             this.btnCadastrar.Text = "Cadastrar Cliente";
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnCheck
             // 
@@ -159,7 +160,7 @@
             // 
             this.btnBuscaCliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscaCliente.Name = "btnBuscaCliente";
-            this.btnBuscaCliente.Size = new System.Drawing.Size(180, 22);
+            this.btnBuscaCliente.Size = new System.Drawing.Size(135, 22);
             this.btnBuscaCliente.Text = "Por Cliente";
             this.btnBuscaCliente.Click += new System.EventHandler(this.btnBuscaCliente_Click);
             // 

@@ -60,5 +60,12 @@ namespace ProjetoHotel
             this.Hide();
             buscaCliente.Show();
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Tela_de_CadastraCliente cadastroCliente = new Tela_de_CadastraCliente(les, lde, fec);
+            this.Hide();
+            cadastroCliente.Show();
+        }
     }
 }

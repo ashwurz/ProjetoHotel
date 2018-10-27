@@ -49,11 +49,11 @@ namespace ProjetoHotel
                 DialogResult result;
                 result = MessageBox.Show(mensagem, caption, boxButtons);
             }
-            Tela_de_Check_In check_In = new Tela_de_Check_In(les, lde, fec);
+            Tela_de_CadastraCliente cadastraCliente= new Tela_de_CadastraCliente(les, lde, fec);
             if(lde.buscaValidacao(txtUsuario.Text, txtSenha.Text))
             {
                 this.Hide();
-                check_In.Show();
+                cadastraCliente.Show();
             }
             else
             {
