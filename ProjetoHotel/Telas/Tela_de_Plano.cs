@@ -64,7 +64,7 @@ namespace ProjetoHotel.Telas
             int q = les.daNumeroQuarto(escolhido);
             str.WriteLine(q);
             pessoa.setQuarto(q);
-            int id = 0;
+            int id = les.daID();
             str.WriteLine(id);
             pessoa.setId(id);
             les.insere(pessoa);

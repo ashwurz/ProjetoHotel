@@ -300,7 +300,7 @@ namespace ProjetoHotel
             {
                 for (int i = 1; i <= 20; i++)
                 {
-                    for (int j = 0; i < quantidade; j++)
+                    for (int j = 0; j < quantidade; j++)
                     {
                         if (clientes[j].getQuarto() == i)
                         {
@@ -321,7 +321,7 @@ namespace ProjetoHotel
             {
                 for (int i = 21; i <= 35; i++)
                 {
-                    for (int j = 0; i < quantidade; j++)
+                    for (int j = 0; j < quantidade; j++)
                     {
                         if (clientes[j].getQuarto() == i)
                         {
@@ -342,7 +342,7 @@ namespace ProjetoHotel
             {
                 for (int i = 36; i <= 50; i++)
                 {
-                    for (int j = 0; i < quantidade; j++)
+                    for (int j = 0; j < quantidade; j++)
                     {
                         if (clientes[j].getQuarto() == i)
                         {
@@ -363,12 +363,12 @@ namespace ProjetoHotel
         public int daID()
         {
             int tem = 0;
-            int quarto = 0;
+            int id = 0;
             for (int i = 1; i <= 50; i++)
             {
-                for (int j = 0; i < quantidade; j++)
+                for (int j = 0; j < quantidade; j++)
                 {
-                    if (clientes[j].getQuarto() == i)
+                    if (clientes[j].getId() == i)
                     {
                         tem = i;
                         break;
@@ -377,11 +377,11 @@ namespace ProjetoHotel
                 }
                 if (tem == 0)
                 {
-                    quarto = i;
+                    id = i;
                     break;
                 }
             }
-            return quarto;
+            return id;
         }
     }
 }
