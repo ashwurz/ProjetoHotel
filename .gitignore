@@ -20,3 +20,9 @@ ProjetoHotel/Properties/
 
 # Para arquivos .sln
 *.sln
+
+# Para arquivos .resources
+.resources
+
+# Para todos o arquivos localizado na pasta ProjetoHotel/bin/Debug/ProjetoHotel.Telas.Tela_de_CadastraCliente.resources
+ProjetoHotel/obj/Debug/ProjetoHotel.Telas.Tela_de_CadastraCliente.resources
