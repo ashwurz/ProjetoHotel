@@ -431,6 +431,7 @@
             this.Controls.Add(this.txtCadastra);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Tela_de_CadastraCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela_de_CadastraCliente";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

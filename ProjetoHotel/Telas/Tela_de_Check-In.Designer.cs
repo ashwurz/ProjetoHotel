@@ -196,6 +196,7 @@
             this.Controls.Add(this.txtNome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Tela_de_Check_In";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Check-IN";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -140,7 +140,8 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Tela_de_Tempo";
-            this.Text = "Tela_de_Tempo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Tela de Tempo";
             this.ResumeLayout(false);
             this.PerformLayout();
 
