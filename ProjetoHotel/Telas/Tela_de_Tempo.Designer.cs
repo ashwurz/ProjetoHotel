@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_de_Tempo));
             this.label1 = new System.Windows.Forms.Label();
             this.rbtnD1 = new System.Windows.Forms.RadioButton();
             this.rbtnD7 = new System.Windows.Forms.RadioButton();
@@ -137,8 +138,11 @@
             this.Controls.Add(this.rbtnD7);
             this.Controls.Add(this.rbtnD1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Tela_de_Tempo";
-            this.Text = "Tela_de_Tempo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Tela de Tempo";
             this.ResumeLayout(false);
             this.PerformLayout();
 

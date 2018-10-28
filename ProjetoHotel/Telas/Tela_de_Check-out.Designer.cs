@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_de_Check_out));
             this.btnCheckout = new System.Windows.Forms.Button();
             this.btnBusca = new System.Windows.Forms.Button();
             this.txtbSobrenome = new System.Windows.Forms.TextBox();
@@ -192,7 +193,10 @@
             this.Controls.Add(this.txtbNome);
             this.Controls.Add(this.txtSobrenome);
             this.Controls.Add(this.txtNome);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Tela_de_Check_out";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Check-OUT";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
