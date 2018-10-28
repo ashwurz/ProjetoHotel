@@ -1,0 +1,22 @@
+﻿# Para todos os arquivos e sub-pastas localizados na pasta ProjetoHotel/bin/
+ProjetoHotel/bin/
+
+
+# Para todos os arquivos e sub-pastas localizados na pasta ProjetoHotel/obj/
+ProjetoHotel/obj/
+
+
+# Para todos os arquivos e sub-pastas localizados na pasta ProjetoHotel/Properties/
+ProjetoHotel/Properties/
+
+
+# Para arquivos .config
+
+*.config
+
+# Para arquivos .csproj
+
+*.csproj
+
+# Para arquivos .sln
+*.sln
