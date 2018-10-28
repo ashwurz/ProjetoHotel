@@ -7,16 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProjetoHotel.Telas;
 
-namespace ProjetoHotel
+namespace ProjetoHotel.Telas
 {
-    public partial class Tela_de_Check_out : Form
+    public partial class Busca_Informacoes_Cliente : Form
     {
-        public LES les;
-        public LDE lde;
-        public FEC fec;
-        public Tela_de_Check_out(LES les, LDE lde, FEC fec)
+        LES les = new LES();
+        LDE lde = new LDE();
+        FEC fec = new FEC();
+        public Busca_Informacoes_Cliente(LES les, LDE lde, FEC fec)
         {
             InitializeComponent();
             this.les = les;
@@ -30,27 +29,32 @@ namespace ProjetoHotel
             Application.Exit();
         }
 
-        private void btnCheck_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Tela_de_Check_In checkin = new Tela_de_Check_In(les, lde, fec);
-            this.Hide();
-            checkin.Show();
+  
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            Tela_de_Check_In check_In = new Tela_de_Check_In(les, lde, fec);
+            this.Hide();
+            check_In.Show();
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            Tela_de_Check_out check_out = new Tela_de_Check_out(les, lde, fec);
+            this.Hide();
+            check_out.Show();
+        }
+
+        private void btnBuscaCliente_Click(object sender, EventArgs e)
         {
             string mensagem = "Essa tela já está aberta";
             string caption = "Erro detectado na abertura e uma nova janela";
             MessageBoxButtons boxButtons = MessageBoxButtons.OK;
             DialogResult result;
             result = MessageBox.Show(mensagem, caption, boxButtons);
-        }
-
-        private void btnBuscaCliente_Click(object sender, EventArgs e)
-        {
-            Busca_Informacoes_Cliente buscaCliente = new Busca_Informacoes_Cliente(les, lde, fec);
-            this.Hide();
-            buscaCliente.Show();
         }
 
         private void btnLogoff_Click(object sender, EventArgs e)

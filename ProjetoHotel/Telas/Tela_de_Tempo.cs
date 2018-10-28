@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+
 
 namespace ProjetoHotel.Telas
 {
@@ -27,12 +28,18 @@ namespace ProjetoHotel.Telas
             this.pessoa = p;
             InitializeComponent();
         }
+        //Função que faz com que se a pessoa clique no botão "X", o programa inteiro se encerra
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Exit();
+        }
 
         private void btnCancela_Click(object sender, EventArgs e)
         {
-            Checkinout checkinout = new Checkinout(les, lde, fec);
+            Tela_de_CadastraCliente cadastroCliente = new Tela_de_CadastraCliente(les, lde, fec);
             this.Hide();
-            checkinout.Show();
+            cadastroCliente.Show();
         }
 
         private void btnPlano_Click(object sender, EventArgs e)

@@ -51,6 +51,16 @@ namespace ProjetoHotel
                 DialogResult result;
                 result = MessageBox.Show(mensagem, caption, boxButtons);
             }
+            else if(lde.buscaValidacao(usuario))
+            {
+                txtUsuario.Clear();
+                txtSenha.Clear();
+                string mensagem = "Esse Funcionário já esta cadastrado na Base de Dados, por favor digite outro Usuário";
+                string caption = "Erro detectado na inserção";
+                MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+                DialogResult result;
+                result = MessageBox.Show(mensagem, caption, boxButtons);
+            }
             else
             {
                 Funcionario funcionario = new Funcionario(usuario, senha);
@@ -62,6 +72,11 @@ namespace ProjetoHotel
                 txtUsuario.Clear();
                 txtSenha.Clear();
                 str.Close();
+                string mensagem = "O funcionário foi cadastrado com sucesso!!!";
+                string caption = "Sucesso!!!";
+                MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+                DialogResult result;
+                result = MessageBox.Show(mensagem, caption, boxButtons);
             }
         }
 
@@ -78,5 +93,6 @@ namespace ProjetoHotel
             this.Hide();
             deletar.Show();
         }
+
     }
 }

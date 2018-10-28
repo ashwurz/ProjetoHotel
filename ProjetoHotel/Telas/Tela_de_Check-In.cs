@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoHotel.Telas;
 
 namespace ProjetoHotel
 {
@@ -29,11 +30,42 @@ namespace ProjetoHotel
             Application.Exit();
         }
 
-        private void btnVoltar_Click(object sender, EventArgs e)
+        private void btnLogoff_Click(object sender, EventArgs e)
         {
-            Checkinout checkinout = new Checkinout(les, lde, fec);
+            Form1 login= new Form1(les, lde, fec);
             this.Hide();
-            checkinout.Show();
+            login.Show();
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            string mensagem = "Essa tela já está aberta";
+            string caption = "Erro detectado na abertura e uma nova janela";
+            MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+            DialogResult result;
+            result = MessageBox.Show(mensagem, caption, boxButtons);
+
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            Tela_de_Check_out checkout = new Tela_de_Check_out(les, lde, fec);
+            this.Hide();
+            checkout.Show();
+        }
+
+        private void btnBuscaCliente_Click(object sender, EventArgs e)
+        {
+            Busca_Informacoes_Cliente buscaCliente = new Busca_Informacoes_Cliente(les, lde, fec);
+            this.Hide();
+            buscaCliente.Show();
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Tela_de_CadastraCliente cadastroCliente = new Tela_de_CadastraCliente(les, lde, fec);
+            this.Hide();
+            cadastroCliente.Show();
         }
     }
 }

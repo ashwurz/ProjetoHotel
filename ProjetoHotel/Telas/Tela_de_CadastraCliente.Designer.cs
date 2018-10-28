@@ -1,4 +1,4 @@
-﻿namespace ProjetoHotel.Telas
+﻿﻿namespace ProjetoHotel.Telas
 {
     partial class Tela_de_CadastraCliente
     {
@@ -49,13 +49,21 @@
             this.edtAC3 = new System.Windows.Forms.TextBox();
             this.edtAC4 = new System.Windows.Forms.TextBox();
             this.edtAC5 = new System.Windows.Forms.TextBox();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.rbtn1 = new System.Windows.Forms.RadioButton();
             this.rbtn2 = new System.Windows.Forms.RadioButton();
             this.rbtn3 = new System.Windows.Forms.RadioButton();
             this.rbtn4 = new System.Windows.Forms.RadioButton();
             this.rbtn5 = new System.Windows.Forms.RadioButton();
             this.rbtn0 = new System.Windows.Forms.RadioButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCheckout = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnBuscaReserva = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnBuscaCliente = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnBuscaQuarto = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLogoff = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCadastrar
@@ -103,10 +111,10 @@
             // txtCadastra
             // 
             this.txtCadastra.AutoSize = true;
-            this.txtCadastra.Font = new System.Drawing.Font("Microsoft Sans Serif", 38F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCadastra.Location = new System.Drawing.Point(158, 9);
+            this.txtCadastra.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCadastra.Location = new System.Drawing.Point(211, 24);
             this.txtCadastra.Name = "txtCadastra";
-            this.txtCadastra.Size = new System.Drawing.Size(491, 59);
+            this.txtCadastra.Size = new System.Drawing.Size(374, 44);
             this.txtCadastra.TabIndex = 9;
             this.txtCadastra.Text = "Cadastro de Cliente";
             // 
@@ -241,15 +249,6 @@
             this.edtAC5.TabIndex = 30;
             this.edtAC5.Visible = false;
             // 
-            // btnVoltar
-            // 
-            this.btnVoltar.Location = new System.Drawing.Point(13, 393);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(75, 23);
-            this.btnVoltar.TabIndex = 31;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = true;
-            // 
             // rbtn1
             // 
             this.rbtn1.AutoSize = true;
@@ -318,18 +317,96 @@
             this.rbtn0.UseVisualStyleBackColor = true;
             this.rbtn0.Click += new System.EventHandler(this.rbtn0_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.btnCheck,
+            this.btnCheckout,
+            this.btnBuscaReserva,
+            this.btnLogoff});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 38;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(113, 20);
+            this.toolStripMenuItem1.Text = "Cadastrar Cliente";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // btnCheck
+            // 
+            this.btnCheck.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCheck.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(70, 20);
+            this.btnCheck.Text = "Check-IN";
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            // 
+            // btnCheckout
+            // 
+            this.btnCheckout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCheckout.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(82, 20);
+            this.btnCheckout.Text = "Check-OUT";
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
+            // 
+            // btnBuscaReserva
+            // 
+            this.btnBuscaReserva.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnBuscaCliente,
+            this.btnBuscaQuarto});
+            this.btnBuscaReserva.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnBuscaReserva.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBuscaReserva.Name = "btnBuscaReserva";
+            this.btnBuscaReserva.Size = new System.Drawing.Size(109, 20);
+            this.btnBuscaReserva.Text = "Buscar Reservas";
+            // 
+            // btnBuscaCliente
+            // 
+            this.btnBuscaCliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBuscaCliente.Name = "btnBuscaCliente";
+            this.btnBuscaCliente.Size = new System.Drawing.Size(180, 22);
+            this.btnBuscaCliente.Text = "Por Cliente";
+            this.btnBuscaCliente.Click += new System.EventHandler(this.btnBuscaCliente_Click);
+            // 
+            // btnBuscaQuarto
+            // 
+            this.btnBuscaQuarto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBuscaQuarto.Name = "btnBuscaQuarto";
+            this.btnBuscaQuarto.Size = new System.Drawing.Size(135, 22);
+            this.btnBuscaQuarto.Text = "Por Quarto";
+            // 
+            // btnLogoff
+            // 
+            this.btnLogoff.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnLogoff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnLogoff.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLogoff.Name = "btnLogoff";
+            this.btnLogoff.Size = new System.Drawing.Size(56, 20);
+            this.btnLogoff.Text = "Logoff";
+            this.btnLogoff.Click += new System.EventHandler(this.btnLogoff_Click);
+            // 
             // Tela_de_CadastraCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.rbtn0);
             this.Controls.Add(this.rbtn5);
             this.Controls.Add(this.rbtn4);
             this.Controls.Add(this.rbtn3);
             this.Controls.Add(this.rbtn2);
             this.Controls.Add(this.rbtn1);
-            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.edtAC5);
             this.Controls.Add(this.edtAC4);
             this.Controls.Add(this.edtAC3);
@@ -353,6 +430,8 @@
             this.Controls.Add(this.txtCadastra);
             this.Name = "Tela_de_CadastraCliente";
             this.Text = "Tela_de_CadastraCliente";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,12 +460,19 @@
         private System.Windows.Forms.TextBox edtAC3;
         private System.Windows.Forms.TextBox edtAC4;
         private System.Windows.Forms.TextBox edtAC5;
-        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.RadioButton rbtn1;
         private System.Windows.Forms.RadioButton rbtn2;
         private System.Windows.Forms.RadioButton rbtn3;
         private System.Windows.Forms.RadioButton rbtn4;
         private System.Windows.Forms.RadioButton rbtn5;
         private System.Windows.Forms.RadioButton rbtn0;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem btnCheck;
+        private System.Windows.Forms.ToolStripMenuItem btnCheckout;
+        private System.Windows.Forms.ToolStripMenuItem btnBuscaReserva;
+        private System.Windows.Forms.ToolStripMenuItem btnBuscaCliente;
+        private System.Windows.Forms.ToolStripMenuItem btnBuscaQuarto;
+        private System.Windows.Forms.ToolStripMenuItem btnLogoff;
     }
 }

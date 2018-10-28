@@ -108,6 +108,7 @@
             // 
             this.txtSenha.Location = new System.Drawing.Point(288, 209);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(229, 20);
             this.txtSenha.TabIndex = 7;
             // 

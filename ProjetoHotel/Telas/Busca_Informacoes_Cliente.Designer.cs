@@ -1,6 +1,6 @@
-﻿namespace ProjetoHotel
+﻿namespace ProjetoHotel.Telas
 {
-    partial class Tela_de_Check_In
+    partial class Busca_Informacoes_Cliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNome = new System.Windows.Forms.Label();
-            this.txtSobrenome = new System.Windows.Forms.Label();
-            this.txtbNome = new System.Windows.Forms.TextBox();
-            this.txtbSobrenome = new System.Windows.Forms.TextBox();
-            this.btnBusca = new System.Windows.Forms.Button();
-            this.btnCheckin = new System.Windows.Forms.Button();
+            this.panelResult = new System.Windows.Forms.Panel();
+            this.labelCliente = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSobrenome = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnCadastrar = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCheck = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,63 +48,82 @@
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // panelResult
+            // 
+            this.panelResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelResult.Location = new System.Drawing.Point(445, 27);
+            this.panelResult.Name = "panelResult";
+            this.panelResult.Size = new System.Drawing.Size(343, 411);
+            this.panelResult.TabIndex = 0;
+            this.panelResult.Visible = false;
+            // 
+            // labelCliente
+            // 
+            this.labelCliente.AutoSize = true;
+            this.labelCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCliente.Location = new System.Drawing.Point(167, 24);
+            this.labelCliente.Name = "labelCliente";
+            this.labelCliente.Size = new System.Drawing.Size(106, 31);
+            this.labelCliente.TabIndex = 1;
+            this.labelCliente.Text = "Cliente";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Nome:";
+            // 
             // txtNome
             // 
-            this.txtNome.AutoSize = true;
-            this.txtNome.BackColor = System.Drawing.Color.Transparent;
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(78, 78);
+            this.txtNome.Location = new System.Drawing.Point(83, 68);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(140, 25);
-            this.txtNome.TabIndex = 0;
-            this.txtNome.Text = "Digite o Nome:";
+            this.txtNome.Size = new System.Drawing.Size(340, 20);
+            this.txtNome.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 119);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Sobrenome:";
             // 
             // txtSobrenome
             // 
-            this.txtSobrenome.AutoSize = true;
-            this.txtSobrenome.BackColor = System.Drawing.Color.Transparent;
-            this.txtSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSobrenome.Location = new System.Drawing.Point(83, 136);
+            this.txtSobrenome.Location = new System.Drawing.Point(83, 116);
             this.txtSobrenome.Name = "txtSobrenome";
-            this.txtSobrenome.Size = new System.Drawing.Size(249, 25);
-            this.txtSobrenome.TabIndex = 1;
-            this.txtSobrenome.Text = "Digite o Ultimo Sobrenome:";
+            this.txtSobrenome.Size = new System.Drawing.Size(340, 20);
+            this.txtSobrenome.TabIndex = 5;
             // 
-            // txtbNome
+            // label3
             // 
-            this.txtbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbNome.Location = new System.Drawing.Point(224, 73);
-            this.txtbNome.Name = "txtbNome";
-            this.txtbNome.Size = new System.Drawing.Size(434, 30);
-            this.txtbNome.TabIndex = 2;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 169);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(21, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "ID:";
             // 
-            // txtbSobrenome
+            // textBox1
             // 
-            this.txtbSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbSobrenome.Location = new System.Drawing.Point(338, 131);
-            this.txtbSobrenome.Name = "txtbSobrenome";
-            this.txtbSobrenome.Size = new System.Drawing.Size(320, 30);
-            this.txtbSobrenome.TabIndex = 3;
+            this.textBox1.Location = new System.Drawing.Point(83, 166);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(340, 20);
+            this.textBox1.TabIndex = 7;
             // 
-            // btnBusca
+            // btnBuscar
             // 
-            this.btnBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBusca.Location = new System.Drawing.Point(287, 243);
-            this.btnBusca.Name = "btnBusca";
-            this.btnBusca.Size = new System.Drawing.Size(158, 48);
-            this.btnBusca.TabIndex = 4;
-            this.btnBusca.Text = "Confirmar";
-            this.btnBusca.UseVisualStyleBackColor = true;
-            // 
-            // btnCheckin
-            // 
-            this.btnCheckin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckin.Location = new System.Drawing.Point(287, 337);
-            this.btnCheckin.Name = "btnCheckin";
-            this.btnCheckin.Size = new System.Drawing.Size(158, 50);
-            this.btnCheckin.TabIndex = 5;
-            this.btnCheckin.Text = "Check-in";
-            this.btnCheckin.UseVisualStyleBackColor = true;
+            this.btnBuscar.Location = new System.Drawing.Point(173, 299);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(100, 36);
+            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // menuStrip1
             // 
@@ -115,7 +137,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 14;
+            this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // btnCadastrar
@@ -125,7 +147,6 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(113, 20);
             this.btnCadastrar.Text = "Cadastrar Cliente";
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnCheck
             // 
@@ -181,20 +202,23 @@
             this.btnLogoff.Text = "Logoff";
             this.btnLogoff.Click += new System.EventHandler(this.btnLogoff_Click);
             // 
-            // Tela_de_Check_In
+            // Busca_Informacoes_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.btnCheckin);
-            this.Controls.Add(this.btnBusca);
-            this.Controls.Add(this.txtbSobrenome);
-            this.Controls.Add(this.txtbNome);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSobrenome);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNome);
-            this.Name = "Tela_de_Check_In";
-            this.Text = "Check-IN";
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelCliente);
+            this.Controls.Add(this.panelResult);
+            this.Name = "Busca_Informacoes_Cliente";
+            this.Text = "Informações Reserva";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -204,12 +228,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label txtNome;
-        private System.Windows.Forms.Label txtSobrenome;
-        private System.Windows.Forms.TextBox txtbNome;
-        private System.Windows.Forms.TextBox txtbSobrenome;
-        private System.Windows.Forms.Button btnBusca;
-        private System.Windows.Forms.Button btnCheckin;
+        private System.Windows.Forms.Panel panelResult;
+        private System.Windows.Forms.Label labelCliente;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtSobrenome;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem btnCadastrar;
         private System.Windows.Forms.ToolStripMenuItem btnCheck;

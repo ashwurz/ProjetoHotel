@@ -48,7 +48,41 @@ namespace ProjetoHotel
 
         }
 
-        public No busca(string usuario)
+        public bool buscaValidacao(string usuario)
+        {
+            No atual = primeiro;
+            while (atual != null)
+            {
+                if (atual.funcionario.getUsuario() == usuario)
+                {
+                    return true;
+                }
+                else
+                {
+                    atual = atual.proximo;
+                }
+            }
+            return false;
+        }
+
+        public bool buscaValidacao(string usuario, string senha)
+        {
+            No atual = primeiro;
+            while (atual != null)
+            {
+                if (atual.funcionario.getUsuario() == usuario && atual.funcionario.getSenha() == senha)
+                {
+                    return true;
+                }
+                else
+                {
+                    atual = atual.proximo;
+                }
+            }
+            return false;
+        }
+
+        public bool busca(string usuario)
         {
             No atual = primeiro;
             while (atual != null)
@@ -60,7 +94,7 @@ namespace ProjetoHotel
                     MessageBoxButtons boxButtons = MessageBoxButtons.OK;
                     DialogResult result;
                     result = MessageBox.Show(mensagem, titulo, boxButtons);
-                    return atual;
+                    return true;
                 }
                 else
                 {
@@ -72,17 +106,17 @@ namespace ProjetoHotel
             MessageBoxButtons boxButtons1 = MessageBoxButtons.OK;
             DialogResult result1;
             result1 = MessageBox.Show(mensagem1, titulo1, boxButtons1);
-            return null;
+            return false;
         }
 
-        public No busca(string usuario, string senha)
+        public bool busca(string usuario, string senha)
         {
             No atual = primeiro;
             while (atual != null)
             {
                 if (atual.funcionario.getUsuario() == usuario && atual.funcionario.getSenha() == senha)
                 {
-                    return atual;
+                    return true;
                 }
                 else
                 {
@@ -94,7 +128,7 @@ namespace ProjetoHotel
             MessageBoxButtons boxButtons1 = MessageBoxButtons.OK;
             DialogResult result1;
             result1 = MessageBox.Show(mensagem1, titulo1, boxButtons1);
-            return null;
+            return false;
         }
 
         public void remove(string usuario, string senha)

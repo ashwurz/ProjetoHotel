@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoHotel.Telas;
 
 namespace ProjetoHotel
 {
@@ -42,24 +43,35 @@ namespace ProjetoHotel
             if(txtUsuario.TextLength == 0 || txtSenha.TextLength == 0)
             {
                 string mensagem = "Campo de Usuário ou Senha não preenchido";
-                string caption = "Erro detectado na inserção";
+                string caption = "Erro detectado no Login";
                 MessageBoxButtons boxButtons = MessageBoxButtons.OK;
                 DialogResult result;
                 result = MessageBox.Show(mensagem, caption, boxButtons);
             }
-            Checkinout checkinout = new Checkinout(les, lde, fec);
-            if(lde.busca(txtUsuario.Text, txtSenha.Text) != null)
+            Tela_de_CadastraCliente cadastraCliente= new Tela_de_CadastraCliente(les, lde, fec);
+            if(lde.buscaValidacao(txtUsuario.Text, txtSenha.Text))
             {
                 this.Hide();
-                checkinout.Show();
+                cadastraCliente.Show();
+            }
+            else
+            {
+                txtUsuario.Clear();
+                txtSenha.Clear();
+                string mensagem = "Usuário ou Senha incorretos";
+                string caption = "Erro detectado no Login";
+                MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+                DialogResult result;
+                result = MessageBox.Show(mensagem, caption, boxButtons);
             }
         }
+
         /*
-        public static void ThreadProc()
-        {
-            Application.Run(new Tela_De_Cadastro(les));
-            this.CLose();
-        }
-        */
+public static void ThreadProc()
+{
+   Application.Run(new Tela_De_Cadastro(les));
+   this.CLose();
+}
+*/
     }
 }

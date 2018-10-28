@@ -54,6 +54,7 @@ namespace ProjetoHotel
             // 
             this.txtSenha.Location = new System.Drawing.Point(258, 288);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(308, 20);
             this.txtSenha.TabIndex = 1;
             // 
@@ -119,6 +120,7 @@ namespace ProjetoHotel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.pictureBox1);

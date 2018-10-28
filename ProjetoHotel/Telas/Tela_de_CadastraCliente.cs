@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +24,12 @@ namespace ProjetoHotel.Telas
             this.les = les;
             this.lde = lde;
             this.fec = fec;
+        }
+        //Função que faz com que se a pessoa clique no botão "X", o programa inteiro se encerra
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Exit();
         }
 
         private int numeroDeAcompanhantes()
@@ -53,11 +59,15 @@ namespace ProjetoHotel.Telas
                 return 0;
             }
         }
-
+        //Devera melhorar o esquema de cadastro de Clientes, isso porque a inserção no arquivo ocorre em várias partes e não em uma só, e caso o usuário cancele a operação no meio do
+        //cadastro, o que o usuário já havia cadastrado e inserido no arquivo estará incompleto, o que pode ocasionar futuras Exceptions.
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            //nome
             string nome = edtNome.Text;
+            //sobrenome
             string sobrenome = edtSobrenome.Text;
+            //tem que ser tratado , pois pode gerar exception
             int numero = Convert.ToInt32(edtNumero.Text);
             string endereco = edtEndereco.Text;
             int acompanhantes = numeroDeAcompanhantes();
@@ -87,7 +97,7 @@ namespace ProjetoHotel.Telas
                 str.WriteLine(acompanhantes);
                 if (i >= 1)
                 {
-                    pessoa.setNomes(acompanhante1,0);
+                    pessoa.setNomes(acompanhante1, 0);
                     str.WriteLine(acompanhante1);
                 }
                 if (i >= 2)
@@ -207,6 +217,43 @@ namespace ProjetoHotel.Telas
                 txtAC5.Visible = false;
                 edtAC5.Visible = false;
             }
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            string mensagem = "Essa tela já está aberta";
+            string caption = "Erro detectado na abertura e uma nova janela";
+            MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+            DialogResult result;
+            result = MessageBox.Show(mensagem, caption, boxButtons);
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            Tela_de_Check_In checkin = new Tela_de_Check_In(les, lde, fec);
+            this.Hide();
+            checkin.Show();
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            Tela_de_Check_out checkout = new Tela_de_Check_out(les, lde, fec);
+            this.Hide();
+            checkout.Show();
+        }
+
+        private void btnBuscaCliente_Click(object sender, EventArgs e)
+        {
+            Busca_Informacoes_Cliente buscaCliente = new Busca_Informacoes_Cliente(les, lde, fec);
+            this.Hide();
+            buscaCliente.Show();
+        }
+
+        private void btnLogoff_Click(object sender, EventArgs e)
+        {
+            Form1 login = new Form1(les, lde, fec);
+            this.Hide();
+            login.Show();
         }
     }
 }

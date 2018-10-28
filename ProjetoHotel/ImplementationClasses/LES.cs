@@ -19,10 +19,10 @@ namespace ProjetoHotel
         {
             quantidade = 0;
         }
-        
+
         public int busca(string nome)
         {
-            for(int i = 0; i < quantidade; i++)
+            for (int i = 0; i < quantidade; i++)
             {
                 if(clientes[i].getNome().ToString().Equals(nome))
                 {
@@ -45,14 +45,15 @@ namespace ProjetoHotel
         public void deletar(string f)
         {
             int posicao = busca(f);
-            if(posicao == -1)
+            if (posicao == -1)
             {
                 string mensagem = "O cliente não pode ser deletado, pois não consta nos registros";
                 string titulo = "Erro detectado na remoção do cliente";
                 MessageBoxButtons boxButtons = MessageBoxButtons.OK;
                 DialogResult result;
                 result = MessageBox.Show(mensagem, titulo, boxButtons);
-            }else
+            }
+            else
             {
                 st = File.Open("ListadeClientes.txt", FileMode.Create);
                 str = new StreamWriter(st);
@@ -61,7 +62,7 @@ namespace ProjetoHotel
                     clientes[i] = clientes[i + 1];
                 }
                 quantidade--;
-                for(int i = 0; i < quantidade; i++)
+                for (int i = 0; i < quantidade; i++)
                 {
                     int membros = clientes[i].getFamilia();
                     str.WriteLine(clientes[i].getNome());
@@ -89,7 +90,7 @@ namespace ProjetoHotel
 
         public bool insere(Pessoa f)
         {
-            if(quantidade == 100)
+            if (quantidade == 100)
             {
                 string mensagem = "O Cliente não pode ser inserido nos registro, pois o limite já foi atingido";
                 string titulo = "Erro detectado na inserção do Cliente";
@@ -102,7 +103,7 @@ namespace ProjetoHotel
             int i;
             for (i = 0; i < quantidade && !clientes[i].getNome().Equals(f.getNome()); i++);
 
-            for(int j = quantidade; j >= i; j--)
+            for (int j = quantidade; j >= i; j--)
             {
                 clientes[j + 1] = clientes[j];
             }
