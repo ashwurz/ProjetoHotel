@@ -8,7 +8,7 @@ using System.IO;
 
 namespace ProjetoHotel
 {
-    public unsafe class LDE
+    public class LDE
     {
         private int n;
         private No primeiro;

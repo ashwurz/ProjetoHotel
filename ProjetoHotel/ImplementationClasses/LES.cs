@@ -11,7 +11,7 @@ namespace ProjetoHotel
     public class LES
     {
         private int quantidade;
-        private Pessoa[] clientes = new Pessoa[100];
+        private Pessoa[] clientes = new Pessoa[50];
         Stream st;
         StreamWriter str;
 
@@ -24,7 +24,7 @@ namespace ProjetoHotel
         {
             for (int i = 0; i < quantidade; i++)
             {
-                if (clientes[i].getNome().ToString().Equals(nome))
+                if(clientes[i].getNome().ToString().Equals(nome))
                 {
                     string mensagem = "O Cliente foi encontrado!";
                     string titulo = "Resultado da Busca";
@@ -101,7 +101,7 @@ namespace ProjetoHotel
             }
 
             int i;
-            for (i = 0; i < quantidade && !clientes[i].getNome().Equals(f.getNome()); i++) ;
+            for (i = 0; i < quantidade && !clientes[i].getNome().Equals(f.getNome()); i++);
 
             for (int j = quantidade; j >= i; j--)
             {
@@ -256,7 +256,7 @@ namespace ProjetoHotel
             }
             if (p.getTempo() == 1)
             {
-                if (plano == "Comum" && contC1 == 4 || plano == "Deluxe" && contD1 == 3 || plano == "Premium" && contP1 == 3)
+                if(plano == "Comum" && contC1 == 4 || plano == "Deluxe" && contD1 == 3 || plano == "Premium" && contP1 == 3)
                 {
                     return false;
                 }
@@ -290,6 +290,98 @@ namespace ProjetoHotel
                 }
             }
             return true;
+        }
+
+        public int daNumeroQuarto(string escolha)
+        {
+            int tem = 0;
+            int quarto = 0;
+            if (escolha == "Comum")
+            {
+                for (int i = 1; i <= 20; i++)
+                {
+                    for (int j = 0; i < quantidade; j++)
+                    {
+                        if (clientes[j].getQuarto() == i)
+                        {
+                            tem = i;
+                            break;
+                        }
+                        tem = 0;
+                    }
+                    if (tem == 0)
+                    {
+                        quarto = i;
+                        break;
+                    }
+                }
+                return quarto;
+            }
+            else if (escolha == "Deluxe")
+            {
+                for (int i = 21; i <= 35; i++)
+                {
+                    for (int j = 0; i < quantidade; j++)
+                    {
+                        if (clientes[j].getQuarto() == i)
+                        {
+                            tem = i;
+                            break;
+                        }
+                        tem = 0;
+                    }
+                    if (tem == 0)
+                    {
+                        quarto = i;
+                        break;
+                    }
+                }
+                return quarto;
+            }
+            else
+            {
+                for (int i = 36; i <= 50; i++)
+                {
+                    for (int j = 0; i < quantidade; j++)
+                    {
+                        if (clientes[j].getQuarto() == i)
+                        {
+                            tem = i;
+                            break;
+                        }
+                        tem = 0;
+                    }
+                    if (tem == 0)
+                    {
+                        quarto = i;
+                        break;
+                    }
+                }
+                return quarto;
+            }
+        }
+        public int daID()
+        {
+            int tem = 0;
+            int quarto = 0;
+            for (int i = 1; i <= 50; i++)
+            {
+                for (int j = 0; i < quantidade; j++)
+                {
+                    if (clientes[j].getQuarto() == i)
+                    {
+                        tem = i;
+                        break;
+                    }
+                    tem = 0;
+                }
+                if (tem == 0)
+                {
+                    quarto = i;
+                    break;
+                }
+            }
+            return quarto;
         }
     }
 }

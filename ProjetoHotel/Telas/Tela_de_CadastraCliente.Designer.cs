@@ -1,4 +1,4 @@
-﻿namespace ProjetoHotel.Telas
+﻿﻿namespace ProjetoHotel.Telas
 {
     partial class Tela_de_CadastraCliente
     {

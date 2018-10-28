@@ -100,12 +100,15 @@ namespace ProjetoHotel
                 string plano = linha;
                 linha = str1.ReadLine();
                 int quarto = Convert.ToInt32(linha);
+                linha = str1.ReadLine();
+                int id = Convert.ToInt32(linha);
                 while (linha != null)
                 {
                     pessoa = new Pessoa(nome, sobrenome, numero, endereco, acompanhantes);
                     pessoa.setTempo(tempo);
                     pessoa.setPlano(plano);
                     pessoa.setQuarto(quarto);
+                    pessoa.setId(id);
                     if (i >= 1)
                     {
                         pessoa.setNomes(acompanhante1, 0);
@@ -138,11 +141,11 @@ namespace ProjetoHotel
                     linha = str1.ReadLine();
                     acompanhantes = Convert.ToInt32(linha);
                     i = acompanhantes;
-                    acompanhante1 = null;
-                    acompanhante2 = null;
-                    acompanhante3 = null;
-                    acompanhante4 = null;
-                    acompanhante5 = null;
+                    acompanhante1 = "";
+                    acompanhante2 = "";
+                    acompanhante3 = "";
+                    acompanhante4 = "";
+                    acompanhante5 = "";
                     if (i >= 1)
                     {
                         linha = str1.ReadLine();
@@ -174,6 +177,8 @@ namespace ProjetoHotel
                     plano = linha;
                     linha = str1.ReadLine();
                     quarto = Convert.ToInt32(linha);
+                    linha = str1.ReadLine();
+                    id = Convert.ToInt32(linha);
                 }
                 str1.Close();
             }

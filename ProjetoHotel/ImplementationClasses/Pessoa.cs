@@ -97,7 +97,7 @@ namespace ProjetoHotel
         }
         public string getNomes(int i)
         {
-            if (nomes[i] != null)
+            if(nomes[i] != null)
             {
                 return nomes[i];
             }
