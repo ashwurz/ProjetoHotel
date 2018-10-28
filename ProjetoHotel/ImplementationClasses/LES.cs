@@ -11,7 +11,7 @@ namespace ProjetoHotel
     public class LES
     {
         private int quantidade;
-        private Pessoa[] clientes = new Pessoa[100];
+        private Pessoa[] clientes = new Pessoa[50];
         Stream st;
         StreamWriter str;
 
@@ -290,6 +290,98 @@ namespace ProjetoHotel
                 }
             }
             return true;
+        }
+
+        public int daNumeroQuarto(string escolha)
+        {
+            int tem = 0;
+            int quarto = 0;
+            if (escolha == "Comum")
+            {
+                for (int i = 1; i <= 20; i++)
+                {
+                    for (int j = 0; i < quantidade; j++)
+                    {
+                        if (clientes[j].getQuarto() == i)
+                        {
+                            tem = i;
+                            break;
+                        }
+                        tem = 0;
+                    }
+                    if (tem == 0)
+                    {
+                        quarto = i;
+                        break;
+                    }
+                }
+                return quarto;
+            }
+            else if (escolha == "Deluxe")
+            {
+                for (int i = 21; i <= 35; i++)
+                {
+                    for (int j = 0; i < quantidade; j++)
+                    {
+                        if (clientes[j].getQuarto() == i)
+                        {
+                            tem = i;
+                            break;
+                        }
+                        tem = 0;
+                    }
+                    if (tem == 0)
+                    {
+                        quarto = i;
+                        break;
+                    }
+                }
+                return quarto;
+            }
+            else
+            {
+                for (int i = 36; i <= 50; i++)
+                {
+                    for (int j = 0; i < quantidade; j++)
+                    {
+                        if (clientes[j].getQuarto() == i)
+                        {
+                            tem = i;
+                            break;
+                        }
+                        tem = 0;
+                    }
+                    if (tem == 0)
+                    {
+                        quarto = i;
+                        break;
+                    }
+                }
+                return quarto;
+            }
+        }
+        public int daID()
+        {
+            int tem = 0;
+            int quarto = 0;
+            for (int i = 1; i <= 50; i++)
+            {
+                for (int j = 0; i < quantidade; j++)
+                {
+                    if (clientes[j].getQuarto() == i)
+                    {
+                        tem = i;
+                        break;
+                    }
+                    tem = 0;
+                }
+                if (tem == 0)
+                {
+                    quarto = i;
+                    break;
+                }
+            }
+            return quarto;
         }
     }
 }

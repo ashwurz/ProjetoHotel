@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 
 namespace ProjetoHotel.Telas
@@ -18,8 +17,6 @@ namespace ProjetoHotel.Telas
         public LDE lde;
         public FEC fec;
         Pessoa pessoa;
-        Stream st;
-        StreamWriter str;
         public Tela_de_Tempo(LES les, LDE lde, FEC fec, Pessoa p)
         {
             this.les = les;
@@ -44,8 +41,6 @@ namespace ProjetoHotel.Telas
 
         private void btnPlano_Click(object sender, EventArgs e)
         {
-            st = File.Open("ListadeClientes.txt", FileMode.Append);
-            str = new StreamWriter(st);
             int escolhido;
             if (rbtnD1.Checked)
             {
@@ -68,9 +63,7 @@ namespace ProjetoHotel.Telas
                 escolhido = 30;
             }
             int tempo = escolhido;
-            str.WriteLine(tempo);
             pessoa.setTempo(tempo);
-            str.Close();
             Tela_de_Plano plano = new Tela_de_Plano(les, lde, fec, pessoa);
             this.Hide();
             plano.Show();

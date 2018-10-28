@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Busca_Informacoes_Cliente));
             this.panelResult = new System.Windows.Forms.Panel();
             this.labelCliente = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -217,6 +218,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelCliente);
             this.Controls.Add(this.panelResult);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Busca_Informacoes_Cliente";
             this.Text = "Informações Reserva";
             this.menuStrip1.ResumeLayout(false);

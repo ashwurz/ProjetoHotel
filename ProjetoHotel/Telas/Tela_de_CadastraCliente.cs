@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace ProjetoHotel.Telas
 {
@@ -16,8 +15,6 @@ namespace ProjetoHotel.Telas
         public LES les;
         public LDE lde;
         public FEC fec;
-        Stream st;
-        StreamWriter str;
         public Tela_de_CadastraCliente(LES les, LDE lde, FEC fec)
         {
             InitializeComponent();
@@ -77,7 +74,8 @@ namespace ProjetoHotel.Telas
             string acompanhante3 = edtAC3.Text;
             string acompanhante4 = edtAC4.Text;
             string acompanhante5 = edtAC5.Text;
-            if (nome == "" || sobrenome == "" || numero.ToString() == "" || endereco == "" || acompanhantes.ToString() == "")
+            if (nome == "" || sobrenome == "" || numero.ToString() == "" || endereco == "" || (i >= 1 && acompanhante1 == "") || (i >= 2 && acompanhante2 == "")
+                || (i>=3 && acompanhante3 == "") || (i >= 4 && acompanhante4 == "") || (i >= 5 && acompanhante5 == ""))
             {
                 string mensagem = "Algum campo não preenchido favor prestar atençao nos campos de acompanhastes";
                 string caption = "Erro detectado na inserção";
@@ -88,37 +86,25 @@ namespace ProjetoHotel.Telas
             else
             {
                 Pessoa pessoa = new Pessoa(nome, sobrenome, numero, endereco, acompanhantes);
-                st = File.Open("ListadeClientes.txt", FileMode.Append);
-                str = new StreamWriter(st);
-                str.WriteLine(nome);
-                str.WriteLine(sobrenome);
-                str.WriteLine(numero);
-                str.WriteLine(endereco);
-                str.WriteLine(acompanhantes);
                 if (i >= 1)
                 {
                     pessoa.setNomes(acompanhante1, 0);
-                    str.WriteLine(acompanhante1);
                 }
                 if (i >= 2)
                 {
                     pessoa.setNomes(acompanhante2, 1);
-                    str.WriteLine(acompanhante2);
                 }
                 if (i >= 3)
                 {
                     pessoa.setNomes(acompanhante3, 2);
-                    str.WriteLine(acompanhante3);
                 }
                 if (i >= 4)
                 {
                     pessoa.setNomes(acompanhante4, 3);
-                    str.WriteLine(acompanhante4);
                 }
                 if (i == 5)
                 {
                     pessoa.setNomes(acompanhante5, 4);
-                    str.WriteLine(acompanhante5);
                 }
                 /*edtNome.Clear();
                 edtSobrenome.Clear();
@@ -129,7 +115,6 @@ namespace ProjetoHotel.Telas
                 edtAC3.Clear();
                 edtAC4.Clear();
                 edtAC5.Clear();*/
-                str.Close();
                 //proxima tela levando pessoa
                 Tela_de_Tempo tempo = new Tela_de_Tempo(les, lde, fec, pessoa);
                 this.Hide();

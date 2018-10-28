@@ -33,8 +33,19 @@ namespace ProjetoHotel.Telas
 
         private void btnRegistra_Click(object sender, EventArgs e)
         {
+
             st = File.Open("ListadeClientes.txt", FileMode.Append);
             str = new StreamWriter(st);
+            str.WriteLine(pessoa.getNome());
+            str.WriteLine(pessoa.getUltimoSobrenome());
+            str.WriteLine(pessoa.getNumero());
+            str.WriteLine(pessoa.getEndereco());
+            str.WriteLine(pessoa.getFamilia());
+            for (int i = 0; i < pessoa.getFamilia(); i++)
+            {
+                str.WriteLine(pessoa.getNomes(i));
+            }
+            str.WriteLine(pessoa.getTempo());
             string escolhido;
             if (rbtnComum.Checked)
             {
@@ -50,22 +61,24 @@ namespace ProjetoHotel.Telas
             }
             str.WriteLine(escolhido);
             pessoa.setPlano(escolhido);
-            Random randNum = new Random();
-            int q = randNum.Next(1,50);
+            int q = les.daNumeroQuarto(escolhido);
             str.WriteLine(q);
             pessoa.setQuarto(q);
+            int id = 0;
+            str.WriteLine(id);
+            pessoa.setId(id);
             les.insere(pessoa);
             str.Close();
-            Checkinout checkinout = new Checkinout(les, lde, fec);
+            Tela_de_CadastraCliente cadastro = new Tela_de_CadastraCliente(les, lde, fec);
             this.Hide();
-            checkinout.Show();
+            cadastro.Show();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Checkinout checkinout = new Checkinout(les, lde, fec);
+            Tela_de_CadastraCliente cadastro = new Tela_de_CadastraCliente(les, lde, fec);
             this.Hide();
-            checkinout.Show();
+            cadastro.Show();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

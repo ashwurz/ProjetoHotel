@@ -37,22 +37,7 @@ public class FEC
         checkout[f] = false;
         f = (f + 1) % n;
         return true;
-    }
-    //passa um dia.
-    public bool passaTempo()
-    {
-        for (int i = this.i; i < f; i++)
-        {
-            time[i]--;
-            if (time[i] == 0)
-            {
-                //remove();
-                return true;
-            }
-        }
-        return false;
-    }
-    
+    }    
     // remove quem entrou primeiro em uma fila.
     public bool remove()
     {
