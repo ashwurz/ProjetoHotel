@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_de_Plano));
             this.txtEscolha = new System.Windows.Forms.Label();
             this.txtComum = new System.Windows.Forms.Label();
             this.txtDeluxe = new System.Windows.Forms.Label();
@@ -185,8 +186,9 @@
             this.Controls.Add(this.txtDeluxe);
             this.Controls.Add(this.txtComum);
             this.Controls.Add(this.txtEscolha);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Tela_de_Plano";
-            this.Text = "Tela_de_Plano";
+            this.Text = "Tela de Plano";
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).EndInit();

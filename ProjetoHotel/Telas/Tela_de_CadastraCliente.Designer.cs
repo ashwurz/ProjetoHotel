@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_de_CadastraCliente));
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.edtSobrenome = new System.Windows.Forms.TextBox();
             this.edtNome = new System.Windows.Forms.TextBox();
@@ -374,7 +375,7 @@
             // 
             this.btnBuscaCliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscaCliente.Name = "btnBuscaCliente";
-            this.btnBuscaCliente.Size = new System.Drawing.Size(180, 22);
+            this.btnBuscaCliente.Size = new System.Drawing.Size(135, 22);
             this.btnBuscaCliente.Text = "Por Cliente";
             this.btnBuscaCliente.Click += new System.EventHandler(this.btnBuscaCliente_Click);
             // 
@@ -428,6 +429,7 @@
             this.Controls.Add(this.txtSobrenome);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtCadastra);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Tela_de_CadastraCliente";
             this.Text = "Tela_de_CadastraCliente";
             this.menuStrip1.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Delete));
             this.txtUsuario = new System.Windows.Forms.Label();
             this.btnRemove = new System.Windows.Forms.Button();
             this.txtbUsuario = new System.Windows.Forms.TextBox();
@@ -142,6 +143,7 @@
             this.Controls.Add(this.txtbUsuario);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.txtUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Delete";
             this.Text = "Deletar";
             this.ResumeLayout(false);

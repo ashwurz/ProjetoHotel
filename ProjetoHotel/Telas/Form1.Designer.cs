@@ -31,6 +31,7 @@ namespace ProjetoHotel
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.labelUsuario = new System.Windows.Forms.Label();
@@ -130,6 +131,7 @@ namespace ProjetoHotel
             this.Controls.Add(this.labelUsuario);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Tela de Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

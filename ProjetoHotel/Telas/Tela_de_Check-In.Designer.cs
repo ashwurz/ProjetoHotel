@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_de_Check_In));
             this.txtNome = new System.Windows.Forms.Label();
             this.txtSobrenome = new System.Windows.Forms.Label();
             this.txtbNome = new System.Windows.Forms.TextBox();
@@ -193,6 +194,7 @@
             this.Controls.Add(this.txtbNome);
             this.Controls.Add(this.txtSobrenome);
             this.Controls.Add(this.txtNome);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Tela_de_Check_In";
             this.Text = "Check-IN";
             this.menuStrip1.ResumeLayout(false);
