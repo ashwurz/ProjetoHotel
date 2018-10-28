@@ -219,6 +219,7 @@
             this.Controls.Add(this.labelCliente);
             this.Controls.Add(this.panelResult);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Busca_Informacoes_Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Informações Reserva";

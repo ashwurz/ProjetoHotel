@@ -171,6 +171,9 @@
   <ItemGroup>
     <None Include="Images\logo_2.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\Iconsmind-Outline-Hotel.ico" />
+    <Content Include="Images\image1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

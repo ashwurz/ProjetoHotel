@@ -187,6 +187,7 @@
             this.Controls.Add(this.txtComum);
             this.Controls.Add(this.txtEscolha);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Tela_de_Plano";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela de Plano";

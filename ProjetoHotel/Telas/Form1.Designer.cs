@@ -38,9 +38,9 @@ namespace ProjetoHotel
             this.labelSenha = new System.Windows.Forms.Label();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +53,7 @@ namespace ProjetoHotel
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(258, 288);
+            this.txtSenha.Location = new System.Drawing.Point(258, 307);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(308, 20);
@@ -62,18 +62,24 @@ namespace ProjetoHotel
             // labelUsuario
             // 
             this.labelUsuario.AutoSize = true;
-            this.labelUsuario.Location = new System.Drawing.Point(192, 245);
+            this.labelUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.labelUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsuario.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelUsuario.Location = new System.Drawing.Point(366, 213);
             this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.Size = new System.Drawing.Size(43, 13);
+            this.labelUsuario.Size = new System.Drawing.Size(94, 26);
             this.labelUsuario.TabIndex = 2;
             this.labelUsuario.Text = "Usuário";
             // 
             // labelSenha
             // 
             this.labelSenha.AutoSize = true;
-            this.labelSenha.Location = new System.Drawing.Point(197, 288);
+            this.labelSenha.BackColor = System.Drawing.Color.Transparent;
+            this.labelSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSenha.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelSenha.Location = new System.Drawing.Point(366, 278);
             this.labelSenha.Name = "labelSenha";
-            this.labelSenha.Size = new System.Drawing.Size(38, 13);
+            this.labelSenha.Size = new System.Drawing.Size(80, 26);
             this.labelSenha.TabIndex = 3;
             this.labelSenha.Text = "Senha";
             // 
@@ -90,22 +96,15 @@ namespace ProjetoHotel
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Cursor = System.Windows.Forms.Cursors.Cross;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label1.Location = new System.Drawing.Point(275, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(274, 46);
             this.label1.TabIndex = 5;
             this.label1.Text = "Tela de Login";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProjetoHotel.Properties.Resources.logo_2;
-            this.pictureBox1.Location = new System.Drawing.Point(195, 68);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(421, 135);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // btnCadastrar
             // 
@@ -117,11 +116,22 @@ namespace ProjetoHotel
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::ProjetoHotel.Properties.Resources.logo_2;
+            this.pictureBox1.Location = new System.Drawing.Point(195, 68);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(421, 135);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::ProjetoHotel.Properties.Resources.image1;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.pictureBox1);
@@ -132,6 +142,7 @@ namespace ProjetoHotel
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela de Login";
