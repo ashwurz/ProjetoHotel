@@ -9,6 +9,7 @@ namespace ProjetoHotel
 {
     static class Program
     {
+        //Files
         public static FileInfo fi = new FileInfo("ListadeFuncionarios.txt");
         public static FileInfo fi1 = new FileInfo("ListadeClientes.txt");
         [STAThread]
