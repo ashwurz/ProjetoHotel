@@ -101,5 +101,12 @@ namespace ProjetoHotel.Telas
         {
             panelResult.Visible = false;
         }
+
+        private void btnBuscaQuarto_Click(object sender, EventArgs e)
+        {
+            Busca_Informacoes_Quarto buscaQuarto = new Busca_Informacoes_Quarto(les, lde, fec);
+            this.Hide();
+            buscaQuarto.Show();
+        }
     }
 }

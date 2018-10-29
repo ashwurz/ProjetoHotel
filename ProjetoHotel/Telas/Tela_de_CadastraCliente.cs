@@ -56,8 +56,6 @@ namespace ProjetoHotel.Telas
                 return 0;
             }
         }
-        //Devera melhorar o esquema de cadastro de Clientes, isso porque a inserção no arquivo ocorre em várias partes e não em uma só, e caso o usuário cancele a operação no meio do
-        //cadastro, o que o usuário já havia cadastrado e inserido no arquivo estará incompleto, o que pode ocasionar futuras Exceptions.
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             //nome
@@ -239,6 +237,13 @@ namespace ProjetoHotel.Telas
             Form1 login = new Form1(les, lde, fec);
             this.Hide();
             login.Show();
+        }
+
+        private void btnBuscaQuarto_Click(object sender, EventArgs e)
+        {
+            Busca_Informacoes_Quarto buscaQuarto = new Busca_Informacoes_Quarto(les, lde, fec);
+            this.Hide();
+            buscaQuarto.Show();
         }
     }
 }

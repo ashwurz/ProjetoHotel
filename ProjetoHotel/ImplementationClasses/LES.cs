@@ -53,6 +53,18 @@ namespace ProjetoHotel
             }
             return null;
         }
+        public Pessoa busca(int quarto)
+        {
+            for (int i = 0; i < quantidade; i++)
+            {
+                if (clientes[i].getQuarto() == quarto)
+                {
+                    return clientes[i];
+                }
+            }
+            return null;
+
+        }
 
         public void deletar(string f)
         {
