@@ -51,7 +51,7 @@
             this.txtNome.AutoSize = true;
             this.txtNome.BackColor = System.Drawing.Color.Transparent;
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(78, 78);
+            this.txtNome.Location = new System.Drawing.Point(83, 78);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(140, 25);
             this.txtNome.TabIndex = 0;
@@ -71,9 +71,9 @@
             // txtbNome
             // 
             this.txtbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbNome.Location = new System.Drawing.Point(224, 73);
+            this.txtbNome.Location = new System.Drawing.Point(229, 73);
             this.txtbNome.Name = "txtbNome";
-            this.txtbNome.Size = new System.Drawing.Size(434, 30);
+            this.txtbNome.Size = new System.Drawing.Size(429, 30);
             this.txtbNome.TabIndex = 2;
             // 
             // txtbSobrenome
@@ -93,6 +93,7 @@
             this.btnBusca.TabIndex = 4;
             this.btnBusca.Text = "Confirmar";
             this.btnBusca.UseVisualStyleBackColor = true;
+            this.btnBusca.Click += new System.EventHandler(this.btnBusca_Click);
             // 
             // btnCheckin
             // 
@@ -103,6 +104,8 @@
             this.btnCheckin.TabIndex = 5;
             this.btnCheckin.Text = "Check-in";
             this.btnCheckin.UseVisualStyleBackColor = true;
+            this.btnCheckin.Visible = false;
+            this.btnCheckin.Click += new System.EventHandler(this.btnCheckin_Click);
             // 
             // menuStrip1
             // 
@@ -161,7 +164,7 @@
             // 
             this.btnBuscaCliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscaCliente.Name = "btnBuscaCliente";
-            this.btnBuscaCliente.Size = new System.Drawing.Size(180, 22);
+            this.btnBuscaCliente.Size = new System.Drawing.Size(135, 22);
             this.btnBuscaCliente.Text = "Por Cliente";
             this.btnBuscaCliente.Click += new System.EventHandler(this.btnBuscaCliente_Click);
             // 
@@ -169,7 +172,7 @@
             // 
             this.btnBuscaQuarto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscaQuarto.Name = "btnBuscaQuarto";
-            this.btnBuscaQuarto.Size = new System.Drawing.Size(180, 22);
+            this.btnBuscaQuarto.Size = new System.Drawing.Size(135, 22);
             this.btnBuscaQuarto.Text = "Por Quarto";
             this.btnBuscaQuarto.Click += new System.EventHandler(this.btnBuscaQuarto_Click);
             // 

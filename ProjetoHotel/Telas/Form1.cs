@@ -15,9 +15,9 @@ namespace ProjetoHotel
     {
         public LES les;
         public LDE lde;
-        public FEC fec;
+        public FEC[] fec;
 
-        public Form1(LES les, LDE lde, FEC fec)
+        public Form1(LES les, LDE lde, FEC[] fec)
         {
             this.les = les;
             this.lde = lde;

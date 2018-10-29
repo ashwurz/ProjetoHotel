@@ -14,8 +14,8 @@ namespace ProjetoHotel.Telas
     {
         public LES les;
         public LDE lde;
-        public FEC fec;
-        public Tela_de_CadastraCliente(LES les, LDE lde, FEC fec)
+        public FEC[] fec;
+        public Tela_de_CadastraCliente(LES les, LDE lde, FEC[] fec)
         {
             InitializeComponent();
             this.les = les;

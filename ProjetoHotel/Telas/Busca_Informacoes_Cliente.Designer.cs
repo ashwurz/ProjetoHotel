@@ -229,10 +229,6 @@
             // 
             // txtID
             // 
-            this.textBox1.Location = new System.Drawing.Point(83, 166);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(340, 20);
-            this.textBox1.TabIndex = 7;
             this.txtID.Location = new System.Drawing.Point(83, 166);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(340, 20);

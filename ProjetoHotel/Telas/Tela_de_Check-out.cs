@@ -15,8 +15,8 @@ namespace ProjetoHotel
     {
         public LES les;
         public LDE lde;
-        public FEC fec;
-        public Tela_de_Check_out(LES les, LDE lde, FEC fec)
+        public FEC[] fec;
+        public Tela_de_Check_out(LES les, LDE lde, FEC[] fec)
         {
             InitializeComponent();
             this.les = les;
@@ -65,6 +65,65 @@ namespace ProjetoHotel
             Busca_Informacoes_Quarto buscaQuarto = new Busca_Informacoes_Quarto(les, lde, fec);
             this.Hide();
             buscaQuarto.Show();
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            for (int k = 0; k < 5; k++)
+            {
+                i = fec[k].buscaFec(txtbNome.Text, txtbSobrenome.Text);
+                if (i != -1) break;
+            }
+            fec[i].fezCheckout(txtbNome.Text, txtbSobrenome.Text);
+            string mensagem = "Check-out realizado com sucesso";
+            string caption = "Check-out";
+            MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+            DialogResult result;
+            result = MessageBox.Show(mensagem, caption, boxButtons);
+            btnCheckout.Visible = false;
+            fec[i].remove(les);
+            txtbNome.Clear();
+            txtbSobrenome.Clear();
+        }
+
+        private void btnBusca_Click(object sender, EventArgs e)
+        {
+            if (txtbNome.Text == "" || txtbSobrenome.Text == "")
+            {
+                string mensagem = "Preencha todos os campos";
+                string caption = "Erro na busca";
+                MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+                DialogResult result;
+                result = MessageBox.Show(mensagem, caption, boxButtons);
+            }
+            else if (les.busca(txtbNome.Text, txtbSobrenome.Text) == null)
+            {
+                string mensagem = "O Cliente não existe";
+                string titulo = "Erro na busca";
+                MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+                DialogResult result;
+                result = MessageBox.Show(mensagem, titulo, boxButtons);
+            }
+            else if (fec[0].busca(txtbNome.Text, txtbSobrenome.Text) == false && fec[1].busca(txtbNome.Text, txtbSobrenome.Text) == false &&
+                fec[2].busca(txtbNome.Text, txtbSobrenome.Text) == false && fec[3].busca(txtbNome.Text, txtbSobrenome.Text) == false &&
+                fec[4].busca(txtbNome.Text, txtbSobrenome.Text) == false)
+            {
+                string mensagem = "Cliente ainda não fez Check-in";
+                string caption = "Erro na busca";
+                MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+                DialogResult result;
+                result = MessageBox.Show(mensagem, caption, boxButtons);
+            }
+            else
+            {
+                string mensagem = "Cliente já pode realizar o Check-out";
+                string caption = "Confirmação concluida";
+                MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+                DialogResult result;
+                result = MessageBox.Show(mensagem, caption, boxButtons);
+                btnCheckout.Visible = true;
+            }
         }
     }
 }

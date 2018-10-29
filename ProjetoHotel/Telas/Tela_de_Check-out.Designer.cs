@@ -49,27 +49,30 @@
             // btnCheckout
             // 
             this.btnCheckout.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckout.Location = new System.Drawing.Point(295, 338);
+            this.btnCheckout.Location = new System.Drawing.Point(287, 337);
             this.btnCheckout.Name = "btnCheckout";
             this.btnCheckout.Size = new System.Drawing.Size(158, 50);
             this.btnCheckout.TabIndex = 11;
             this.btnCheckout.Text = "Check-out";
             this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Visible = false;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // btnBusca
             // 
             this.btnBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBusca.Location = new System.Drawing.Point(295, 244);
+            this.btnBusca.Location = new System.Drawing.Point(287, 243);
             this.btnBusca.Name = "btnBusca";
             this.btnBusca.Size = new System.Drawing.Size(158, 48);
             this.btnBusca.TabIndex = 10;
             this.btnBusca.Text = "Confirmar";
             this.btnBusca.UseVisualStyleBackColor = true;
+            this.btnBusca.Click += new System.EventHandler(this.btnBusca_Click);
             // 
             // txtbSobrenome
             // 
             this.txtbSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbSobrenome.Location = new System.Drawing.Point(346, 132);
+            this.txtbSobrenome.Location = new System.Drawing.Point(338, 131);
             this.txtbSobrenome.Name = "txtbSobrenome";
             this.txtbSobrenome.Size = new System.Drawing.Size(320, 30);
             this.txtbSobrenome.TabIndex = 9;
@@ -77,9 +80,9 @@
             // txtbNome
             // 
             this.txtbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbNome.Location = new System.Drawing.Point(232, 74);
+            this.txtbNome.Location = new System.Drawing.Point(229, 73);
             this.txtbNome.Name = "txtbNome";
-            this.txtbNome.Size = new System.Drawing.Size(434, 30);
+            this.txtbNome.Size = new System.Drawing.Size(429, 30);
             this.txtbNome.TabIndex = 8;
             // 
             // txtSobrenome
@@ -87,7 +90,7 @@
             this.txtSobrenome.AutoSize = true;
             this.txtSobrenome.BackColor = System.Drawing.Color.Transparent;
             this.txtSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSobrenome.Location = new System.Drawing.Point(91, 137);
+            this.txtSobrenome.Location = new System.Drawing.Point(83, 136);
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(249, 25);
             this.txtSobrenome.TabIndex = 7;
@@ -98,7 +101,7 @@
             this.txtNome.AutoSize = true;
             this.txtNome.BackColor = System.Drawing.Color.Transparent;
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(86, 79);
+            this.txtNome.Location = new System.Drawing.Point(83, 78);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(140, 25);
             this.txtNome.TabIndex = 6;
@@ -160,7 +163,7 @@
             // 
             this.btnBuscaCliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscaCliente.Name = "btnBuscaCliente";
-            this.btnBuscaCliente.Size = new System.Drawing.Size(180, 22);
+            this.btnBuscaCliente.Size = new System.Drawing.Size(135, 22);
             this.btnBuscaCliente.Text = "Por Cliente";
             this.btnBuscaCliente.Click += new System.EventHandler(this.btnBuscaCliente_Click);
             // 
@@ -168,7 +171,7 @@
             // 
             this.btnBuscaQuarto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscaQuarto.Name = "btnBuscaQuarto";
-            this.btnBuscaQuarto.Size = new System.Drawing.Size(180, 22);
+            this.btnBuscaQuarto.Size = new System.Drawing.Size(135, 22);
             this.btnBuscaQuarto.Text = "Por Quarto";
             this.btnBuscaQuarto.Click += new System.EventHandler(this.btnBuscaQuarto_Click);
             // 

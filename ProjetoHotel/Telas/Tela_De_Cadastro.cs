@@ -15,10 +15,10 @@ namespace ProjetoHotel
     {
         public LES les;
         public LDE lde;
-        public FEC fec;
+        public FEC[] fec;
         Stream st;
         StreamWriter str;
-        public Tela_De_Cadastro(LES les, LDE lde, FEC fec)
+        public Tela_De_Cadastro(LES les, LDE lde, FEC[] fec)
         {
             InitializeComponent();
             this.les = les;

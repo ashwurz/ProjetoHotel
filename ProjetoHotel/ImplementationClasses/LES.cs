@@ -20,17 +20,17 @@ namespace ProjetoHotel
             quantidade = 0;
         }
 
-        public int busca(string nome)
+        public int busca(string nome, string sobrenome, int id, int quarto)
         {
             for (int i = 0; i < quantidade; i++)
             {
-                if(clientes[i].getNome().ToString().Equals(nome))
+                if(clientes[i].getNome() == nome && clientes[i].getUltimoSobrenome() == sobrenome && clientes[i].getId() == id  && clientes[i].getQuarto() == quarto)
                 {
-                    string mensagem = "O Cliente foi encontrado!";
+                    /*string mensagem = "O Cliente foi encontrado!";
                     string titulo = "Resultado da Busca";
                     MessageBoxButtons boxButtons = MessageBoxButtons.OK;
                     DialogResult result;
-                    result = MessageBox.Show(mensagem, titulo, boxButtons);
+                    result = MessageBox.Show(mensagem, titulo, boxButtons);*/
                     return i;
                 }
             }
@@ -65,10 +65,21 @@ namespace ProjetoHotel
             return null;
 
         }
-
-        public void deletar(string f)
+        public Pessoa busca(string nome, string sobrenome)
         {
-            int posicao = busca(f);
+            for (int i = 0; i < quantidade; i++)
+            {
+                if (clientes[i].getNome().ToString().Equals(nome))
+                {
+                    return clientes[i];
+                }
+            }
+            return null;
+        }
+
+        public void deletar(Pessoa p)
+        {
+            int posicao = busca(p.getNome(), p.getUltimoSobrenome(), p.getId(), p.getQuarto());
             if (posicao == -1)
             {
                 string mensagem = "O cliente não pode ser deletado, pois não consta nos registros";

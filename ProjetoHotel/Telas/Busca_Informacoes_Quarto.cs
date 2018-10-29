@@ -12,10 +12,10 @@ namespace ProjetoHotel.Telas
 {
     public partial class Busca_Informacoes_Quarto : Form
     {
-        LES les = new LES();
-        LDE lde = new LDE();
-        FEC fec = new FEC();
-        public Busca_Informacoes_Quarto(LES les, LDE lde, FEC fec)
+        public LES les;
+        public LDE lde;
+        public FEC[] fec;
+        public Busca_Informacoes_Quarto(LES les, LDE lde, FEC[] fec)
         {
             InitializeComponent();
             this.les = les;
