@@ -161,7 +161,7 @@
             // 
             this.btnBuscaCliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscaCliente.Name = "btnBuscaCliente";
-            this.btnBuscaCliente.Size = new System.Drawing.Size(135, 22);
+            this.btnBuscaCliente.Size = new System.Drawing.Size(180, 22);
             this.btnBuscaCliente.Text = "Por Cliente";
             this.btnBuscaCliente.Click += new System.EventHandler(this.btnBuscaCliente_Click);
             // 
@@ -169,8 +169,9 @@
             // 
             this.btnBuscaQuarto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscaQuarto.Name = "btnBuscaQuarto";
-            this.btnBuscaQuarto.Size = new System.Drawing.Size(135, 22);
+            this.btnBuscaQuarto.Size = new System.Drawing.Size(180, 22);
             this.btnBuscaQuarto.Text = "Por Quarto";
+            this.btnBuscaQuarto.Click += new System.EventHandler(this.btnBuscaQuarto_Click);
             // 
             // btnLogoff
             // 

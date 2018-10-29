@@ -53,6 +53,12 @@
     <Compile Include="Telas\Busca_Informacoes_Cliente.Designer.cs">
       <DependentUpon>Busca_Informacoes_Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Busca_Informacoes_Quarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Busca_Informacoes_Quarto.Designer.cs">
+      <DependentUpon>Busca_Informacoes_Quarto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Delete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="Telas\Busca_Informacoes_Cliente.resx">
       <DependentUpon>Busca_Informacoes_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Busca_Informacoes_Quarto.resx">
+      <DependentUpon>Busca_Informacoes_Quarto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Delete.resx">
       <DependentUpon>Delete.cs</DependentUpon>

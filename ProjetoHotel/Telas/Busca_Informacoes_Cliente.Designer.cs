@@ -30,13 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Busca_Informacoes_Cliente));
             this.panelResult = new System.Windows.Forms.Panel();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.txtPlano = new System.Windows.Forms.TextBox();
+            this.txtTempo = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtQuarto = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.labelCliente = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSobrenome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnCadastrar = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,17 +57,124 @@
             this.btnBuscaCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBuscaQuarto = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLogoff = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelResult.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelResult
             // 
             this.panelResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelResult.Controls.Add(this.btnOK);
+            this.panelResult.Controls.Add(this.txtPlano);
+            this.panelResult.Controls.Add(this.txtTempo);
+            this.panelResult.Controls.Add(this.txtEndereco);
+            this.panelResult.Controls.Add(this.txtQuarto);
+            this.panelResult.Controls.Add(this.txtTelefone);
+            this.panelResult.Controls.Add(this.label8);
+            this.panelResult.Controls.Add(this.label7);
+            this.panelResult.Controls.Add(this.label6);
+            this.panelResult.Controls.Add(this.label5);
+            this.panelResult.Controls.Add(this.label4);
             this.panelResult.Location = new System.Drawing.Point(445, 27);
             this.panelResult.Name = "panelResult";
             this.panelResult.Size = new System.Drawing.Size(343, 411);
             this.panelResult.TabIndex = 0;
             this.panelResult.Visible = false;
+            // 
+            // btnOK
+            // 
+            this.btnOK.Location = new System.Drawing.Point(130, 270);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(89, 36);
+            this.btnOK.TabIndex = 10;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // txtPlano
+            // 
+            this.txtPlano.Enabled = false;
+            this.txtPlano.Location = new System.Drawing.Point(8, 224);
+            this.txtPlano.Name = "txtPlano";
+            this.txtPlano.Size = new System.Drawing.Size(328, 20);
+            this.txtPlano.TabIndex = 9;
+            // 
+            // txtTempo
+            // 
+            this.txtTempo.Enabled = false;
+            this.txtTempo.Location = new System.Drawing.Point(8, 175);
+            this.txtTempo.Name = "txtTempo";
+            this.txtTempo.Size = new System.Drawing.Size(328, 20);
+            this.txtTempo.TabIndex = 8;
+            // 
+            // txtEndereco
+            // 
+            this.txtEndereco.Enabled = false;
+            this.txtEndereco.Location = new System.Drawing.Point(8, 124);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(328, 20);
+            this.txtEndereco.TabIndex = 7;
+            // 
+            // txtQuarto
+            // 
+            this.txtQuarto.Enabled = false;
+            this.txtQuarto.Location = new System.Drawing.Point(8, 75);
+            this.txtQuarto.Name = "txtQuarto";
+            this.txtQuarto.Size = new System.Drawing.Size(328, 20);
+            this.txtQuarto.TabIndex = 6;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Enabled = false;
+            this.txtTelefone.Location = new System.Drawing.Point(8, 26);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(328, 20);
+            this.txtTelefone.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(153, 208);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Plano:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(149, 159);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 13);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Período:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(153, 59);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Quarto:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(149, 108);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Endereço:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(153, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Telefone:";
             // 
             // labelCliente
             // 
@@ -109,12 +227,16 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "ID:";
             // 
-            // textBox1
+            // txtID
             // 
             this.textBox1.Location = new System.Drawing.Point(83, 166);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(340, 21);
+            this.textBox1.Size = new System.Drawing.Size(340, 20);
             this.textBox1.TabIndex = 7;
+            this.txtID.Location = new System.Drawing.Point(83, 166);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(340, 20);
+            this.txtID.TabIndex = 7;
             // 
             // btnBuscar
             // 
@@ -182,7 +304,7 @@
             // 
             this.btnBuscaCliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscaCliente.Name = "btnBuscaCliente";
-            this.btnBuscaCliente.Size = new System.Drawing.Size(135, 22);
+            this.btnBuscaCliente.Size = new System.Drawing.Size(180, 22);
             this.btnBuscaCliente.Text = "Por Cliente";
             this.btnBuscaCliente.Click += new System.EventHandler(this.btnBuscaCliente_Click);
             // 
@@ -190,8 +312,9 @@
             // 
             this.btnBuscaQuarto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscaQuarto.Name = "btnBuscaQuarto";
-            this.btnBuscaQuarto.Size = new System.Drawing.Size(135, 22);
+            this.btnBuscaQuarto.Size = new System.Drawing.Size(180, 22);
             this.btnBuscaQuarto.Text = "Por Quarto";
+            this.btnBuscaQuarto.Click += new System.EventHandler(this.btnBuscaQuarto_Click);
             // 
             // btnLogoff
             // 
@@ -210,7 +333,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSobrenome);
             this.Controls.Add(this.label2);
@@ -224,6 +347,8 @@
             this.Name = "Busca_Informacoes_Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Informações Reserva";
+            this.panelResult.ResumeLayout(false);
+            this.panelResult.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -240,7 +365,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSobrenome;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem btnCadastrar;
@@ -250,5 +375,16 @@
         private System.Windows.Forms.ToolStripMenuItem btnBuscaCliente;
         private System.Windows.Forms.ToolStripMenuItem btnBuscaQuarto;
         private System.Windows.Forms.ToolStripMenuItem btnLogoff;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.TextBox txtPlano;
+        private System.Windows.Forms.TextBox txtTempo;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.TextBox txtQuarto;
+        private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.Label label8;
     }
 }

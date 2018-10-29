@@ -30,6 +30,12 @@ namespace ProjetoHotel.Telas
             rbtnDeluxe.Visible = les.confirmaDisponivel(p, "Deluxe");
             rbtnPremium.Visible = les.confirmaDisponivel(p, "Premium");
         }
+        //Função que faz com que se a pessoa clique no botão "X", o programa inteiro se encerra
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Exit();
+        }
 
         private void btnRegistra_Click(object sender, EventArgs e)
         {
