@@ -31,7 +31,40 @@ namespace ProjetoHotel.Telas
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-  
+            if(txtNome.Text.Equals("") || txtSobrenome.Text.Equals("") || txtID.Text.Equals(""))
+            {
+                string mensagem = "Todos os campos devem estar preenchidos para se buscar o cliente!!";
+                string caption = "Erro detectado na procura por cliente";
+                MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+                DialogResult result;
+                result = MessageBox.Show(mensagem, caption, boxButtons);
+                txtNome.Clear();
+                txtSobrenome.Clear();
+                txtID.Clear();
+                return;
+            }
+            Pessoa cliente = les.busca(txtNome.Text, txtSobrenome.Text, Convert.ToInt16(txtID.Text));
+            if(cliente == null)
+            {
+                string mensagem = "Esse cliente não consta nos registros";
+                string caption = "Erro detectado na procura por cliente";
+                MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+                DialogResult result;
+                result = MessageBox.Show(mensagem, caption, boxButtons);
+                txtNome.Clear();
+                txtSobrenome.Clear();
+                txtID.Clear();
+                return;
+            }
+            txtTelefone.Text = cliente.getNumero().ToString();
+            txtQuarto.Text = cliente.getQuarto().ToString();
+            txtEndereco.Text = cliente.getEndereco().ToString();
+            txtTempo.Text = cliente.getTempo().ToString() + " dias";
+            txtPlano.Text = cliente.getPlano().ToString();
+            txtNome.Clear();
+            txtSobrenome.Clear();
+            txtID.Clear();
+            panelResult.Visible = true;
         }
 
         private void btnCheck_Click(object sender, EventArgs e)
@@ -62,6 +95,11 @@ namespace ProjetoHotel.Telas
             Form1 login = new Form1(les, lde, fec);
             this.Hide();
             login.Show();
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            panelResult.Visible = false;
         }
     }
 }

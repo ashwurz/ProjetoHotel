@@ -42,6 +42,18 @@ namespace ProjetoHotel
             return -1;
         }
 
+        public Pessoa busca(string nome, string sobreNome, int ID)
+        {
+            for(int i = 0; i < quantidade; i++)
+            {
+                if(clientes[i].getNome().ToString().Equals(nome) && clientes[i].getUltimoSobrenome().ToString().Equals(sobreNome) && clientes[i].getId() == ID)
+                {
+                    return clientes[i];
+                }
+            }
+            return null;
+        }
+
         public void deletar(string f)
         {
             int posicao = busca(f);
