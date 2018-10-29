@@ -15,11 +15,11 @@ namespace ProjetoHotel.Telas
     {
         public LES les;
         public LDE lde;
-        public FEC fec;
+        public FEC[] fec;
         public Pessoa pessoa;
         Stream st;
         StreamWriter str;
-        public Tela_de_Plano(LES les, LDE lde, FEC fec, Pessoa p)
+        public Tela_de_Plano(LES les, LDE lde, FEC[] fec, Pessoa p)
         {
             this.les = les;
             this.lde = lde;

@@ -15,9 +15,9 @@ namespace ProjetoHotel.Telas
     {
         public LES les;
         public LDE lde;
-        public FEC fec;
+        public FEC[] fec;
         Pessoa pessoa;
-        public Tela_de_Tempo(LES les, LDE lde, FEC fec, Pessoa p)
+        public Tela_de_Tempo(LES les, LDE lde, FEC[] fec, Pessoa p)
         {
             this.les = les;
             this.lde = lde;
