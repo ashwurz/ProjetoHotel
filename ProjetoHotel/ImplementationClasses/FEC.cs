@@ -118,6 +118,7 @@ public class FEC
                 str.WriteLine(v[k].getUltimoSobrenome());
                 str.WriteLine(checkout[k]);
             }
+            str.Close();
             remove(les);
             return true;
         }
@@ -130,6 +131,38 @@ public class FEC
             if (v[k].getNome() == nome && v[k].getUltimoSobrenome() == sobrenome)
             {
                 checkout[k] = true;
+                if (v[k].getTempo() == 1)
+                {
+                    st = File.Open("Fila1Dia.txt", FileMode.Create);
+                    str = new StreamWriter(st);
+                }
+                else if (v[k].getTempo() == 7)
+                {
+                    st = File.Open("Fila7Dia.txt", FileMode.Create);
+                    str = new StreamWriter(st);
+                }
+                else if (v[k].getTempo() == 14)
+                {
+                    st = File.Open("Fila14Dia.txt", FileMode.Create);
+                    str = new StreamWriter(st);
+                }
+                else if (v[k].getTempo() == 21)
+                {
+                    st = File.Open("Fila21Dia.txt", FileMode.Create);
+                    str = new StreamWriter(st);
+                }
+                else
+                {
+                    st = File.Open("Fila30Dia.txt", FileMode.Create);
+                    str = new StreamWriter(st);
+                }
+                for (int l = this.i; l != f; l = (l + 1) % n)
+                {
+                    str.WriteLine(v[l].getNome());
+                    str.WriteLine(v[l].getUltimoSobrenome());
+                    str.WriteLine(checkout[l]);
+                }
+                str.Close();
                 return true;
             }
         }
