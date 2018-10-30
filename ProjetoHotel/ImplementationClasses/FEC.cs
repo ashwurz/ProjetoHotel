@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 public class FEC
 {
@@ -17,8 +18,15 @@ public class FEC
     private Pessoa[] v = new Pessoa[11]; //fila de tamanho do maximo de quartos.
     private bool[] checkout = new bool[11];//se o cliente fez ou não checkout no tempo certo
 
+    Stream st;
+    StreamWriter str;
+
     public FEC()
     {
+        for (int k = 0; k < n; k++)
+        {
+            checkout[k] = false;
+        }
         i = 0;
         f = 0;
     }
@@ -28,12 +36,44 @@ public class FEC
     {
         if ((f + 1) % n == i)
         {
-            Console.WriteLine("A lista esta cheia");
+            string mensagem1 = "A lista esta cheia";
+            string titulo1 = "Problemas amigo";
+            MessageBoxButtons boxButtons1 = MessageBoxButtons.OK;
+            DialogResult result1;
+            result1 = MessageBox.Show(mensagem1, titulo1, boxButtons1);
             return false;
         }
+        if (valor.getTempo() == 1)
+        {
+            st = File.Open("Fila1Dia.txt", FileMode.Append);
+            str = new StreamWriter(st);
+        }
+        else if(valor.getTempo() == 7)
+        {
+            st = File.Open("Fila7Dia.txt", FileMode.Append);
+            str = new StreamWriter(st);
+        }
+        else if (valor.getTempo() == 14)
+        {
+            st = File.Open("Fila14Dia.txt", FileMode.Append);
+            str = new StreamWriter(st);
+        }
+        else if (valor.getTempo() == 21)
+        {
+            st = File.Open("Fila21Dia.txt", FileMode.Append);
+            str = new StreamWriter(st);
+        }
+        else
+        {
+            st = File.Open("Fila30Dia.txt", FileMode.Append);
+            str = new StreamWriter(st);
+        }
+        str.WriteLine(valor.getNome());
+        str.WriteLine(valor.getUltimoSobrenome());
+        str.WriteLine(checkout[f]);
         v[f] = valor;
-        checkout[f] = false;
         f = (f + 1) % n;
+        str.Close();
         return true;
     }    
     // remove quem entrou primeiro em uma fila.
@@ -46,7 +86,38 @@ public class FEC
         else
         {
             les.deletar(v[i]);
+            if (v[i].getTempo() == 1)
+            {
+                st = File.Open("Fila1Dia.txt", FileMode.Create);
+                str = new StreamWriter(st);
+            }
+            else if (v[i].getTempo() == 7)
+            {
+                st = File.Open("Fila7Dia.txt", FileMode.Create);
+                str = new StreamWriter(st);
+            }
+            else if (v[i].getTempo() == 14)
+            {
+                st = File.Open("Fila14Dia.txt", FileMode.Create);
+                str = new StreamWriter(st);
+            }
+            else if (v[i].getTempo() == 21)
+            {
+                st = File.Open("Fila21Dia.txt", FileMode.Create);
+                str = new StreamWriter(st);
+            }
+            else
+            {
+                st = File.Open("Fila30Dia.txt", FileMode.Create);
+                str = new StreamWriter(st);
+            }
             i = (i + 1) % n;
+            for (int k = this.i; k != f; k = (k + 1) % n)
+            {
+                str.WriteLine(v[k].getNome());
+                str.WriteLine(v[k].getUltimoSobrenome());
+                str.WriteLine(checkout[k]);
+            }
             remove(les);
             return true;
         }
@@ -86,5 +157,10 @@ public class FEC
             }
         }
         return false;
+    }
+
+    public void setCheckout(bool checkout)
+    {
+        this.checkout[f] = checkout;
     }
 }

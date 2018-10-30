@@ -80,7 +80,7 @@ namespace ProjetoHotel
         {
             for (int i = 0; i < quantidade; i++)
             {
-                if (clientes[i].getNome().ToString().Equals(nome))
+                if (clientes[i].getNome().ToString().Equals(nome) && clientes[i].getUltimoSobrenome().ToString().Equals(sobrenome))
                 {
                     return clientes[i];
                 }
@@ -123,6 +123,7 @@ namespace ProjetoHotel
                     str.WriteLine(clientes[i].getTempo());
                     str.WriteLine(clientes[i].getPlano());
                     str.WriteLine(clientes[i].getQuarto());
+                    str.WriteLine(clientes[i].getId());
                 }
                 str.Close();
                 string mensagem = "O Cliente foi excluído com sucesso dos registros";

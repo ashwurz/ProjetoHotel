@@ -87,11 +87,11 @@ namespace ProjetoHotel
             {
                 i = 1;
             }
-            else if (pessoa.getTempo() == 7)
+            else if (pessoa.getTempo() == 14)
             {
                 i = 2;
             }
-            else if (pessoa.getTempo() == 7)
+            else if (pessoa.getTempo() == 21)
             {
                 i = 3;
             }
