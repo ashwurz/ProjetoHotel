@@ -130,6 +130,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            //this.BackgroundImage = global::ProjetoHotel.Properties.Resources.Tela_de_Tempo;
             this.Controls.Add(this.btnCancela);
             this.Controls.Add(this.btnPlano);
             this.Controls.Add(this.rbtnD30);

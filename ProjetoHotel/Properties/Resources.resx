@@ -124,4 +124,31 @@
   <data name="image1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\image1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Busca_Informacoes_Clientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Busca_Informacoes_Clientes.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Busca_Informacoes_Quarto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Busca_Informacoes_Quarto.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Delete.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Form1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Form1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tela_de_Busca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Tela_de_Busca.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tela_de_CadastraCliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Tela_de_CadastraCliente.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tela_de_Cadastro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Tela_de_Cadastro.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tela_de_Checkin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Tela_de_Checkin.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tela_de_Checkout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Tela_de_Checkout.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

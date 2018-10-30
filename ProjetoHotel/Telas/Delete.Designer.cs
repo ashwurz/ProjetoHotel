@@ -33,7 +33,6 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.txtbUsuario = new System.Windows.Forms.TextBox();
             this.btnInicio = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,7 +53,7 @@
             // btnRemove
             // 
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(368, 298);
+            this.btnRemove.Location = new System.Drawing.Point(344, 277);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(85, 25);
             this.btnRemove.TabIndex = 1;
@@ -74,7 +73,7 @@
             // 
             this.btnInicio.BackColor = System.Drawing.Color.Transparent;
             this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.Location = new System.Drawing.Point(12, 400);
+            this.btnInicio.Location = new System.Drawing.Point(214, 327);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(69, 25);
             this.btnInicio.TabIndex = 3;
@@ -82,19 +81,9 @@
             this.btnInicio.UseVisualStyleBackColor = false;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 38F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(282, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 59);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Remover";
-            // 
             // btnCadastro
             // 
-            this.btnCadastro.Location = new System.Drawing.Point(368, 400);
+            this.btnCadastro.Location = new System.Drawing.Point(344, 329);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(75, 23);
             this.btnCadastro.TabIndex = 5;
@@ -104,7 +93,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(713, 400);
+            this.btnBuscar.Location = new System.Drawing.Point(476, 329);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 6;
@@ -133,12 +122,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProjetoHotel.Properties.Resources.Delete;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnCadastro);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInicio);
             this.Controls.Add(this.txtbUsuario);
             this.Controls.Add(this.btnRemove);
@@ -159,7 +148,6 @@
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.TextBox txtbUsuario;
         private System.Windows.Forms.Button btnInicio;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label2;

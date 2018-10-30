@@ -34,7 +34,6 @@
             this.edtNome = new System.Windows.Forms.TextBox();
             this.txtSobrenome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.Label();
-            this.txtCadastra = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.Label();
             this.edtNumero = new System.Windows.Forms.TextBox();
@@ -69,7 +68,7 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(354, 394);
+            this.btnCadastrar.Location = new System.Drawing.Point(335, 396);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btnCadastrar.TabIndex = 14;
@@ -108,16 +107,6 @@
             this.txtNome.Size = new System.Drawing.Size(38, 13);
             this.txtNome.TabIndex = 10;
             this.txtNome.Text = "Nome:";
-            // 
-            // txtCadastra
-            // 
-            this.txtCadastra.AutoSize = true;
-            this.txtCadastra.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCadastra.Location = new System.Drawing.Point(211, 24);
-            this.txtCadastra.Name = "txtCadastra";
-            this.txtCadastra.Size = new System.Drawing.Size(374, 44);
-            this.txtCadastra.TabIndex = 9;
-            this.txtCadastra.Text = "Cadastro de Cliente";
             // 
             // txtNumero
             // 
@@ -253,6 +242,7 @@
             // rbtn1
             // 
             this.rbtn1.AutoSize = true;
+            this.rbtn1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rbtn1.Location = new System.Drawing.Point(284, 219);
             this.rbtn1.Name = "rbtn1";
             this.rbtn1.Size = new System.Drawing.Size(31, 17);
@@ -264,6 +254,7 @@
             // rbtn2
             // 
             this.rbtn2.AutoSize = true;
+            this.rbtn2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rbtn2.Location = new System.Drawing.Point(344, 219);
             this.rbtn2.Name = "rbtn2";
             this.rbtn2.Size = new System.Drawing.Size(31, 17);
@@ -275,6 +266,7 @@
             // rbtn3
             // 
             this.rbtn3.AutoSize = true;
+            this.rbtn3.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rbtn3.Location = new System.Drawing.Point(412, 219);
             this.rbtn3.Name = "rbtn3";
             this.rbtn3.Size = new System.Drawing.Size(31, 17);
@@ -286,6 +278,7 @@
             // rbtn4
             // 
             this.rbtn4.AutoSize = true;
+            this.rbtn4.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rbtn4.Location = new System.Drawing.Point(476, 219);
             this.rbtn4.Name = "rbtn4";
             this.rbtn4.Size = new System.Drawing.Size(31, 17);
@@ -297,6 +290,7 @@
             // rbtn5
             // 
             this.rbtn5.AutoSize = true;
+            this.rbtn5.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rbtn5.Location = new System.Drawing.Point(534, 219);
             this.rbtn5.Name = "rbtn5";
             this.rbtn5.Size = new System.Drawing.Size(31, 17);
@@ -308,6 +302,7 @@
             // rbtn0
             // 
             this.rbtn0.AutoSize = true;
+            this.rbtn0.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rbtn0.Checked = true;
             this.rbtn0.Location = new System.Drawing.Point(224, 219);
             this.rbtn0.Name = "rbtn0";
@@ -401,6 +396,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProjetoHotel.Properties.Resources.Tela_de_CadastraCliente;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.rbtn0);
@@ -429,7 +425,6 @@
             this.Controls.Add(this.edtNome);
             this.Controls.Add(this.txtSobrenome);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtCadastra);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Tela_de_CadastraCliente";
@@ -449,7 +444,6 @@
         private System.Windows.Forms.TextBox edtNome;
         private System.Windows.Forms.Label txtSobrenome;
         private System.Windows.Forms.Label txtNome;
-        private System.Windows.Forms.Label txtCadastra;
         private System.Windows.Forms.Label txtNumero;
         private System.Windows.Forms.Label txtEndereco;
         private System.Windows.Forms.TextBox edtNumero;

@@ -41,7 +41,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.labelCliente = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -188,21 +187,11 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Telefone:";
             // 
-            // labelCliente
-            // 
-            this.labelCliente.AutoSize = true;
-            this.labelCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCliente.Location = new System.Drawing.Point(167, 24);
-            this.labelCliente.Name = "labelCliente";
-            this.labelCliente.Size = new System.Drawing.Size(106, 31);
-            this.labelCliente.TabIndex = 1;
-            this.labelCliente.Text = "Cliente";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 71);
+            this.label1.Location = new System.Drawing.Point(7, 142);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 2;
@@ -211,7 +200,7 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(83, 68);
+            this.txtNome.Location = new System.Drawing.Point(77, 139);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(340, 22);
             this.txtNome.TabIndex = 3;
@@ -220,7 +209,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 119);
+            this.label2.Location = new System.Drawing.Point(6, 190);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 4;
@@ -229,7 +218,7 @@
             // txtSobrenome
             // 
             this.txtSobrenome.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSobrenome.Location = new System.Drawing.Point(83, 116);
+            this.txtSobrenome.Location = new System.Drawing.Point(77, 187);
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(340, 22);
             this.txtSobrenome.TabIndex = 5;
@@ -238,7 +227,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 169);
+            this.label3.Location = new System.Drawing.Point(6, 240);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(21, 13);
             this.label3.TabIndex = 6;
@@ -247,7 +236,7 @@
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(83, 166);
+            this.txtID.Location = new System.Drawing.Point(77, 237);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(340, 22);
             this.txtID.TabIndex = 7;
@@ -255,7 +244,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(173, 299);
+            this.btnBuscar.Location = new System.Drawing.Point(35, 316);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(100, 36);
             this.btnBuscar.TabIndex = 8;
@@ -345,8 +334,9 @@
             // linkEsqueciID
             // 
             this.linkEsqueciID.AutoSize = true;
+            this.linkEsqueciID.BackColor = System.Drawing.Color.Transparent;
             this.linkEsqueciID.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkEsqueciID.Location = new System.Drawing.Point(173, 212);
+            this.linkEsqueciID.Location = new System.Drawing.Point(178, 271);
             this.linkEsqueciID.Name = "linkEsqueciID";
             this.linkEsqueciID.Size = new System.Drawing.Size(95, 13);
             this.linkEsqueciID.TabIndex = 16;
@@ -358,6 +348,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProjetoHotel.Properties.Resources.Busca_Informacoes_Clientes;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.linkEsqueciID);
             this.Controls.Add(this.menuStrip1);
@@ -368,7 +359,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.labelCliente);
             this.Controls.Add(this.panelResult);
             this.Font = new System.Drawing.Font("Script MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -388,7 +378,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelResult;
-        private System.Windows.Forms.Label labelCliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;

@@ -63,6 +63,46 @@ namespace ProjetoHotel.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Busca_Informacoes_Clientes {
+            get {
+                object obj = ResourceManager.GetObject("Busca_Informacoes_Clientes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Busca_Informacoes_Quarto {
+            get {
+                object obj = ResourceManager.GetObject("Busca_Informacoes_Quarto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Delete {
+            get {
+                object obj = ResourceManager.GetObject("Delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Form1 {
+            get {
+                object obj = ResourceManager.GetObject("Form1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image1 {
             get {
                 object obj = ResourceManager.GetObject("image1", resourceCulture);
@@ -76,6 +116,56 @@ namespace ProjetoHotel.Properties {
         internal static System.Drawing.Bitmap logo_2 {
             get {
                 object obj = ResourceManager.GetObject("logo_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_de_Busca {
+            get {
+                object obj = ResourceManager.GetObject("Tela_de_Busca", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_de_CadastraCliente {
+            get {
+                object obj = ResourceManager.GetObject("Tela_de_CadastraCliente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_de_Cadastro {
+            get {
+                object obj = ResourceManager.GetObject("Tela_de_Cadastro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_de_Checkin {
+            get {
+                object obj = ResourceManager.GetObject("Tela_de_Checkin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_de_Checkout {
+            get {
+                object obj = ResourceManager.GetObject("Tela_de_Checkout", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

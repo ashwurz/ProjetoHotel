@@ -61,7 +61,7 @@
             // btnBusca
             // 
             this.btnBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBusca.Location = new System.Drawing.Point(287, 243);
+            this.btnBusca.Location = new System.Drawing.Point(287, 259);
             this.btnBusca.Name = "btnBusca";
             this.btnBusca.Size = new System.Drawing.Size(158, 48);
             this.btnBusca.TabIndex = 10;
@@ -72,7 +72,7 @@
             // txtbSobrenome
             // 
             this.txtbSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbSobrenome.Location = new System.Drawing.Point(338, 131);
+            this.txtbSobrenome.Location = new System.Drawing.Point(336, 182);
             this.txtbSobrenome.Name = "txtbSobrenome";
             this.txtbSobrenome.Size = new System.Drawing.Size(320, 30);
             this.txtbSobrenome.TabIndex = 9;
@@ -80,7 +80,7 @@
             // txtbNome
             // 
             this.txtbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbNome.Location = new System.Drawing.Point(229, 73);
+            this.txtbNome.Location = new System.Drawing.Point(227, 124);
             this.txtbNome.Name = "txtbNome";
             this.txtbNome.Size = new System.Drawing.Size(429, 30);
             this.txtbNome.TabIndex = 8;
@@ -90,7 +90,7 @@
             this.txtSobrenome.AutoSize = true;
             this.txtSobrenome.BackColor = System.Drawing.Color.Transparent;
             this.txtSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSobrenome.Location = new System.Drawing.Point(83, 136);
+            this.txtSobrenome.Location = new System.Drawing.Point(81, 187);
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(249, 25);
             this.txtSobrenome.TabIndex = 7;
@@ -101,7 +101,7 @@
             this.txtNome.AutoSize = true;
             this.txtNome.BackColor = System.Drawing.Color.Transparent;
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(83, 78);
+            this.txtNome.Location = new System.Drawing.Point(81, 129);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(140, 25);
             this.txtNome.TabIndex = 6;
@@ -190,6 +190,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProjetoHotel.Properties.Resources.Tela_de_Checkout;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnCheckout);

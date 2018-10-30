@@ -72,6 +72,16 @@ namespace ProjetoHotel
             senha.Show();
         }
 
+        private void txtUsuario_Click(object sender, EventArgs e)
+        {
+            labelUsuario.Visible = false;
+        }
+
+        private void txtSenha_Click(object sender, EventArgs e)
+        {
+            labelSenha.Visible = false;
+        }
+
 
         /*
 public static void ThreadProc()

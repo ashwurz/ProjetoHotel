@@ -37,7 +37,6 @@
             this.btnBuscaCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBuscaQuarto = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLogoff = new System.Windows.Forms.ToolStripMenuItem();
-            this.labelCliente = new System.Windows.Forms.Label();
             this.panelResult = new System.Windows.Forms.Panel();
             this.txtSobrenome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -138,16 +137,6 @@
             this.btnLogoff.Text = "Logoff";
             this.btnLogoff.Click += new System.EventHandler(this.btnLogoff_Click);
             // 
-            // labelCliente
-            // 
-            this.labelCliente.AutoSize = true;
-            this.labelCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCliente.Location = new System.Drawing.Point(166, 24);
-            this.labelCliente.Name = "labelCliente";
-            this.labelCliente.Size = new System.Drawing.Size(103, 31);
-            this.labelCliente.TabIndex = 17;
-            this.labelCliente.Text = "Quarto";
-            // 
             // panelResult
             // 
             this.panelResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -164,7 +153,7 @@
             this.panelResult.Controls.Add(this.label6);
             this.panelResult.Controls.Add(this.label5);
             this.panelResult.Controls.Add(this.label4);
-            this.panelResult.Location = new System.Drawing.Point(457, 27);
+            this.panelResult.Location = new System.Drawing.Point(429, 37);
             this.panelResult.Name = "panelResult";
             this.panelResult.Size = new System.Drawing.Size(343, 411);
             this.panelResult.TabIndex = 18;
@@ -284,15 +273,15 @@
             // 
             // txtQuarto
             // 
-            this.txtQuarto.Location = new System.Drawing.Point(115, 104);
+            this.txtQuarto.Location = new System.Drawing.Point(111, 176);
             this.txtQuarto.Name = "txtQuarto";
-            this.txtQuarto.Size = new System.Drawing.Size(340, 20);
+            this.txtQuarto.Size = new System.Drawing.Size(266, 20);
             this.txtQuarto.TabIndex = 19;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 107);
+            this.label1.Location = new System.Drawing.Point(8, 179);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 20;
@@ -300,7 +289,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(169, 176);
+            this.btnBuscar.Location = new System.Drawing.Point(153, 355);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(100, 36);
             this.btnBuscar.TabIndex = 21;
@@ -312,12 +301,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProjetoHotel.Properties.Resources.Busca_Informacoes_Quarto;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtQuarto);
             this.Controls.Add(this.panelResult);
-            this.Controls.Add(this.labelCliente);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Busca_Informacoes_Quarto";
@@ -342,7 +331,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnBuscaCliente;
         private System.Windows.Forms.ToolStripMenuItem btnBuscaQuarto;
         private System.Windows.Forms.ToolStripMenuItem btnLogoff;
-        private System.Windows.Forms.Label labelCliente;
         private System.Windows.Forms.Panel panelResult;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.TextBox txtPlano;
