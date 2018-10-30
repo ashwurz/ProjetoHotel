@@ -41,6 +41,7 @@ namespace ProjetoHotel
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,6 +127,20 @@ namespace ProjetoHotel
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Location = new System.Drawing.Point(608, 421);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(180, 20);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Esqueci minha senha";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,6 +148,7 @@ namespace ProjetoHotel
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::ProjetoHotel.Properties.Resources.image1;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -163,6 +179,7 @@ namespace ProjetoHotel
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

@@ -121,6 +121,18 @@
     <Compile Include="Telas\Tela_de_Tempo.Designer.cs">
       <DependentUpon>Tela_de_Tempo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Tela_Esqueci_ID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Tela_Esqueci_ID.Designer.cs">
+      <DependentUpon>Tela_Esqueci_ID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Tela_Esqueci_Senha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Tela_Esqueci_Senha.Designer.cs">
+      <DependentUpon>Tela_Esqueci_Senha.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Telas\Busca_Informacoes_Cliente.resx">
       <DependentUpon>Busca_Informacoes_Cliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +175,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Tela_de_Tempo.resx">
       <DependentUpon>Tela_de_Tempo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tela_Esqueci_ID.resx">
+      <DependentUpon>Tela_Esqueci_ID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tela_Esqueci_Senha.resx">
+      <DependentUpon>Tela_Esqueci_Senha.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

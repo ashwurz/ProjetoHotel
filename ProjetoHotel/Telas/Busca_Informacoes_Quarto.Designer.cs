@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Busca_Informacoes_Quarto));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnCadastrar = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCheck = new System.Windows.Forms.ToolStripMenuItem();
@@ -318,6 +319,7 @@
             this.Controls.Add(this.panelResult);
             this.Controls.Add(this.labelCliente);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Busca_Informacoes_Quarto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Informações Reserva";

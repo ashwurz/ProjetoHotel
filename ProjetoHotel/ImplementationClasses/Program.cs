@@ -19,6 +19,11 @@ namespace ProjetoHotel
             LES les = new LES();
             LDE lde = new LDE();
             FEC[] fec = new FEC[5];
+            fec[0] = new FEC();
+            fec[1] = new FEC();
+            fec[2] = new FEC();
+            fec[3] = new FEC();
+            fec[4] = new FEC();
             Stream st;
             StreamReader str;
             Stream st1;

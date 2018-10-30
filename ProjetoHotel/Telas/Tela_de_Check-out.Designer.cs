@@ -129,6 +129,7 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(113, 20);
             this.btnCadastrar.Text = "Cadastrar Cliente";
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnCheck
             // 

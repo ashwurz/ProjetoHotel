@@ -20,6 +20,17 @@ namespace ProjetoHotel
             quantidade = 0;
         }
 
+        public void buscaID(string nome, string sobrenome)
+        {
+            //Esse cara é muito mané
+            Pessoa maneQueEsqueceuID = this.busca(nome, sobrenome);
+            string mensagem1 = "O SEU ID É: " + maneQueEsqueceuID.getId();
+            string titulo1 = "Informação ID";
+            MessageBoxButtons boxButtons1 = MessageBoxButtons.OK;
+            DialogResult result1;
+            result1 = MessageBox.Show(mensagem1, titulo1, boxButtons1);
+        }
+
         public int busca(string nome, string sobrenome, int id, int quarto)
         {
             for (int i = 0; i < quantidade; i++)

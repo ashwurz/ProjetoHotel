@@ -58,53 +58,95 @@ namespace ProjetoHotel.Telas
         }
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            //nome
-            string nome = edtNome.Text;
-            //sobrenome
-            string sobrenome = edtSobrenome.Text;
-            //tem que ser tratado , pois pode gerar exception
-            int numero = Convert.ToInt32(edtNumero.Text);
-            string endereco = edtEndereco.Text;
-            int acompanhantes = numeroDeAcompanhantes();
-            int i = acompanhantes;
-            string acompanhante1 = edtAC1.Text;
-            string acompanhante2 = edtAC2.Text;
-            string acompanhante3 = edtAC3.Text;
-            string acompanhante4 = edtAC4.Text;
-            string acompanhante5 = edtAC5.Text;
-            if (nome == "" || sobrenome == "" || numero.ToString() == "" || endereco == "" || (i >= 1 && acompanhante1 == "") || (i >= 2 && acompanhante2 == "")
-                || (i>=3 && acompanhante3 == "") || (i >= 4 && acompanhante4 == "") || (i >= 5 && acompanhante5 == ""))
+            try
             {
-                string mensagem = "Algum campo não preenchido favor prestar atençao nos campos de acompanhastes";
-                string caption = "Erro detectado na inserção";
+                //nome
+                string nome = edtNome.Text;
+                //sobrenome
+                string sobrenome = edtSobrenome.Text;
+                int numero = Convert.ToInt32(edtNumero.Text);
+                string endereco = edtEndereco.Text;
+                int acompanhantes = numeroDeAcompanhantes();
+                int i = acompanhantes;
+                string acompanhante1 = edtAC1.Text;
+                string acompanhante2 = edtAC2.Text;
+                string acompanhante3 = edtAC3.Text;
+                string acompanhante4 = edtAC4.Text;
+                string acompanhante5 = edtAC5.Text;
+                if (nome == "" || sobrenome == "" || numero.ToString() == "" || endereco == "" || (i >= 1 && acompanhante1 == "") || (i >= 2 && acompanhante2 == "")
+                    || (i >= 3 && acompanhante3 == "") || (i >= 4 && acompanhante4 == "") || (i >= 5 && acompanhante5 == ""))
+                {
+                    string mensagem = "Algum campo não preenchido favor prestar atençao nos campos de acompanhastes";
+                    string caption = "Erro detectado no cadastro";
+                    MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+                    DialogResult result;
+                    result = MessageBox.Show(mensagem, caption, boxButtons);
+                    return;
+                }
+                else if (les.busca(nome, sobrenome) != null)
+                {
+                    string mensagem = "Essa pessoa já está cadastrada no sistema!!!!";
+                    string caption = "Erro detectado no cadastro";
+                    MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+                    DialogResult result;
+                    result = MessageBox.Show(mensagem, caption, boxButtons);
+                    edtNome.Clear();
+                    edtSobrenome.Clear();
+                    edtNumero.Clear();
+                    edtEndereco.Clear();
+                    edtAC1.Clear();
+                    edtAC2.Clear();
+                    edtAC3.Clear();
+                    edtAC4.Clear();
+                    edtAC5.Clear();
+                    return;
+                }
+                else
+                {
+                    Pessoa pessoa = new Pessoa(nome, sobrenome, numero, endereco, acompanhantes);
+                    if (i >= 1)
+                    {
+                        pessoa.setNomes(acompanhante1, 0);
+                    }
+                    if (i >= 2)
+                    {
+                        pessoa.setNomes(acompanhante2, 1);
+                    }
+                    if (i >= 3)
+                    {
+                        pessoa.setNomes(acompanhante3, 2);
+                    }
+                    if (i >= 4)
+                    {
+                        pessoa.setNomes(acompanhante4, 3);
+                    }
+                    if (i == 5)
+                    {
+                        pessoa.setNomes(acompanhante5, 4);
+                    }
+                    /*edtNome.Clear();
+                    edtSobrenome.Clear();
+                    edtNumero.Clear();
+                    edtEndereco.Clear();
+                    edtAC1.Clear();
+                    edtAC2.Clear();
+                    edtAC3.Clear();
+                    edtAC4.Clear();
+                    edtAC5.Clear();*/
+                    //proxima tela levando pessoa
+                    Tela_de_Tempo tempo = new Tela_de_Tempo(les, lde, fec, pessoa);
+                    this.Hide();
+                    tempo.Show();
+                }
+            }
+            catch (FormatException ex)
+            {
+                string mensagem = "Por favor, insira SOMENTE número no campo do Telefone!";
+                string caption = "Erro detectado no cadastro";
                 MessageBoxButtons boxButtons = MessageBoxButtons.OK;
                 DialogResult result;
                 result = MessageBox.Show(mensagem, caption, boxButtons);
-            }
-            else
-            {
-                Pessoa pessoa = new Pessoa(nome, sobrenome, numero, endereco, acompanhantes);
-                if (i >= 1)
-                {
-                    pessoa.setNomes(acompanhante1, 0);
-                }
-                if (i >= 2)
-                {
-                    pessoa.setNomes(acompanhante2, 1);
-                }
-                if (i >= 3)
-                {
-                    pessoa.setNomes(acompanhante3, 2);
-                }
-                if (i >= 4)
-                {
-                    pessoa.setNomes(acompanhante4, 3);
-                }
-                if (i == 5)
-                {
-                    pessoa.setNomes(acompanhante5, 4);
-                }
-                /*edtNome.Clear();
+                edtNome.Clear();
                 edtSobrenome.Clear();
                 edtNumero.Clear();
                 edtEndereco.Clear();
@@ -112,11 +154,7 @@ namespace ProjetoHotel.Telas
                 edtAC2.Clear();
                 edtAC3.Clear();
                 edtAC4.Clear();
-                edtAC5.Clear();*/
-                //proxima tela levando pessoa
-                Tela_de_Tempo tempo = new Tela_de_Tempo(les, lde, fec, pessoa);
-                this.Hide();
-                tempo.Show();
+                edtAC5.Clear();
             }
         }
 

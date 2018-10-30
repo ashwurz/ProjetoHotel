@@ -62,11 +62,6 @@ public class FEC
                 return true;
             }
         }
-        string mensagem = "Não existe ninguem com este nome na fila de checkout, favor confirmar letras maiusculas e nomes e tente novamente";
-        string caption = "Erro detectado na inserção";
-        MessageBoxButtons boxButtons = MessageBoxButtons.OK;
-        DialogResult result;
-        result = MessageBox.Show(mensagem, caption, boxButtons);
         return false;
     }
 
@@ -79,11 +74,6 @@ public class FEC
                 return true;
             }
         }
-        string mensagem = "Não existe ninguem com este nome na fila de checkout, favor confirmar letras maiusculas e nomes e tente novamente";
-        string caption = "Erro detectado na inserção";
-        MessageBoxButtons boxButtons = MessageBoxButtons.OK;
-        DialogResult result;
-        result = MessageBox.Show(mensagem, caption, boxButtons);
         return false;
     }
     public int buscaFec(string nome, string sobrenome)
@@ -95,11 +85,6 @@ public class FEC
                 return k;
             }
         }
-        string mensagem = "Não existe ninguem com este nome na fila de checkout, favor confirmar letras maiusculas e nomes e tente novamente";
-        string caption = "Erro detectado na inserção";
-        MessageBoxButtons boxButtons = MessageBoxButtons.OK;
-        DialogResult result;
-        result = MessageBox.Show(mensagem, caption, boxButtons);
         return -1;
     }
 }

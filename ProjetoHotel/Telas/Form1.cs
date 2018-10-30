@@ -66,6 +66,12 @@ namespace ProjetoHotel
             }
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Tela_Esqueci_Senha senha = new Tela_Esqueci_Senha(lde);
+            senha.Show();
+        }
+
 
         /*
 public static void ThreadProc()

@@ -73,7 +73,7 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btnCadastrar.TabIndex = 14;
-            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.Text = "Próximo";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
@@ -375,7 +375,7 @@
             // 
             this.btnBuscaCliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscaCliente.Name = "btnBuscaCliente";
-            this.btnBuscaCliente.Size = new System.Drawing.Size(180, 22);
+            this.btnBuscaCliente.Size = new System.Drawing.Size(135, 22);
             this.btnBuscaCliente.Text = "Por Cliente";
             this.btnBuscaCliente.Click += new System.EventHandler(this.btnBuscaCliente_Click);
             // 
@@ -383,7 +383,7 @@
             // 
             this.btnBuscaQuarto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscaQuarto.Name = "btnBuscaQuarto";
-            this.btnBuscaQuarto.Size = new System.Drawing.Size(180, 22);
+            this.btnBuscaQuarto.Size = new System.Drawing.Size(135, 22);
             this.btnBuscaQuarto.Text = "Por Quarto";
             this.btnBuscaQuarto.Click += new System.EventHandler(this.btnBuscaQuarto_Click);
             // 

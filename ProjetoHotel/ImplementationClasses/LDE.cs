@@ -48,6 +48,27 @@ namespace ProjetoHotel
 
         }
 
+        public void buscaValidacaoSenha(string usuario)
+        {
+            No atual = primeiro;
+            while (atual != null)
+            {
+                if (atual.funcionario.getUsuario() == usuario)
+                {
+                    string mensagem1 = "A seua senha É: " + atual.funcionario.getSenha();
+                    string titulo1 = "Informação senha!";
+                    MessageBoxButtons boxButtons1 = MessageBoxButtons.OK;
+                    DialogResult result1;
+                    result1 = MessageBox.Show(mensagem1, titulo1, boxButtons1);
+                    return;
+                }
+                else
+                {
+                    atual = atual.proximo;
+                }
+            };
+        }
+
         public bool buscaValidacao(string usuario)
         {
             No atual = primeiro;

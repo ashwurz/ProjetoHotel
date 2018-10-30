@@ -73,18 +73,37 @@ namespace ProjetoHotel
             for (int k = 0; k < 5; k++)
             {
                 i = fec[k].buscaFec(txtbNome.Text, txtbSobrenome.Text);
-                if (i != -1) break;
+                if (i != -1)
+                {
+                    break;
+                }
             }
-            fec[i].fezCheckout(txtbNome.Text, txtbSobrenome.Text);
+            bool validacao = fec[i].fezCheckout(txtbNome.Text, txtbSobrenome.Text);
+            if(validacao == false)
+            {
+                string mensagem1 = "Não existe ninguem com este nome na fila de checkout, favor confirmar letras maiusculas e nomes e tente novamente";
+                string caption1 = "Erro detectado na inserção";
+                MessageBoxButtons boxButtons1 = MessageBoxButtons.OK;
+                DialogResult result1;
+                result1 = MessageBox.Show(mensagem1, caption1, boxButtons1);
+            }
+            btnCheckout.Visible = false;
+            if(fec[i].remove(les) == false)
+            {
+                string mensagem1 = "Vai bobao!";
+                string caption1 = "Check-out";
+                MessageBoxButtons boxButtons1 = MessageBoxButtons.OK;
+                DialogResult result1;
+                result1 = MessageBox.Show(mensagem1, caption1, boxButtons1);
+            }
+            fec[i].remove(les);
+            txtbNome.Clear();
+            txtbSobrenome.Clear();
             string mensagem = "Check-out realizado com sucesso";
             string caption = "Check-out";
             MessageBoxButtons boxButtons = MessageBoxButtons.OK;
             DialogResult result;
             result = MessageBox.Show(mensagem, caption, boxButtons);
-            btnCheckout.Visible = false;
-            fec[i].remove(les);
-            txtbNome.Clear();
-            txtbSobrenome.Clear();
         }
 
         private void btnBusca_Click(object sender, EventArgs e)
@@ -124,6 +143,13 @@ namespace ProjetoHotel
                 result = MessageBox.Show(mensagem, caption, boxButtons);
                 btnCheckout.Visible = true;
             }
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Tela_de_CadastraCliente cadastraCliente = new Tela_de_CadastraCliente(les, lde, fec);
+            this.Hide();
+            cadastraCliente.Show();
         }
     }
 }

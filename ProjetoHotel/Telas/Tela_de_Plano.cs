@@ -76,6 +76,11 @@ namespace ProjetoHotel.Telas
             les.insere(pessoa);
             str.Close();
             Tela_de_CadastraCliente cadastro = new Tela_de_CadastraCliente(les, lde, fec);
+            string mensagem = "O SEU ID É: " + pessoa.getId();
+            string caption = "Atenção! Guarde o seguinte número de ID";
+            MessageBoxButtons boxButtons = MessageBoxButtons.OK;
+            DialogResult result;
+            result = MessageBox.Show(mensagem, caption, boxButtons);
             this.Hide();
             cadastro.Show();
         }
