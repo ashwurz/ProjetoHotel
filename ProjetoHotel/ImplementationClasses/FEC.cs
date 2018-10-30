@@ -76,15 +76,15 @@ public class FEC
         }
         return false;
     }
-    public int buscaFec(string nome, string sobrenome)
+    public bool buscaFec(string nome, string sobrenome)
     {
         for (int k = this.i; k != f; k = (k + 1) % n)
         {
             if (v[k].getNome() == nome && v[k].getUltimoSobrenome() == sobrenome)
             {
-                return k;
+                return true;
             }
         }
-        return -1;
+        return false;
     }
 }

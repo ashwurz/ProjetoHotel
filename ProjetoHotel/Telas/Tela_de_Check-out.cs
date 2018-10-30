@@ -72,9 +72,9 @@ namespace ProjetoHotel
             int i = 0;
             for (int k = 0; k < 5; k++)
             {
-                i = fec[k].buscaFec(txtbNome.Text, txtbSobrenome.Text);
-                if (i != -1)
+                if (fec[k].buscaFec(txtbNome.Text, txtbSobrenome.Text) == true)
                 {
+                    i = k;
                     break;
                 }
             }
@@ -88,14 +88,6 @@ namespace ProjetoHotel
                 result1 = MessageBox.Show(mensagem1, caption1, boxButtons1);
             }
             btnCheckout.Visible = false;
-            if(fec[i].remove(les) == false)
-            {
-                string mensagem1 = "Vai bobao!";
-                string caption1 = "Check-out";
-                MessageBoxButtons boxButtons1 = MessageBoxButtons.OK;
-                DialogResult result1;
-                result1 = MessageBox.Show(mensagem1, caption1, boxButtons1);
-            }
             fec[i].remove(les);
             txtbNome.Clear();
             txtbSobrenome.Clear();
