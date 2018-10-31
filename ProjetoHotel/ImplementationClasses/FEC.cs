@@ -32,7 +32,7 @@ public class FEC
     }
 
     // insere o valor na fila com seu devido tempo de estadia.
-    public bool insere(Pessoa valor)
+    public void insere(Pessoa valor)
     {
         if ((f + 1) % n == i)
         {
@@ -41,40 +41,75 @@ public class FEC
             MessageBoxButtons boxButtons1 = MessageBoxButtons.OK;
             DialogResult result1;
             result1 = MessageBox.Show(mensagem1, titulo1, boxButtons1);
-            return false;
+            return;
         }
         if (valor.getTempo() == 1)
         {
             st = File.Open("Fila1Dia.txt", FileMode.Append);
             str = new StreamWriter(st);
+            str.WriteLine(valor.getNome());
+            str.WriteLine(valor.getUltimoSobrenome());
+            str.WriteLine(checkout[f]);
+            v[f] = valor;
+            f = (f + 1) % n;
+            str.Close();
+            return;
         }
         else if(valor.getTempo() == 7)
         {
             st = File.Open("Fila7Dia.txt", FileMode.Append);
             str = new StreamWriter(st);
+            str.WriteLine(valor.getNome());
+            str.WriteLine(valor.getUltimoSobrenome());
+            str.WriteLine(checkout[f]);
+            v[f] = valor;
+            f = (f + 1) % n;
+            str.Close();
+            return;
         }
         else if (valor.getTempo() == 14)
         {
             st = File.Open("Fila14Dia.txt", FileMode.Append);
             str = new StreamWriter(st);
+            str.WriteLine(valor.getNome());
+            str.WriteLine(valor.getUltimoSobrenome());
+            str.WriteLine(checkout[f]);
+            v[f] = valor;
+            f = (f + 1) % n;
+            str.Close();
+            return;
         }
         else if (valor.getTempo() == 21)
         {
             st = File.Open("Fila21Dia.txt", FileMode.Append);
             str = new StreamWriter(st);
+            str.WriteLine(valor.getNome());
+            str.WriteLine(valor.getUltimoSobrenome());
+            str.WriteLine(checkout[f]);
+            v[f] = valor;
+            f = (f + 1) % n;
+            str.Close();
+            return;
         }
         else
         {
             st = File.Open("Fila30Dia.txt", FileMode.Append);
             str = new StreamWriter(st);
-        }
+            str.WriteLine(valor.getNome());
+            str.WriteLine(valor.getUltimoSobrenome());
+            str.WriteLine(checkout[f]);
+            v[f] = valor;
+            f = (f + 1) % n;
+            str.Close();
+            return;
+        }/*
         str.WriteLine(valor.getNome());
         str.WriteLine(valor.getUltimoSobrenome());
         str.WriteLine(checkout[f]);
         v[f] = valor;
         f = (f + 1) % n;
         str.Close();
-        return true;
+        return true;*/
     }    
     // remove quem entrou primeiro em uma fila.
     public bool remove(LES les)
