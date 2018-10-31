@@ -111,5 +111,10 @@ namespace ProjetoHotel.Telas
         {
             panelResult.Visible = false;
         }
+
+        private void txtQuarto_Click(object sender, EventArgs e)
+        {
+            label1.Visible = false;
+        }
     }
 }

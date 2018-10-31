@@ -149,5 +149,20 @@ namespace ProjetoHotel
                 pessoa = les.busca(txtbNome.Text, txtbSobrenome.Text);
             }
         }
+
+        private void Tela_de_Check_In_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbSobrenome_Click(object sender, EventArgs e)
+        {
+            txtSobrenome.Visible = false;
+        }
+
+        private void txtbNome_Click(object sender, EventArgs e)
+        {
+            txtNome.Visible = false;
+        }
     }
 }

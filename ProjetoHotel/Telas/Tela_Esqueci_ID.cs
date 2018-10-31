@@ -23,5 +23,15 @@ namespace ProjetoHotel.Telas
         {
             les.buscaID(txtNome.Text, txtSobrenome.Text);
         }
+
+        private void txtSobrenome_Click(object sender, EventArgs e)
+        {
+            label2.Visible = false;
+        }
+
+        private void txtNome_Click(object sender, EventArgs e)
+        {
+            label1.Visible = false;
+        }
     }
 }

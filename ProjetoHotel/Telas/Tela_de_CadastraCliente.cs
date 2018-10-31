@@ -283,5 +283,50 @@ namespace ProjetoHotel.Telas
             this.Hide();
             buscaQuarto.Show();
         }
+
+        private void edtNome_Click(object sender, EventArgs e)
+        {
+            txtNome.Visible = false;
+        }
+
+        private void edtSobrenome_Click(object sender, EventArgs e)
+        {
+            txtSobrenome.Visible = false;
+        }
+
+        private void edtNumero_Click(object sender, EventArgs e)
+        {
+            txtNumero.Visible = false;
+        }
+
+        private void edtEndereco_Click(object sender, EventArgs e)
+        {
+            txtEndereco.Visible = false;
+        }
+
+        private void edtAC1_Click(object sender, EventArgs e)
+        {
+            txtAC1.Visible = false;
+        }
+
+        private void edtAC2_Click(object sender, EventArgs e)
+        {
+            txtAC2.Visible = false;
+        }
+
+        private void edtAC3_Click(object sender, EventArgs e)
+        {
+            txtAC3.Visible = false;
+        }
+
+        private void edtAC4_Click(object sender, EventArgs e)
+        {
+            txtAC4.Visible = false;
+        }
+
+        private void edtAC5_Click(object sender, EventArgs e)
+        {
+            txtAC5.Visible = false;
+        }
     }
 }

@@ -23,5 +23,10 @@ namespace ProjetoHotel.Telas
         {
             lde.buscaValidacaoSenha(txtUsuario.Text);
         }
+
+        private void txtUsuario_Click(object sender, EventArgs e)
+        {
+            label1.Visible = false;
+        }
     }
 }

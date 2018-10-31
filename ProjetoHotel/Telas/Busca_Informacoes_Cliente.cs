@@ -147,5 +147,20 @@ namespace ProjetoHotel.Telas
             this.Hide();
             cadastraCliente.Show();
         }
+
+        private void txtNome_Click(object sender, EventArgs e)
+        {
+            label1.Visible = false;
+        }
+
+        private void txtSobrenome_Click(object sender, EventArgs e)
+        {
+            label2.Visible = false;
+        }
+
+        private void txtID_Click(object sender, EventArgs e)
+        {
+            label3.Visible = false;
+        }
     }
 }

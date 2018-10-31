@@ -45,19 +45,19 @@ namespace ProjetoHotel
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(188, 194);
+            this.txtUsuario.Location = new System.Drawing.Point(196, 192);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(386, 38);
+            this.txtUsuario.Size = new System.Drawing.Size(416, 38);
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.Click += new System.EventHandler(this.txtUsuario_Click);
             // 
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(188, 256);
+            this.txtSenha.Location = new System.Drawing.Point(196, 259);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(386, 38);
+            this.txtSenha.Size = new System.Drawing.Size(416, 38);
             this.txtSenha.TabIndex = 1;
             this.txtSenha.Click += new System.EventHandler(this.txtSenha_Click);
             // 
@@ -68,7 +68,7 @@ namespace ProjetoHotel
             this.labelUsuario.Enabled = false;
             this.labelUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsuario.ForeColor = System.Drawing.Color.DarkGray;
-            this.labelUsuario.Location = new System.Drawing.Point(190, 197);
+            this.labelUsuario.Location = new System.Drawing.Point(198, 195);
             this.labelUsuario.Name = "labelUsuario";
             this.labelUsuario.Size = new System.Drawing.Size(108, 31);
             this.labelUsuario.TabIndex = 2;
@@ -81,7 +81,7 @@ namespace ProjetoHotel
             this.labelSenha.Enabled = false;
             this.labelSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSenha.ForeColor = System.Drawing.Color.DarkGray;
-            this.labelSenha.Location = new System.Drawing.Point(190, 259);
+            this.labelSenha.Location = new System.Drawing.Point(198, 262);
             this.labelSenha.Name = "labelSenha";
             this.labelSenha.Size = new System.Drawing.Size(92, 31);
             this.labelSenha.TabIndex = 3;
@@ -89,32 +89,38 @@ namespace ProjetoHotel
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(387, 316);
+            this.btnEntrar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnEntrar.ForeColor = System.Drawing.Color.White;
+            this.btnEntrar.Location = new System.Drawing.Point(411, 317);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(187, 23);
+            this.btnEntrar.Size = new System.Drawing.Size(203, 37);
             this.btnEntrar.TabIndex = 4;
             this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(188, 316);
+            this.btnCadastrar.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(196, 317);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(187, 23);
+            this.btnCadastrar.Size = new System.Drawing.Size(203, 37);
             this.btnCadastrar.TabIndex = 7;
             this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.RoyalBlue;
-            this.linkLabel1.Location = new System.Drawing.Point(566, 421);
+            this.linkLabel1.LinkColor = System.Drawing.SystemColors.Highlight;
+            this.linkLabel1.Location = new System.Drawing.Point(307, 358);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(180, 20);
             this.linkLabel1.TabIndex = 8;
@@ -127,7 +133,7 @@ namespace ProjetoHotel
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::ProjetoHotel.Properties.Resources.Form1;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnCadastrar);

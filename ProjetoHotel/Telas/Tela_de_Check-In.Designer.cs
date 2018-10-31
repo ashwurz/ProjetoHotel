@@ -49,67 +49,77 @@
             // txtNome
             // 
             this.txtNome.AutoSize = true;
-            this.txtNome.BackColor = System.Drawing.Color.Transparent;
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(77, 130);
+            this.txtNome.BackColor = System.Drawing.Color.White;
+            this.txtNome.Enabled = false;
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtNome.Location = new System.Drawing.Point(81, 127);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(140, 25);
+            this.txtNome.Size = new System.Drawing.Size(185, 31);
             this.txtNome.TabIndex = 0;
-            this.txtNome.Text = "Digite o Nome:";
+            this.txtNome.Text = "Digite o Nome";
             // 
             // txtSobrenome
             // 
             this.txtSobrenome.AutoSize = true;
-            this.txtSobrenome.BackColor = System.Drawing.Color.Transparent;
-            this.txtSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSobrenome.Location = new System.Drawing.Point(77, 188);
+            this.txtSobrenome.BackColor = System.Drawing.Color.White;
+            this.txtSobrenome.Enabled = false;
+            this.txtSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSobrenome.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtSobrenome.Location = new System.Drawing.Point(81, 183);
             this.txtSobrenome.Name = "txtSobrenome";
-            this.txtSobrenome.Size = new System.Drawing.Size(249, 25);
+            this.txtSobrenome.Size = new System.Drawing.Size(336, 31);
             this.txtSobrenome.TabIndex = 1;
-            this.txtSobrenome.Text = "Digite o Ultimo Sobrenome:";
+            this.txtSobrenome.Text = "Digite o Ultimo Sobrenome";
             // 
             // txtbNome
             // 
-            this.txtbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbNome.Location = new System.Drawing.Point(223, 125);
+            this.txtbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbNome.Location = new System.Drawing.Point(79, 124);
             this.txtbNome.Name = "txtbNome";
-            this.txtbNome.Size = new System.Drawing.Size(429, 30);
+            this.txtbNome.Size = new System.Drawing.Size(640, 38);
             this.txtbNome.TabIndex = 2;
+            this.txtbNome.Click += new System.EventHandler(this.txtbNome_Click);
             // 
             // txtbSobrenome
             // 
-            this.txtbSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbSobrenome.Location = new System.Drawing.Point(332, 183);
+            this.txtbSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbSobrenome.Location = new System.Drawing.Point(79, 180);
             this.txtbSobrenome.Name = "txtbSobrenome";
-            this.txtbSobrenome.Size = new System.Drawing.Size(320, 30);
+            this.txtbSobrenome.Size = new System.Drawing.Size(640, 38);
             this.txtbSobrenome.TabIndex = 3;
+            this.txtbSobrenome.Click += new System.EventHandler(this.txtbSobrenome_Click);
             // 
             // btnBusca
             // 
+            this.btnBusca.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBusca.Location = new System.Drawing.Point(287, 264);
+            this.btnBusca.ForeColor = System.Drawing.Color.White;
+            this.btnBusca.Location = new System.Drawing.Point(83, 265);
             this.btnBusca.Name = "btnBusca";
-            this.btnBusca.Size = new System.Drawing.Size(158, 48);
+            this.btnBusca.Size = new System.Drawing.Size(636, 48);
             this.btnBusca.TabIndex = 4;
             this.btnBusca.Text = "Confirmar";
-            this.btnBusca.UseVisualStyleBackColor = true;
+            this.btnBusca.UseVisualStyleBackColor = false;
             this.btnBusca.Click += new System.EventHandler(this.btnBusca_Click);
             // 
             // btnCheckin
             // 
+            this.btnCheckin.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnCheckin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckin.Location = new System.Drawing.Point(287, 337);
+            this.btnCheckin.ForeColor = System.Drawing.Color.White;
+            this.btnCheckin.Location = new System.Drawing.Point(83, 339);
             this.btnCheckin.Name = "btnCheckin";
-            this.btnCheckin.Size = new System.Drawing.Size(158, 50);
+            this.btnCheckin.Size = new System.Drawing.Size(636, 50);
             this.btnCheckin.TabIndex = 5;
             this.btnCheckin.Text = "Check-in";
-            this.btnCheckin.UseVisualStyleBackColor = true;
+            this.btnCheckin.UseVisualStyleBackColor = false;
             this.btnCheckin.Visible = false;
             this.btnCheckin.Click += new System.EventHandler(this.btnCheckin_Click);
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCadastrar,
             this.btnCheck,
@@ -125,7 +135,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(113, 20);
             this.btnCadastrar.Text = "Cadastrar Cliente";
@@ -134,7 +144,7 @@
             // btnCheck
             // 
             this.btnCheck.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnCheck.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCheck.ForeColor = System.Drawing.Color.White;
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(70, 20);
             this.btnCheck.Text = "Check-IN";
@@ -143,7 +153,7 @@
             // btnCheckout
             // 
             this.btnCheckout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnCheckout.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCheckout.ForeColor = System.Drawing.Color.White;
             this.btnCheckout.Name = "btnCheckout";
             this.btnCheckout.Size = new System.Drawing.Size(82, 20);
             this.btnCheckout.Text = "Check-OUT";
@@ -155,14 +165,15 @@
             this.btnBuscaCliente,
             this.btnBuscaQuarto});
             this.btnBuscaReserva.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnBuscaReserva.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBuscaReserva.ForeColor = System.Drawing.Color.White;
             this.btnBuscaReserva.Name = "btnBuscaReserva";
             this.btnBuscaReserva.Size = new System.Drawing.Size(109, 20);
             this.btnBuscaReserva.Text = "Buscar Reservas";
             // 
             // btnBuscaCliente
             // 
-            this.btnBuscaCliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBuscaCliente.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnBuscaCliente.ForeColor = System.Drawing.Color.White;
             this.btnBuscaCliente.Name = "btnBuscaCliente";
             this.btnBuscaCliente.Size = new System.Drawing.Size(135, 22);
             this.btnBuscaCliente.Text = "Por Cliente";
@@ -170,7 +181,8 @@
             // 
             // btnBuscaQuarto
             // 
-            this.btnBuscaQuarto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBuscaQuarto.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnBuscaQuarto.ForeColor = System.Drawing.Color.White;
             this.btnBuscaQuarto.Name = "btnBuscaQuarto";
             this.btnBuscaQuarto.Size = new System.Drawing.Size(135, 22);
             this.btnBuscaQuarto.Text = "Por Quarto";
@@ -180,7 +192,7 @@
             // 
             this.btnLogoff.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.btnLogoff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnLogoff.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLogoff.ForeColor = System.Drawing.Color.White;
             this.btnLogoff.Name = "btnLogoff";
             this.btnLogoff.Size = new System.Drawing.Size(56, 20);
             this.btnLogoff.Text = "Logoff";
@@ -190,20 +202,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ProjetoHotel.Properties.Resources.Tela_de_Checkin;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtSobrenome);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnCheckin);
             this.Controls.Add(this.btnBusca);
             this.Controls.Add(this.txtbSobrenome);
             this.Controls.Add(this.txtbNome);
-            this.Controls.Add(this.txtSobrenome);
-            this.Controls.Add(this.txtNome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Tela_de_Check_In";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Check-IN";
+            this.Load += new System.EventHandler(this.Tela_de_Check_In_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

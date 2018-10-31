@@ -94,5 +94,14 @@ namespace ProjetoHotel
             deletar.Show();
         }
 
+        private void txtUsuario_Click(object sender, EventArgs e)
+        {
+            label2.Visible = false;
+        }
+
+        private void txtSenha_Click(object sender, EventArgs e)
+        {
+            label3.Visible = false;
+        }
     }
 }

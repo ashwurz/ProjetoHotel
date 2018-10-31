@@ -29,120 +29,89 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_de_Plano));
-            this.txtEscolha = new System.Windows.Forms.Label();
             this.txtComum = new System.Windows.Forms.Label();
             this.txtDeluxe = new System.Windows.Forms.Label();
             this.txtPremium = new System.Windows.Forms.Label();
-            this.pic1 = new System.Windows.Forms.PictureBox();
-            this.pic2 = new System.Windows.Forms.PictureBox();
-            this.pic3 = new System.Windows.Forms.PictureBox();
             this.rbtnComum = new System.Windows.Forms.RadioButton();
             this.rbtnDeluxe = new System.Windows.Forms.RadioButton();
             this.rbtnPremium = new System.Windows.Forms.RadioButton();
             this.btnRegistra = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtEscolha
-            // 
-            this.txtEscolha.AutoSize = true;
-            this.txtEscolha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEscolha.Location = new System.Drawing.Point(279, 50);
-            this.txtEscolha.Name = "txtEscolha";
-            this.txtEscolha.Size = new System.Drawing.Size(193, 17);
-            this.txtEscolha.TabIndex = 0;
-            this.txtEscolha.Text = "Escolha um Plano de Quarto:";
             // 
             // txtComum
             // 
             this.txtComum.AutoSize = true;
-            this.txtComum.Location = new System.Drawing.Point(129, 122);
+            this.txtComum.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComum.Location = new System.Drawing.Point(111, 307);
             this.txtComum.Name = "txtComum";
-            this.txtComum.Size = new System.Drawing.Size(42, 13);
+            this.txtComum.Size = new System.Drawing.Size(112, 31);
             this.txtComum.TabIndex = 1;
-            this.txtComum.Text = "Comum";
+            this.txtComum.Text = "RSxx,xx";
             // 
             // txtDeluxe
             // 
             this.txtDeluxe.AutoSize = true;
-            this.txtDeluxe.Location = new System.Drawing.Point(347, 122);
+            this.txtDeluxe.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDeluxe.Location = new System.Drawing.Point(339, 307);
             this.txtDeluxe.Name = "txtDeluxe";
-            this.txtDeluxe.Size = new System.Drawing.Size(40, 13);
+            this.txtDeluxe.Size = new System.Drawing.Size(125, 31);
             this.txtDeluxe.TabIndex = 2;
-            this.txtDeluxe.Text = "Deluxe";
+            this.txtDeluxe.Text = "RSxxx,xx";
             // 
             // txtPremium
             // 
             this.txtPremium.AutoSize = true;
-            this.txtPremium.Location = new System.Drawing.Point(565, 122);
+            this.txtPremium.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPremium.Location = new System.Drawing.Point(566, 307);
             this.txtPremium.Name = "txtPremium";
-            this.txtPremium.Size = new System.Drawing.Size(47, 13);
+            this.txtPremium.Size = new System.Drawing.Size(138, 31);
             this.txtPremium.TabIndex = 3;
-            this.txtPremium.Text = "Premium";
-            // 
-            // pic1
-            // 
-            this.pic1.Location = new System.Drawing.Point(75, 166);
-            this.pic1.Name = "pic1";
-            this.pic1.Size = new System.Drawing.Size(159, 135);
-            this.pic1.TabIndex = 4;
-            this.pic1.TabStop = false;
-            // 
-            // pic2
-            // 
-            this.pic2.Location = new System.Drawing.Point(293, 166);
-            this.pic2.Name = "pic2";
-            this.pic2.Size = new System.Drawing.Size(159, 135);
-            this.pic2.TabIndex = 5;
-            this.pic2.TabStop = false;
-            // 
-            // pic3
-            // 
-            this.pic3.Location = new System.Drawing.Point(511, 166);
-            this.pic3.Name = "pic3";
-            this.pic3.Size = new System.Drawing.Size(159, 135);
-            this.pic3.TabIndex = 6;
-            this.pic3.TabStop = false;
+            this.txtPremium.Text = "RSxxxx,xx";
             // 
             // rbtnComum
             // 
             this.rbtnComum.AutoSize = true;
-            this.rbtnComum.Location = new System.Drawing.Point(111, 344);
+            this.rbtnComum.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rbtnComum.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnComum.Location = new System.Drawing.Point(98, 93);
             this.rbtnComum.Name = "rbtnComum";
-            this.rbtnComum.Size = new System.Drawing.Size(63, 17);
+            this.rbtnComum.Size = new System.Drawing.Size(126, 35);
             this.rbtnComum.TabIndex = 7;
-            this.rbtnComum.Text = "RSxx,xx";
+            this.rbtnComum.Text = "Comum";
             this.rbtnComum.UseVisualStyleBackColor = true;
             // 
             // rbtnDeluxe
             // 
             this.rbtnDeluxe.AutoSize = true;
-            this.rbtnDeluxe.Location = new System.Drawing.Point(334, 344);
+            this.rbtnDeluxe.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rbtnDeluxe.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnDeluxe.Location = new System.Drawing.Point(318, 93);
             this.rbtnDeluxe.Name = "rbtnDeluxe";
-            this.rbtnDeluxe.Size = new System.Drawing.Size(68, 17);
+            this.rbtnDeluxe.Size = new System.Drawing.Size(116, 35);
             this.rbtnDeluxe.TabIndex = 8;
-            this.rbtnDeluxe.Text = "RSxxx,xx";
+            this.rbtnDeluxe.Text = "Deluxe";
             this.rbtnDeluxe.UseVisualStyleBackColor = true;
             // 
             // rbtnPremium
             // 
             this.rbtnPremium.AutoSize = true;
-            this.rbtnPremium.Location = new System.Drawing.Point(549, 344);
+            this.rbtnPremium.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rbtnPremium.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnPremium.Location = new System.Drawing.Point(547, 93);
             this.rbtnPremium.Name = "rbtnPremium";
-            this.rbtnPremium.Size = new System.Drawing.Size(73, 17);
+            this.rbtnPremium.Size = new System.Drawing.Size(139, 35);
             this.rbtnPremium.TabIndex = 9;
-            this.rbtnPremium.Text = "RSxxxx,xx";
+            this.rbtnPremium.Text = "Premium";
             this.rbtnPremium.UseVisualStyleBackColor = true;
             // 
             // btnRegistra
             // 
-            this.btnRegistra.Location = new System.Drawing.Point(315, 396);
+            this.btnRegistra.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistra.Location = new System.Drawing.Point(329, 358);
             this.btnRegistra.Name = "btnRegistra";
-            this.btnRegistra.Size = new System.Drawing.Size(122, 23);
+            this.btnRegistra.Size = new System.Drawing.Size(162, 42);
             this.btnRegistra.TabIndex = 10;
             this.btnRegistra.Text = "Finalizar Registro";
             this.btnRegistra.UseVisualStyleBackColor = true;
@@ -150,9 +119,10 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(595, 396);
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(572, 358);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(121, 42);
             this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -160,9 +130,10 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(75, 395);
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Location = new System.Drawing.Point(117, 358);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltar.Size = new System.Drawing.Size(111, 42);
             this.btnVoltar.TabIndex = 12;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
@@ -172,43 +143,31 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProjetoHotel.Properties.Resources.Tela_de_Plano;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            //this.BackgroundImage = global::ProjetoHotel.Properties.Resources.Tela_de_Plano;
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnRegistra);
             this.Controls.Add(this.rbtnPremium);
             this.Controls.Add(this.rbtnDeluxe);
             this.Controls.Add(this.rbtnComum);
-            this.Controls.Add(this.pic3);
-            this.Controls.Add(this.pic2);
-            this.Controls.Add(this.pic1);
             this.Controls.Add(this.txtPremium);
             this.Controls.Add(this.txtDeluxe);
             this.Controls.Add(this.txtComum);
-            this.Controls.Add(this.txtEscolha);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Tela_de_Plano";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela de Plano";
-            ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label txtEscolha;
         private System.Windows.Forms.Label txtComum;
         private System.Windows.Forms.Label txtDeluxe;
         private System.Windows.Forms.Label txtPremium;
-        private System.Windows.Forms.PictureBox pic1;
-        private System.Windows.Forms.PictureBox pic2;
-        private System.Windows.Forms.PictureBox pic3;
         private System.Windows.Forms.RadioButton rbtnComum;
         private System.Windows.Forms.RadioButton rbtnDeluxe;
         private System.Windows.Forms.RadioButton rbtnPremium;

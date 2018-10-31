@@ -143,5 +143,15 @@ namespace ProjetoHotel
             this.Hide();
             cadastraCliente.Show();
         }
+
+        private void txtbSobrenome_Click(object sender, EventArgs e)
+        {
+            txtSobrenome.Visible = false;
+        }
+
+        private void txtbNome_Click(object sender, EventArgs e)
+        {
+            txtNome.Visible = false;
+        }
     }
 }

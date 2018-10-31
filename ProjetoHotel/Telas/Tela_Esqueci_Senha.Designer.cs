@@ -37,24 +37,31 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 16);
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Enabled = false;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1.Location = new System.Drawing.Point(71, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.Size = new System.Drawing.Size(255, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Qual o seu usuário?";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(121, 13);
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(68, 97);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(317, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(317, 38);
             this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.Click += new System.EventHandler(this.txtUsuario_Click);
             // 
             // btnBuscarSenha
             // 
-            this.btnBuscarSenha.Location = new System.Drawing.Point(180, 161);
+            this.btnBuscarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarSenha.Location = new System.Drawing.Point(153, 157);
             this.btnBuscarSenha.Name = "btnBuscarSenha";
-            this.btnBuscarSenha.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarSenha.Size = new System.Drawing.Size(119, 42);
             this.btnBuscarSenha.TabIndex = 2;
             this.btnBuscarSenha.Text = "Buscar";
             this.btnBuscarSenha.UseVisualStyleBackColor = true;
@@ -65,9 +72,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 332);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscarSenha);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Tela_Esqueci_Senha";

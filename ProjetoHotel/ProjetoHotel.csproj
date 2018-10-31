@@ -199,6 +199,8 @@
     <None Include="Images\logo_2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Images\Tela_de_Plano.png" />
+    <None Include="Images\Tela_de_Tempo.png" />
     <None Include="Images\Tela_de_CadastraCliente.PNG" />
     <None Include="Images\Tela_de_Checkout.PNG" />
     <None Include="Images\Tela_de_Checkin.PNG" />

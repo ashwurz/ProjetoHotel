@@ -58,5 +58,14 @@ namespace ProjetoHotel
             busca.Show();
         }
 
+        private void txtbUsuario_Click(object sender, EventArgs e)
+        {
+            txtUsuario.Visible = false;
+        }
+
+        private void txtSenha_Click(object sender, EventArgs e)
+        {
+            label2.Visible = false;
+        }
     }
 }
