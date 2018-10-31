@@ -27,8 +27,20 @@ namespace ProjetoHotel.Telas
             this.pessoa = p;
             InitializeComponent();
             rbtnComum.Visible = les.confirmaDisponivel(p, "Comum");
+            if (rbtnComum.Visible == false)
+            {
+                txtIndisponivel1.Visible = true;
+            }
             rbtnDeluxe.Visible = les.confirmaDisponivel(p, "Deluxe");
+            if (rbtnDeluxe.Visible == false)
+            {
+                txtIndisponivel2.Visible = true;
+            }
             rbtnPremium.Visible = les.confirmaDisponivel(p, "Premium");
+            if (rbtnPremium.Visible == false)
+            {
+                txtIndisponivel3.Visible = true;
+            }
         }
         //Função que faz com que se a pessoa clique no botão "X", o programa inteiro se encerra
         protected override void OnClosed(EventArgs e)

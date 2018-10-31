@@ -68,5 +68,10 @@ namespace ProjetoHotel.Telas
             this.Hide();
             plano.Show();
         }
+
+        private void rbtnD30_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
