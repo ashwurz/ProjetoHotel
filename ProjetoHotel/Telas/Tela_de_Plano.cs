@@ -53,6 +53,7 @@ namespace ProjetoHotel.Telas
             }
             str.WriteLine(pessoa.getTempo());
             string escolhido;
+            //resolvido
             if (rbtnComum.Checked)
             {
                 escolhido = "Comum";
