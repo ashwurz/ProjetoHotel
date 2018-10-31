@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,29 +47,102 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Telas\Busca_Informacoes_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Telas\Busca_Informacoes_Cliente.Designer.cs">
+      <DependentUpon>Busca_Informacoes_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Busca_Informacoes_Quarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Busca_Informacoes_Quarto.Designer.cs">
+      <DependentUpon>Busca_Informacoes_Quarto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Delete.Designer.cs">
+      <DependentUpon>Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImplementationClasses\FEC.cs" />
+    <Compile Include="Telas\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Funcionario.cs" />
-    <Compile Include="LES.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="ImplementationClasses\Funcionario.cs" />
+    <Compile Include="ImplementationClasses\LDE.cs" />
+    <Compile Include="ImplementationClasses\LES.cs" />
+    <Compile Include="ImplementationClasses\No.cs" />
+    <Compile Include="ImplementationClasses\Pessoa.cs" />
+    <Compile Include="ImplementationClasses\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tela_De_Busca.cs">
+    <Compile Include="Telas\Tela_De_Busca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_De_Busca.Designer.cs" />
-    <Compile Include="Tela_De_Cadastro.cs">
+    <Compile Include="Telas\Tela_De_Busca.Designer.cs">
+      <DependentUpon>Tela_De_Busca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Tela_de_CadastraCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_De_Cadastro.Designer.cs" />
-    <Compile Include="Tela_De_Perfil.cs">
+    <Compile Include="Telas\Tela_de_CadastraCliente.Designer.cs">
+      <DependentUpon>Tela_de_CadastraCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Tela_De_Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_De_Perfil.Designer.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <Compile Include="Telas\Tela_De_Cadastro.Designer.cs">
+      <DependentUpon>Tela_De_Cadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Tela_de_Check-In.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Tela_de_Check-In.Designer.cs">
+      <DependentUpon>Tela_de_Check-In.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Tela_de_Check-out.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Tela_de_Check-out.Designer.cs">
+      <DependentUpon>Tela_de_Check-out.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Tela_de_Plano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Tela_de_Plano.Designer.cs">
+      <DependentUpon>Tela_de_Plano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Tela_de_Tempo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Tela_de_Tempo.Designer.cs">
+      <DependentUpon>Tela_de_Tempo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Tela_Esqueci_ID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Tela_Esqueci_ID.Designer.cs">
+      <DependentUpon>Tela_Esqueci_ID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Tela_Esqueci_Senha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Tela_Esqueci_Senha.Designer.cs">
+      <DependentUpon>Tela_Esqueci_Senha.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Telas\Busca_Informacoes_Cliente.resx">
+      <DependentUpon>Busca_Informacoes_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Busca_Informacoes_Quarto.resx">
+      <DependentUpon>Busca_Informacoes_Quarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Delete.resx">
+      <DependentUpon>Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -79,9 +153,35 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Tela_De_Busca.resx" />
-    <EmbeddedResource Include="Tela_De_Cadastro.resx" />
+    <EmbeddedResource Include="Telas\Tela_De_Busca.resx">
+      <DependentUpon>Tela_De_Busca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tela_de_CadastraCliente.resx">
+      <DependentUpon>Tela_de_CadastraCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tela_De_Cadastro.resx">
+      <DependentUpon>Tela_De_Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tela_de_Check-In.resx">
+      <DependentUpon>Tela_de_Check-In.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tela_de_Check-out.resx">
+      <DependentUpon>Tela_de_Check-out.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tela_de_Plano.resx">
+      <DependentUpon>Tela_de_Plano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tela_de_Tempo.resx">
+      <DependentUpon>Tela_de_Tempo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tela_Esqueci_ID.resx">
+      <DependentUpon>Tela_Esqueci_ID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tela_Esqueci_Senha.resx">
+      <DependentUpon>Tela_Esqueci_Senha.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,6 +194,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\logo_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Tela_de_Plano.png" />
+    <None Include="Images\Tela_de_Tempo.png" />
+    <None Include="Images\Tela_de_CadastraCliente.PNG" />
+    <None Include="Images\Tela_de_Checkout.PNG" />
+    <None Include="Images\Tela_de_Checkin.PNG" />
+    <None Include="Images\Tela_de_Cadastro.PNG" />
+    <None Include="Images\Tela_de_Busca.PNG" />
+    <None Include="Images\Form1.PNG" />
+    <None Include="Images\Delete.PNG" />
+    <None Include="Images\Busca_Informacoes_Clientes.PNG" />
+    <None Include="Images\Busca_Informacoes_Quarto.PNG" />
+    <Content Include="Images\Iconsmind-Outline-Hotel.ico" />
+    <Content Include="Images\image1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
