@@ -92,6 +92,7 @@
             this.rbtnComum.TabIndex = 7;
             this.rbtnComum.Text = "        Comum      ";
             this.rbtnComum.UseVisualStyleBackColor = false;
+            this.rbtnComum.CheckedChanged += new System.EventHandler(this.rbtnComum_CheckedChanged);
             // 
             // rbtnDeluxe
             // 
@@ -106,6 +107,7 @@
             this.rbtnDeluxe.TabIndex = 8;
             this.rbtnDeluxe.Text = "        Deluxe        ";
             this.rbtnDeluxe.UseVisualStyleBackColor = false;
+            this.rbtnDeluxe.VisibleChanged += new System.EventHandler(this.rbtnDeluxe_VisibleChanged);
             // 
             // rbtnPremium
             // 
@@ -120,6 +122,7 @@
             this.rbtnPremium.TabIndex = 9;
             this.rbtnPremium.Text = "      Premium      ";
             this.rbtnPremium.UseVisualStyleBackColor = false;
+            this.rbtnPremium.VisibleChanged += new System.EventHandler(this.rbtnPremium_VisibleChanged);
             // 
             // btnRegistra
             // 
@@ -167,7 +170,7 @@
             this.txtIndisponivel1.Enabled = false;
             this.txtIndisponivel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.txtIndisponivel1.ForeColor = System.Drawing.Color.White;
-            this.txtIndisponivel1.Location = new System.Drawing.Point(66, 95);
+            this.txtIndisponivel1.Location = new System.Drawing.Point(66, 94);
             this.txtIndisponivel1.Name = "txtIndisponivel1";
             this.txtIndisponivel1.Size = new System.Drawing.Size(221, 31);
             this.txtIndisponivel1.TabIndex = 13;
@@ -181,7 +184,7 @@
             this.txtIndisponivel2.Enabled = false;
             this.txtIndisponivel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndisponivel2.ForeColor = System.Drawing.Color.White;
-            this.txtIndisponivel2.Location = new System.Drawing.Point(287, 95);
+            this.txtIndisponivel2.Location = new System.Drawing.Point(287, 94);
             this.txtIndisponivel2.Name = "txtIndisponivel2";
             this.txtIndisponivel2.Size = new System.Drawing.Size(228, 31);
             this.txtIndisponivel2.TabIndex = 14;
@@ -195,7 +198,7 @@
             this.txtIndisponivel3.Enabled = false;
             this.txtIndisponivel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndisponivel3.ForeColor = System.Drawing.Color.White;
-            this.txtIndisponivel3.Location = new System.Drawing.Point(517, 95);
+            this.txtIndisponivel3.Location = new System.Drawing.Point(517, 94);
             this.txtIndisponivel3.Name = "txtIndisponivel3";
             this.txtIndisponivel3.Size = new System.Drawing.Size(221, 31);
             this.txtIndisponivel3.TabIndex = 15;
@@ -208,15 +211,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoHotel.Properties.Resources.Tela_de_Plano;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.rbtnComum);
+            this.Controls.Add(this.rbtnDeluxe);
+            this.Controls.Add(this.rbtnPremium);
             this.Controls.Add(this.txtIndisponivel3);
             this.Controls.Add(this.txtIndisponivel2);
             this.Controls.Add(this.txtIndisponivel1);
-            this.Controls.Add(this.rbtnComum);
-            this.Controls.Add(this.rbtnDeluxe);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnRegistra);
-            this.Controls.Add(this.rbtnPremium);
             this.Controls.Add(this.txtPremium);
             this.Controls.Add(this.txtDeluxe);
             this.Controls.Add(this.txtComum);

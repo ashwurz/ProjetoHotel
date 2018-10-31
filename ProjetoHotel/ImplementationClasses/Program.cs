@@ -222,7 +222,7 @@ namespace ProjetoHotel
                 while (linha != null)
                 {
                     fec[0].setCheckout(checkout);
-                    fec[0].insere(pessoa);
+                    fec[0].insereFile(pessoa);
                     linha = str2.ReadLine();
                     nome = linha;
                     linha = str2.ReadLine();
@@ -252,7 +252,7 @@ namespace ProjetoHotel
                 while (linha != null)
                 {
                     fec[1].setCheckout(checkout);
-                    fec[1].insere(pessoa);
+                    fec[1].insereFile(pessoa);
                     linha = str3.ReadLine();
                     nome = linha;
                     linha = str3.ReadLine();
@@ -282,7 +282,7 @@ namespace ProjetoHotel
                 while (linha != null)
                 {
                     fec[2].setCheckout(checkout);
-                    fec[2].insere(pessoa);
+                    fec[2].insereFile(pessoa);
                     linha = str4.ReadLine();
                     nome = linha;
                     linha = str4.ReadLine();
@@ -312,7 +312,7 @@ namespace ProjetoHotel
                 while (linha != null)
                 {
                     fec[3].setCheckout(checkout);
-                    fec[3].insere(pessoa);
+                    fec[3].insereFile(pessoa);
                     linha = str5.ReadLine();
                     nome = linha;
                     linha = str5.ReadLine();
@@ -342,7 +342,7 @@ namespace ProjetoHotel
                 while (linha != null)
                 {
                     fec[4].setCheckout(checkout);
-                    fec[4].insere(pessoa);
+                    fec[4].insereFile(pessoa);
                     linha = str6.ReadLine();
                     nome = linha;
                     linha = str6.ReadLine();

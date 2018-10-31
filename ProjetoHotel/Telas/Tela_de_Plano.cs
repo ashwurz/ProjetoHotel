@@ -27,20 +27,8 @@ namespace ProjetoHotel.Telas
             this.pessoa = p;
             InitializeComponent();
             rbtnComum.Visible = les.confirmaDisponivel(p, "Comum");
-            if (rbtnComum.Visible == false)
-            {
-                txtIndisponivel1.Visible = true;
-            }
             rbtnDeluxe.Visible = les.confirmaDisponivel(p, "Deluxe");
-            if (rbtnDeluxe.Visible == false)
-            {
-                txtIndisponivel2.Visible = true;
-            }
             rbtnPremium.Visible = les.confirmaDisponivel(p, "Premium");
-            if (rbtnPremium.Visible == false)
-            {
-                txtIndisponivel3.Visible = true;
-            }
         }
         //Função que faz com que se a pessoa clique no botão "X", o programa inteiro se encerra
         protected override void OnClosed(EventArgs e)
@@ -73,9 +61,19 @@ namespace ProjetoHotel.Telas
             {
                 escolhido = "Deluxe";
             }
-            else
+            else if (rbtnPremium.Checked)
             {
                 escolhido = "Premium";
+            }
+            else
+            {
+                string mensagem1 = "Nenhuma Opção Escolhida, Favor escolher";
+                string titulo1 = "Erro de Seleção!";
+                MessageBoxButtons boxButtons1 = MessageBoxButtons.OK;
+                DialogResult result1;
+                result1 = MessageBox.Show(mensagem1, titulo1, boxButtons1);
+                str.Close();
+                return;
             }
             str.WriteLine(escolhido);
             pessoa.setPlano(escolhido);
@@ -109,6 +107,21 @@ namespace ProjetoHotel.Telas
             Tela_de_Tempo tempo = new Tela_de_Tempo(les, lde, fec, pessoa);
             this.Hide();
             tempo.Show();
+        }
+
+        private void rbtnPremium_VisibleChanged(object sender, EventArgs e)
+        {
+            txtIndisponivel3.Visible = true;
+        }
+
+        private void rbtnDeluxe_VisibleChanged(object sender, EventArgs e)
+        {
+            txtIndisponivel2.Visible = true;
+        }
+
+        private void rbtnComum_CheckedChanged(object sender, EventArgs e)
+        {
+            txtIndisponivel1.Visible = true;
         }
     }
 }
