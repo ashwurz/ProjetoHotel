@@ -93,6 +93,7 @@ public class FEC
         }
         else
         {
+            //commit
             st = File.Open("Fila30Dia.txt", FileMode.Append);
             str = new StreamWriter(st);
             str.WriteLine(valor.getNome());
